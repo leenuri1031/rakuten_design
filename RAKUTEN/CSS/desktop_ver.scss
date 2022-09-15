@@ -1,0 +1,25 @@
+@use './var'as var;
+@use './mixin' as mixin;
+@use './basic';
+// -------------------------------------------
+
+@media(min-width:650px){
+  #root{
+    height: 400vh;
+  }
+
+  header{
+    @include mixin.container-style(100%, 4%, space-between, center,column);
+  
+    &>h1{
+      @include mixin.container-style(100%, 40%, flex-start, center);
+      // padding-left: 5vw;
+      border: 2px solid lightcyan;
+    }
+    
+    &>div{
+      display: none;
+    }
+
+  }
+}
