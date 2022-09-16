@@ -3,8 +3,32 @@
 @use './basic';
 // -------------------------------------------
 
+.renewal {
+  width: 60%;
+  height: 100%;
+}
+
+.toggle .line1{
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.toggle .line2{
+  opacity: 0;
+}
+
+.toggle .line3{
+  transform: rotate(45deg) translate(-9px, -6px);
+}
+
+// class-setting-----------------------------------------
+
+
+
+
 #root{
-  @include mixin.container-style(100vw, 500vh, space-between, center, column );
+  // @include mixin.container-style(100vw, 500vh, space-between, center, column );
+  @include mixin.container-style(100vw, 100vh, space-between, center, column );
+
 }
 
 header{
@@ -18,27 +42,60 @@ header{
   }
   
   &>div{
-    @include mixin.container-style(15%, 50%, center, center);
-    // border: 1px solid salmon;
-    &>i{
-      @include mixin.font(2rem,500,black);
+    @include mixin.container-style(15%, 80%, center, center, column);
+    // border: 3px solid black;
+    
+    &>div{
+      @include mixin.container-style(15%, 80%, center, center, column);
       cursor: pointer;
-    }
-  }
 
-  &>ul{
-    display: none;
-  }
+      &>div{
+        @include mixin.size(30px, 5px);
+        margin: 3px;
+        background-color: gray;
+        transition: all 0.4s ease;
+      }
+    }
+  
+    &>ul{
+      display: none;
+    }
+    }
+
 }
 
 main{
   @include mixin.container-style(100%, 93%, space-evenly, center, column);
-  background-color: var.$col-bright-gray;
+  // background-color: var.$col-bright-gray;
 }
 
 #slide{
   @include mixin.container-style(100%, 10%, space-around, center, column);
   background-color: aliceblue;
+
+  &>div:nth-child(1){
+    @include mixin.container-style(100%, 90%, space-around, center);
+
+    &>div:nth-child(1){
+      @include mixin.container-style(100%, 100%, center, center);
+      background-color: deepskyblue;
+    }
+
+    @for$i from 2 through 4{
+      &>div:nth-child(#{$i}){
+        display: none;
+      }
+    }
+
+  }
+
+  &>ul{
+    @include mixin.container-style(20%, 5%, space-around, center);
+
+    &>li{
+      cursor: pointer;
+    }
+  }
 }
 
 #best{
@@ -69,8 +126,21 @@ main{
 }
 
 #brand{
-  @include mixin.container-style(100%, 10%, space-around, center, column);
-  background-color: salmon;
+  @include mixin.container-style(100%, 10%, space-between, center, column);
+  background-color: darkkhaki;
+  
+  &>div{
+    @include mixin.container-style(100%, 90%, center, center, column);
+    background-color: salmon;
+  }
+
+  &>ul{
+    @include mixin.container-style(20%, 5%, space-around, center);
+
+    &>li{
+      cursor: pointer;
+    }
+  }
 }
 
 #categories{
@@ -177,7 +247,7 @@ main{
   }
 }
 
-#set{
+#popular{
   @include mixin.container-style(100%, 5%, space-between, center, column);
   background-color: darkorange;
 

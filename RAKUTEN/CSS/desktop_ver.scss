@@ -3,23 +3,124 @@
 @use './basic';
 // -------------------------------------------
 
-@media(min-width:650px){
+@media(min-width:1020px){
   #root{
-    height: 400vh;
+    // height: 400vh;
+    height: 100vh;
   }
 
   header{
-    @include mixin.container-style(100%, 4%, space-between, center,column);
+    @include mixin.container-style(85%, 5%, center, center,column);
   
     &>h1{
-      @include mixin.container-style(100%, 40%, flex-start, center);
-      // padding-left: 5vw;
-      border: 2px solid lightcyan;
+      @include mixin.container-style(100%, 40%, flex-start, flex-end);
+      // border: solid 1px red;
+      padding-left: 0vw;
     }
     
     &>div{
       display: none;
     }
 
+    &>ul{
+      @include mixin.container-style(100%, 40%, space-around, center);
+      // border: solid 1px red;
+
+      &>li{
+        list-style: none;
+        cursor: pointer;
+      }
+    }
   }
+
+  main{
+    width: 85%;
+    border: 5px solid black;
+  }
+
+  #slide{
+      @include mixin.container-style(100%, 10%, space-around, center, column);
+      order: 1;
+
+      &>div:nth-child(1){
+        overflow: hidden;
+
+        @for$i from 1 through 4{
+          &>div:nth-child(#{$i}){
+            @include mixin.container-style(30%, 80%, center, center);
+            margin: 1vw;
+            background-color: deepskyblue;
+          }
+        }
+        
+      }
+
+      &>ul{
+        width: 15%;
+      }
+  }
+
+  #best{
+    @include mixin.container-style(100%, 25%, space-around, center);
+    order: 2;
+    flex-wrap: wrap;
+
+    &>div{
+      width: 45%;
+      height: 45%;
+    }
+  }
+
+  #brand{
+    @include mixin.container-style(100%, 20%, space-between, center, column);
+    order: 3;
+
+    &>ul{
+      @include mixin.container-style(15%, 5%, space-around, center);
+    }
+  }
+
+  #categories{
+    order: 7;
+    @include mixin.container-style(100%, 8%, space-between, center, column);
+
+  }
+
+  #recommend{
+    order: 4;
+    @include mixin.container-style(100%, 10%, space-between, center, column);
+
+  }
+
+  #popular{
+    order: 5;
+    @include mixin.container-style(100%, 10%, space-between, center, column);
+
+  }
+
+  #set{
+    order: 6;
+    @include mixin.container-style(100%, 10%, space-between, center, column);
+
+  }
+
+
+
+
+
+
+  footer{
+    width: 85%;
+  }
+
+
+
+
+
+
+
+
+
+
+
 }

@@ -12,9 +12,26 @@
   scroll-behavior: smooth;
 }
 
+.renewal {
+  width: 60%;
+  height: 100%;
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-9px, -6px);
+}
+
 #root {
   width: 100vw;
-  height: 500vh;
+  height: 100vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,19 +58,29 @@ header > h1 {
 }
 header > div {
   width: 15%;
-  height: 50%;
+  height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
 }
-header > div > i {
-  font-size: 2rem;
-  font-weight: 500;
-  color: black;
+header > div > div {
+  width: 15%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   cursor: pointer;
 }
-header > ul {
+header > div > div > div {
+  width: 30px;
+  height: 5px;
+  margin: 3px;
+  background-color: gray;
+  transition: all 0.4s ease;
+}
+header > div > ul {
   display: none;
 }
 
@@ -64,7 +91,6 @@ main {
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  background-color: #e2e2e2;
 }
 
 #slide {
@@ -75,6 +101,43 @@ main {
   align-items: center;
   flex-direction: column;
   background-color: aliceblue;
+}
+#slide > div:nth-child(1) {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+#slide > div:nth-child(1) > div:nth-child(1) {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: deepskyblue;
+}
+#slide > div:nth-child(1) > div:nth-child(2) {
+  display: none;
+}
+#slide > div:nth-child(1) > div:nth-child(3) {
+  display: none;
+}
+#slide > div:nth-child(1) > div:nth-child(4) {
+  display: none;
+}
+#slide > ul {
+  width: 20%;
+  height: 5%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+#slide > ul > li {
+  cursor: pointer;
 }
 
 #best {
@@ -112,10 +175,30 @@ main {
   width: 100%;
   height: 10%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-color: darkkhaki;
+}
+#brand > div {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   background-color: salmon;
+}
+#brand > ul {
+  width: 20%;
+  height: 5%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+#brand > ul > li {
+  cursor: pointer;
 }
 
 #categories {
@@ -289,7 +372,7 @@ main {
   font-size: 0.8rem;
 }
 
-#set {
+#popular {
   width: 100%;
   height: 5%;
   display: flex;
@@ -298,7 +381,7 @@ main {
   flex-direction: column;
   background-color: darkorange;
 }
-#set > div:first-child {
+#popular > div:first-child {
   width: 100%;
   height: 15%;
   display: flex;
@@ -308,7 +391,7 @@ main {
   background-color: dimgray;
   color: white;
 }
-#set > div:last-child {
+#popular > div:last-child {
   width: 95%;
   height: 80%;
   display: flex;
@@ -316,7 +399,7 @@ main {
   align-items: center;
   flex-direction: row;
 }
-#set > div:last-child > div {
+#popular > div:last-child > div {
   width: 30%;
   height: 90%;
   display: flex;
@@ -325,7 +408,7 @@ main {
   flex-direction: column;
   cursor: pointer;
 }
-#set > div:last-child > div > div:nth-child(1) {
+#popular > div:last-child > div > div:nth-child(1) {
   width: 15vw;
   height: 15vw;
   display: flex;
@@ -334,7 +417,7 @@ main {
   flex-direction: row;
   background-color: aliceblue;
 }
-#set > div:last-child > div > div:nth-child(2) {
+#popular > div:last-child > div > div:nth-child(2) {
   width: 15vw;
   height: 15%;
   display: flex;
@@ -343,7 +426,7 @@ main {
   flex-direction: row;
   font-size: 0.7rem;
 }
-#set > div:last-child > div > div:nth-child(3) {
+#popular > div:last-child > div > div:nth-child(3) {
   width: 15vw;
   height: 15%;
   display: flex;
