@@ -40,25 +40,7 @@
   }
 
   #slide{
-      @include mixin.container-style(100%, 10%, space-around, center, column);
       order: 1;
-
-      &>div:nth-child(1){
-        overflow: hidden;
-
-        @for$i from 1 through 4{
-          &>div:nth-child(#{$i}){
-            @include mixin.container-style(30%, 80%, center, center);
-            margin: 1vw;
-            background-color: deepskyblue;
-          }
-        }
-        
-      }
-
-      &>ul{
-        width: 15%;
-      }
   }
 
   #best{

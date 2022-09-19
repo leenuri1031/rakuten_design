@@ -164,9 +164,6 @@ input[type="checkbox"]{
 
 // class-setting-----------------------------------------
 
-
-
-
 #root{
   @include mixin.container-style(100vw, 500vh, space-between, center, column );
 
@@ -175,7 +172,7 @@ input[type="checkbox"]{
 header{
   @include mixin.container-style(100%, 2%, space-between, center);
   // background-color: var.$col-mid-gray;
-
+  
   &>h1{
     @include mixin.container-style(35%, 100%, center, center);
     padding-left: 5vw;
@@ -185,7 +182,7 @@ header{
   &>div{
     @include mixin.container-style(15%, 80%, center, center, column);
     // border: 3px solid black;
-    position: relative;
+    @include mixin.position(relative, 10000);
     
     &>div{
       @include mixin.container-style(15%, 80%, center, center, column);
@@ -213,11 +210,12 @@ header{
 main{
   @include mixin.container-style(100%, 93%, space-evenly, center, column);
   // background-color: var.$col-bright-gray;
+  @include mixin.position(relative, 1000);
 }
 
 #slide{
   @include mixin.container-style(100%, 10%, space-around, center);
-  background-color: aliceblue;
+  // background-color: aliceblue;
 
   &>div{
     @include mixin.container-style(100%, 100%, space-around, center);
@@ -229,29 +227,6 @@ main{
     }
   }
 
-  // &>div:nth-child(1){
-  //   @include mixin.container-style(100%, 90%, space-around, center);
-
-  //   &>div:nth-child(1){
-  //     @include mixin.container-style(100%, 100%, center, center);
-  //     background-color: deepskyblue;
-  //   }
-
-  //   @for$i from 2 through 4{
-  //     &>div:nth-child(#{$i}){
-  //       display: none;
-  //     }
-  //   }
-
-  // }
-
-  // &>ul{
-  //   @include mixin.container-style(20%, 5%, space-around, center);
-
-  //   &>li{
-  //     cursor: pointer;
-  //   }
-  // }
 }
 
 #best{
@@ -477,81 +452,3 @@ footer{
 
 }
 
-// #container{
-//   @include mixin.container-style(100vw, auto, center, center, column );
-// }
-
-// #section1{
-//   @include mixin.container-style(1000px, 600px, center, center, column );
-//   background-color: aliceblue;
-// }
-
-// #section2{
-//   @include mixin.container-style(1000px, 700px, center, center, column );
-//   background-color: antiquewhite;
-// }
-
-// #section3{
-//   @include mixin.container-style(1000px, 2830px, center, center, column );
-//   background-color: aqua;
-// }
-
-// #section4{
-//   @include mixin.container-style(1000px, 950px, center, center, column );
-//   background-color: aquamarine;
-
-// }
-
-// #section5{
-//   @include mixin.container-style(1000px, 300px, center, center, column );
-//   background-color: blueviolet;
-// }
-
-// #section6{
-//   @include mixin.container-style(1000px, 900px, center, center, column );
-//   background-color: brown;
-
-// }
-
-// #section7{
-//   @include mixin.container-style(1000px, 700px, center, center, column );
-//   background-color: cadetblue;
-// }
-
-// #section8{
-//   @include mixin.container-style(1000px, 850px, center, center, column );
-// background-color: chartreuse;
-// }
-
-// #section9{
-//   @include mixin.container-style(1000px, 1000px, center, center, column );
-// background-color: chocolate;
-// }
-
-// #section10{
-//   @include mixin.container-style(1000px, 1450px, center, center, column );
-// background-color: cornflowerblue;
-// }
-
-// #section11{
-//   @include mixin.container-style(1000px, 500px, center, center, column );
-//   background-color: crimson;
-// }
-
-// #footer{
-//   @include mixin.container-style(400px, 120px, center, center, column );
-  
-//   &>div:nth-child(1){
-//     @include mixin.container-style(100%, 50%, center, flex-end);
-//     @include mixin.font(2.5rem, 500, var.$col-mid-black);
-//     letter-spacing: 3vw;
-//     padding-left: 2.5vw;
-//     // background-color: antiquewhite;
-//   }
-
-//   &>div:nth-child(2){
-//     @include mixin.container-style(100%, 50%, center, flex-start);
-//     @include mixin.font(1rem, 400, var.$col-mid-black);
-//     // background-color: burlywood;
-//   }
-// }

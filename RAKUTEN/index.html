@@ -13,15 +13,15 @@
   <title>【楽天市場】A-SKIN 敏感な肌のための初めてのソリューション：エースキン[トップページ]</title>
 </head>
 <script src="https://kit.fontawesome.com/12e1deed84.js" crossorigin="anonymous"></script>
-<script src="./JS/jquery-1.12.4.js"></script>
-<script src="./JS/jquery-1.12.4.min.js"></script>
-<link rel="stylesheet" href="./JS/slick-1.8.1/slick/slick.css">
-<link rel="stylesheet" href="./JS/slick-1.8.1/slick/slick-theme.css">
-<script src="./JS/slick-1.8.1/slick/slick.js"></script>
-<script src="./JS/slick-1.8.1/slick/slick.min.js"></script>
+<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 <link rel="stylesheet" href="./CSS/style.css">
 <link rel="stylesheet" href="./CSS/desktop_ver.css">
-<script type="module" src="./JS/app.js" defer></script>
+<script type="module" src="./app.js" defer></script>
+
+
 
 <body>
   <div id="root">
@@ -184,6 +184,29 @@
       </div>
     </footer>
   </div>
-
+  <script>
+    $(function(){
+        $('.slider-box').slick({
+          infinite : true,     
+          slidesToShow : 3,     
+          slidesToScroll : 1,        
+          speed : 500,     
+          dots : true,        
+          autoplay : true,            
+          autoplaySpeed : 2000,         
+          pauseOnHover : true,      
+          vertical : false,        
+          draggable : false,     
+          responsive: [ 
+            {  
+              breakpoint: 700, 
+              settings: {
+                slidesToShow: 1
+              } 
+            }
+          ]
+        });
+    })
+    </script>
 </body>
 </html>
