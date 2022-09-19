@@ -98,6 +98,216 @@
 .menu__item:hover {
   background-color: #CFD8DC;
 }
+
+// slide---------------------------------------
+
+// start block slider-wrapper
+.srap-slider-wrapper {
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  // max-width: 1024px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+
+  // control buttons
+  .prevBtn, .nextBtn {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, .1);
+      position: absolute;
+      cursor: pointer;
+      z-index: 200;
+      top: 40%;
+      transition: .3s;
+
+      &:hover {
+          background: rgba(0, 0, 0, .5);
+      }
+  }
+
+  .nextBtn {
+      right: 10px;
+
+  }
+
+  .prevBtn {
+      left: 10px;
+  }
+
+  .arrow-left1{
+    width: 5px;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 3px;
+    transform: rotate(50deg);
+    position: relative;
+    left: 20px;
+    top: 5.5px;
+  }
+
+  .arrow-left2{
+    width: 5px;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 3px;
+    transform: rotate(-50deg);
+    position: relative;
+    left: 20px;
+    bottom: 6px;
+  }
+
+  .arrow-right1{
+    width: 5px;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 3px;
+    transform: rotate(-50deg);
+    position: relative;
+    left: 25px;
+    top: 5.5px;
+  }
+
+  .arrow-right2{
+    width: 5px;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 3px;
+    transform: rotate(50deg);
+    position: relative;
+    left: 25px;
+    bottom: 6px;
+  }
+
+  // start block srap-slider
+  .srap-slider {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      width: 100%;
+      box-sizing: border-box;
+      list-style: none;
+      position: relative;
+
+      .slide {
+          margin: 0;
+          padding: 0;
+          border: 0;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          z-index: 1;
+          left: 0;
+          transition-property: left;
+          transition-delay: 0;
+
+          img {
+              width: 100%;
+              font-size: 0;
+          }
+
+          .slide-content {
+              margin: 0;
+              padding: 0;
+              border: 0;
+              position: absolute;
+              bottom: 20%;
+              right: 30%;
+              left: 30%;
+              z-index: 100;
+          }
+      }
+
+      .active-prev {
+          left: -100%;
+          z-index: 2;
+      }
+
+      .active-default {
+          left: 0;
+          z-index: 3;
+      }
+
+      .active-next {
+          left: 100%;
+          z-index: 2;
+      }
+
+      .active-from-right {
+          z-index: 3;
+          animation-name: active-from-right;
+      }
+
+      .active-from-left {
+          z-index: 3;
+          animation-name: active-from-left;
+      }
+  }
+  // end block srap-slider
+
+  // start block indicators
+  .slider-indicators {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      width: 100%;
+      list-style: none;
+      position: absolute;
+      z-index: 200;
+      bottom: 5%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      .indicator {
+          cursor: pointer;
+          border-radius: 50%;
+          width: 15px;
+          height: 15px;
+          padding: 0;
+          border: 0;
+          margin: 0 10px;
+          background-color: rgba(255, 255, 255, .5);
+          transition: background-color 1s;
+
+          &:hover {
+              background-color: rgba(255, 255, 255, .7);
+          }
+      }
+
+      .indicator-active {
+          // background-color: rgba(255, 255, 255, .7);
+          background-color: rgba(255, 255, 255, 1);
+      }
+  }
+  // end block indicators
+}
+// end block slider-wrapper
+
+@keyframes active-from-right {
+  0%{
+      left: 100%;
+  }
+  100%{
+      left: 0;
+  }
+}
+
+
+@keyframes active-from-left {
+  0%{
+      left: -100%;
+  }
+  100%{
+      left: 0;
+  }
+}
 // class-setting-----------------------------------------
 
 #root{
