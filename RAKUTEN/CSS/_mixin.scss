@@ -1,9 +1,5 @@
 @use './var'as var;
 
-@mixin position($posi, $zindx) {
-  position: $posi;
-  z-index: $zindx;
-}
 
 @mixin flex($jus, $ali, $flexdirection : row) {
   display: flex;
@@ -37,7 +33,7 @@
   color: $col;
 }
 
-@mixin position($posi, $left, $top, $zin) {
+@mixin position($posi, $left:0, $top:0, $zin:100) {
   position: $posi;
   left: $left;
   top: $top;
