@@ -1,7 +1,9 @@
 @use './var'as var;
 
-@mixin position($posi, $zindx) {
+@mixin posi($posi, $top:0, $left:0, $zindx:100) {
   position: $posi;
+  top: $top;
+  left: $left;
   z-index: $zindx;
 }
 
