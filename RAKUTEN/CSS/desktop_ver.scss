@@ -5,8 +5,8 @@
 
 @media(min-width:1020px){
   #root{
-    // height: 400vh;
-    height: 100vh;
+    height: 400vh;
+    // height: 100vh;
   }
 
   header{
@@ -14,7 +14,7 @@
   
     &>h1{
       @include mixin.container-style(100%, 40%, flex-start, flex-end);
-      // border: solid 1px red;
+      border: solid 1px red;
       padding-left: 0vw;
     }
     
@@ -24,7 +24,8 @@
 
     &>ul{
       @include mixin.container-style(100%, 40%, space-around, center);
-      // border: solid 1px red;
+      border: solid 1px red;
+      margin-top: 2vh;
 
       &>li{
         list-style: none;

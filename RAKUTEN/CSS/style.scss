@@ -174,7 +174,7 @@ input[type="checkbox"]{
 
 header{
   @include mixin.container-style(100%, 2%, space-between, center);
-  background-color: var.$col-mid-gray;
+  // background-color: var.$col-mid-gray;
 
   &>h1{
     @include mixin.container-style(35%, 100%, center, center);
@@ -216,32 +216,42 @@ main{
 }
 
 #slide{
-  @include mixin.container-style(100%, 10%, space-around, center, column);
+  @include mixin.container-style(100%, 10%, space-around, center);
   background-color: aliceblue;
 
-  &>div:nth-child(1){
-    @include mixin.container-style(100%, 90%, space-around, center);
-
-    &>div:nth-child(1){
-      @include mixin.container-style(100%, 100%, center, center);
-      background-color: deepskyblue;
-    }
-
-    @for$i from 2 through 4{
-      &>div:nth-child(#{$i}){
-        display: none;
+  &>div{
+    @include mixin.container-style(100%, 100%, space-around, center);
+    &>div{
+      @include mixin.size(100%, 100%);
+      &>img{
+        @include mixin.size(100%, 100%);
       }
     }
-
   }
 
-  &>ul{
-    @include mixin.container-style(20%, 5%, space-around, center);
+  // &>div:nth-child(1){
+  //   @include mixin.container-style(100%, 90%, space-around, center);
 
-    &>li{
-      cursor: pointer;
-    }
-  }
+  //   &>div:nth-child(1){
+  //     @include mixin.container-style(100%, 100%, center, center);
+  //     background-color: deepskyblue;
+  //   }
+
+  //   @for$i from 2 through 4{
+  //     &>div:nth-child(#{$i}){
+  //       display: none;
+  //     }
+  //   }
+
+  // }
+
+  // &>ul{
+  //   @include mixin.container-style(20%, 5%, space-around, center);
+
+  //   &>li{
+  //     cursor: pointer;
+  //   }
+  // }
 }
 
 #best{
