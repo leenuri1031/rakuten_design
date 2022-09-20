@@ -42,7 +42,21 @@
   #slide{
       order: 1;
   }
+// slide-----------------------------------
+.item{
+  @include mixin.size(30%,100%);
+  margin-left: 2vw;
+}
 
+.slick-prev{
+  left: 2%;
+}
+
+.slick-next{
+  left: 94%;
+}
+
+// slide-----------------------------------
 
   #best{
     @include mixin.container-style(100%, 25%, space-around, center);

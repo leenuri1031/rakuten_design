@@ -27,7 +27,6 @@
   <div id="root">
     <!-- <img class="renewal" src="https://image.rakuten.co.jp/smartforyou/cabinet/renewal_.jpg"> -->
     <header>
-      <h1>A-SKIN</h1>
       <div class="hamburger-menu">
         <input id="menu__toggle" type="checkbox" />
         <label class="menu__btn" for="menu__toggle">
@@ -42,6 +41,7 @@
           <li><a class="menu__item" href="#">Event Products</a></li>
         </ul>
       </div>
+      <h1>A-SKIN</h1>
       <ul>
         <li>제품별</li>
         <li>피부 타입별</li>
@@ -54,12 +54,20 @@
 
     <main>
       <section id="slide">
-        <div id="slider-box">
-          <!-- <img src="https://image.rakuten.co.jp/smartforyou/cabinet/new_1.jpg" alt="">
-          <img  src="https://image.rakuten.co.jp/smartforyou/cabinet/new_2.jpg" alt="">
-          <img  src="https://image.rakuten.co.jp/smartforyou/cabinet/new_3.jpg" alt="">
-          <img  src="https://image.rakuten.co.jp/smartforyou/cabinet/new_4.jpg" alt=""> -->
-        </div>
+          <div class="slider">
+            <div class="item">
+              <img src="https://image.rakuten.co.jp/smartforyou/cabinet/new_1.jpg" alt="">
+            </div>
+            <div class="item">
+              <img  src="https://image.rakuten.co.jp/smartforyou/cabinet/new_2.jpg" alt="">
+            </div>
+            <div class="item">
+              <img  src="https://image.rakuten.co.jp/smartforyou/cabinet/new_3.jpg" alt="">
+            </div>
+            <div class="item">
+              <img  src="https://image.rakuten.co.jp/smartforyou/cabinet/new_4.jpg" alt="">
+            </div>
+          </div>
       </section>
 
       <section id="best">
@@ -176,28 +184,29 @@
     </footer>
   </div>
   <script>
-    // $(function(){
-    //     $('.slider-box').slick({
-    //       infinite : true,     
-    //       slidesToShow : 3,     
-    //       slidesToScroll : 1,        
-    //       speed : 500,     
-    //       dots : true,        
-    //       autoplay : true,            
-    //       autoplaySpeed : 2000,         
-    //       pauseOnHover : true,      
-    //       vertical : false,        
-    //       draggable : false,     
-    //       responsive: [ 
-    //         {  
-    //           breakpoint: 700, 
-    //           settings: {
-    //             slidesToShow: 1
-    //           } 
-    //         }
-    //       ]
-    //     });
-    // })
+    $(function(){
+        $('.slider').slick({
+          rows:1,
+          infinite : true,     
+          slidesToShow : 3,     
+          slidesToScroll : 1,        
+          speed : 500,     
+          dots : true,        
+          autoplay : true,            
+          autoplaySpeed : 2000,         
+          pauseOnHover : true,      
+          vertical : false,        
+          draggable : false,     
+          responsive: [ 
+            {  
+              breakpoint: 700, 
+              settings: {
+                slidesToShow: 1
+              } 
+            }
+          ]
+        });
+    });
     </script>
 </body>
 </html>
