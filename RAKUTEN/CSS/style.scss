@@ -167,6 +167,7 @@ main{
   .slide-wrap{
     @include mixin.container-style(100%,100%, center,center, column);
     position: relative;
+    z-index: -1;
   }
 
   .slide-box{
@@ -176,7 +177,7 @@ main{
   }
 
   .slide-list{
-    width: 2560px;
+    width: 100%;
     height: 100%;
   }
 

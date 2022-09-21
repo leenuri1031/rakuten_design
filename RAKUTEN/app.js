@@ -1,23 +1,23 @@
-let div = document.querySelector('.slide-list');
-let clone = div.firstElementChild.cloneNode(true);
-div.appendChild(clone);
+// let div = document.querySelector('.slide-list');
+// let clone = div.firstElementChild.cloneNode(true);
+// div.appendChild(clone);
 
-function move(){
-  let current = 0;
-  setInterval(function(){
-    div.style.transition = '0.2s';
-    div.style.transform = 'translate3d(-'+200*(curIndex+1)+'px, 0px, 0px)';
-    current++;
+// function move(){
+//   let current = 0;
+//   setInterval(function(){
+//     div.style.transition = '0.2s';
+//     div.style.transform = 'translate3d(-'+200*(curIndex+1)+'px, 0px, 0px)';
+//     current++;
 
-    if(current === 5){
-      setTimeout(function(){
-        div.style.transition = '0s';
-        div.style.transform = 'translate3d(0px, 0px, 0px)';
-        current = 0;
-      },1000);
-    }
-  }, 1000);
-}
+//     if(current === 5){
+//       setTimeout(function(){
+//         div.style.transition = '0s';
+//         div.style.transform = 'translate3d(0px, 0px, 0px)';
+//         current = 0;
+//       },1000);
+//     }
+//   }, 1000);
+// }
 // var ul = document.querySelector('.slide_wrap');
 // var firstItemClone = ul.firstElementChild.cloneNode(true);
 // ul.appendChild(firstItemClone);
@@ -62,3 +62,4 @@ function move(){
 
 //   },1000);
 // }
+
