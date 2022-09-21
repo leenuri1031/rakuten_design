@@ -39,13 +39,6 @@
   color: $col;
 }
 
-@mixin position($posi, $left, $top, $zin) {
-  position: $posi;
-  left: $left;
-  top: $top;
-  z-index: $zin;
-}
-
 @mixin menu-style($col, $opacity, $mode:horizontal-tb, $orientation:unset) {
   padding-top: 2vh;
   writing-mode: $mode;

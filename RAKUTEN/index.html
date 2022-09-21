@@ -13,61 +13,151 @@
   <title>【楽天市場】A-SKIN 敏感な肌のための初めてのソリューション：エースキン[トップページ]</title>
 </head>
 <script src="https://kit.fontawesome.com/12e1deed84.js" crossorigin="anonymous"></script>
-<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+<script src="/JS/jquery-1.12.4.js"></script>
+<script src="/JS/slick-1.8.1/slick/slick.js"></script>
+<link rel="stylesheet" href="/JS/slick-1.8.1/slick/slick.css" />
+<link rel="stylesheet" href="/JS/slick-1.8.1/slick/slick-theme.css" />
 <link rel="stylesheet" href="./CSS/style.css">
 <link rel="stylesheet" href="./CSS/desktop_ver.css">
 <script type="module" src="./app.js" defer></script>
 
 
 
-<body>
+<body oncontextmenu='return false' 
+onselectstart='return false' ondragstart='return false'>
   <div id="root">
-    <!-- <img class="renewal" src="https://image.rakuten.co.jp/smartforyou/cabinet/renewal_.jpg"> -->
     <header>
-      <div class="hamburger-menu">
-        <input id="menu__toggle" type="checkbox" />
-        <label class="menu__btn" for="menu__toggle">
-          <span></span>
-        </label>
-        <ul class="menu__box">
-          <li><a class="menu__item" href="#">Products</a></li>
-          <li><a class="menu__item" href="#">Type of Skin</a></li>
-          <li><a class="menu__item" href="#">Skin Problem</a></li>
-          <li><a class="menu__item" href="#">Products Set</a></li>
-          <li><a class="menu__item" href="#">Best Products</a></li>
-          <li><a class="menu__item" href="#">Event Products</a></li>
-        </ul>
-      </div>
-      <h1>A-SKIN</h1>
-      <ul>
-        <li>제품별</li>
-        <li>피부 타입별</li>
-        <li>피부 고민별</li>
-        <li>세트 상품</li>
-        <li>인기 상품</li>
-        <li>이벤트 상품</li>
-      </ul>
+      <section id="mobile-area">
+        <div class="hamburger-menu">
+          <input id="menu__toggle" type="checkbox" />
+          <label class="menu__btn" for="menu__toggle">
+            <span></span>
+          </label>
+          <ul class="menu__box">
+            <li><a class="menu__item" href="#">Products</a></li>
+            <li><a class="menu__item" href="#">Type of Skin</a></li>
+            <li><a class="menu__item" href="#">Skin Problem</a></li>
+            <li><a class="menu__item" href="#">Products Set</a></li>
+            <li><a class="menu__item" href="#">Best Products</a></li>
+            <li><a class="menu__item" href="#">Event Products</a></li>
+          </ul>
+        </div>
+        <div class="logo">
+          <div>A S K I N</div>
+          <div></div>
+        </div>
+      </section>
+      <!-- mobile-ver-header -->
+      <section id="desktop-area">
+        <div>
+          <div>
+            <a href="https://www.rakuten.ne.jp/gold/smartforyou/" target="_top">
+              <div></div>
+              <div>A S K I N</div>
+            </a>
+          </div>     
+          <!-- logo&title -->
+          <div class="site-menu-container">
+            <div class="site-menu"><a href="https://www.rakuten.co.jp/smartforyou/info.html" target="_blank" title="会社概要">COMPANY</a></div>
+            <div class="site-menu"><a href="https://www.rakuten.co.jp/smartforyou/info2.html" target="_blank" title="お買い物ガイド">SHOPPING INFORMATION</a></div>
+            <div class="site-menu"><a href="https://basket.step.rakuten.co.jp/rms/mall/bs/cart/?shop_bid=280427" target="_blank" title="カート">SHOPPING CART</a></div>
+            <div class="site-menu"><a href="https://ask.step.rakuten.co.jp/inquiry-form/?page=simple-inquiry-top&act=login&ms=500&shop_id=280427" target="_blank" title="お問い合わせ">Q＆A</a></div>
+            <div class="site-menu"><a href="https://www.rakuten.co.jp" target="_blank" title="楽天へ">RAKUTEN HOME</a></div>
+          </div>
+        </div>
+        <!-- header-top -->
+        <div>
+          <div>
+            <div class="dropdown">
+              <button class="dropdown-btn">A-SKIN</button>
+              <div class="item">
+                <a href="#">About A-skin</a>
+                <a href="#">Brand Story</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropdown-btn">Products</button>
+              <div class="item">
+                <a href="#">Skin/Toner</a>
+                <a href="#">Cream/Lotion</a>
+                <a href="#">Essence/Ampoule</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropdown-btn">Skin Type</button>
+              <div class="item">
+                <a href="#">Sensitive</a>
+                <a href="#">Dry Skin</a>
+                <a href="#">Oily Skin</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropdown-btn">Skin Trouble</button>
+              <div class="item">
+                <a href="#">Soothing</a>
+                <a href="#">Moisture</a>
+                <a href="#">Elasticity</a>
+                <a href="#">Pimple</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropdown-btn">Set</button>
+              <div class="item">
+                <a href="#">Soothing Set</a>
+                <a href="#">Repair Set</a>
+                <a href="#">Trouble Set</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropdown-btn">Best</button>
+            </div>
+          </div>
+          <div>
+            <div class="search-box">
+              <form accept-charset="euc-jp" method="get" action="http://esearch.rakuten.co.jp/rms/sd/esearch/vc" target="_top" onclick="document.charset='EUC-JP'; document.rakutenSubmit.submit();">
+                <input type="hidden" name="sv" value="6">
+                <input type="hidden" name="sid" value="280427">
+                <input type="hidden" name="su" value="smartforyou">
+                <input type="hidden" name="sn" value="smartforyou">
+                <input type="hidden" name="f" value="A">
+                <input name="v" value="3" type="hidden">
+                <input type="text" name="sitem" class="text-area" value="キーワードを入力してください" onFocus="if( this.value == 'キーワードを入力してください' ) { this.value = ''; } " onBlur="if( this.value == '' ) { this.value = 'キーワードを入力してください'; } ">
+                <input type="image" src="https://image.rakuten.co.jp/smartforyou/cabinet/search_bt.jpg" class="search-btn" value="検索" alt="検索">
+              </form>	
+            </div>
+          </div> 
+        </div>
+        <!-- header-bottom -->
+      </section>
+      <!-- desktop-ver-header -->
     </header>
 
     <main>
-      <section id="slide">
-          <div class="slider">
-            <div class="item">
-              <img src="https://image.rakuten.co.jp/smartforyou/cabinet/new_1.jpg" alt="">
-            </div>
-            <div class="item">
-              <img  src="https://image.rakuten.co.jp/smartforyou/cabinet/new_2.jpg" alt="">
-            </div>
-            <div class="item">
-              <img  src="https://image.rakuten.co.jp/smartforyou/cabinet/new_3.jpg" alt="">
-            </div>
-            <div class="item">
-              <img  src="https://image.rakuten.co.jp/smartforyou/cabinet/new_4.jpg" alt="">
+      <section id="slider">
+        <div class="slide-wrap">
+
+          <div class="slide-box">
+            <div class="slide-list">
+              <div class="item slide1 slide-active"></div>
+              <div class="item slide2"></div>
+              <div class="item slide3"></div>
+              <div class="item slide4"></div>
             </div>
           </div>
+          <!-- slide-box -->
+          
+          <div class="slide-btn">
+            <button type="button" class="prev">Prev</button>
+            <button type="button" class="next">Next</button>
+          </div>
+          <!-- slide-btn -->
+          <ul class="slide-nav">
+            <li class="dot dot-active" data-index="0"><a href="#"></a></li>
+            <li class="dot" data-index="1"><a href="#"></a></li>
+            <li class="dot" data-index="2"><a href="#"></a></li>
+            <li class="dot" data-index="3"><a href="#"></a></li>
+          </ul>
+        </div>
       </section>
 
       <section id="best">
@@ -142,8 +232,8 @@
           </div>
         </div>
       </section>
-      <section id="set">
 
+      <section id="set">
         <div>세트 상품</div>
         <div>
           <div>
@@ -163,6 +253,7 @@
           </div>
         </div>
       </section>
+
     </main>
 
     <footer>
@@ -182,31 +273,32 @@
         </div>
       </div>
     </footer>
+
   </div>
   <script>
-    $(function(){
-        $('.slider').slick({
-          rows:1,
-          infinite : true,     
-          slidesToShow : 3,     
-          slidesToScroll : 1,        
-          speed : 500,     
-          dots : true,        
-          autoplay : true,            
-          autoplaySpeed : 2000,         
-          pauseOnHover : true,      
-          vertical : false,        
-          draggable : false,     
-          responsive: [ 
-            {  
-              breakpoint: 700, 
-              settings: {
-                slidesToShow: 1
-              } 
-            }
-          ]
-        });
-    });
+    // $(function(){
+    //     $('.slider').slick({
+    //       rows:1,
+    //       infinite : true,     
+    //       slidesToShow : 3,     
+    //       slidesToScroll : 1,        
+    //       speed : 500,     
+    //       dots : true,        
+    //       autoplay : true,            
+    //       autoplaySpeed : 2000,         
+    //       pauseOnHover : true,      
+    //       vertical : false,        
+    //       draggable : false,     
+    //       responsive: [ 
+    //         {  
+    //           breakpoint: 700, 
+    //           settings: {
+    //             slidesToShow: 1
+    //           } 
+    //         }
+    //       ]
+    //     });
+    // });
     </script>
 </body>
 </html>
