@@ -139,136 +139,149 @@ header{
     display: none;
   }
   
-  
-  // &>div{
-  //   @include mixin.container-style(20%, 100%, center, center);
-  //   // border: 1px solid salmon;
-  // }
 
-  // &>ul{
-  //   display: none;
-  // }
 }
 
 
 
 main{
-  @include mixin.container-style(100%, 93%, space-evenly, center, column);
-  // background-color: var.$col-bright-gray;
-
-  // &>section:nth-child(1){
-  //   @include mixin.size(100%, 10%);
-  // }
+  @include mixin.container-style(100%, 90%, space-around, center, column);
+// background-color: chartreuse;
 }
-  #slider{
-    @include mixin.container-style(100%,10%, center, center);
-  }
 // slide-----------------------------------
-  .slide-wrap{
-    @include mixin.container-style(100%,100%, center,center, column);
-    position: relative;
-    z-index: -1;
-  }
 
-  .slide-box{
-    @include mixin.container-style(100%,90%, center,center);
-    // border: 5px blue solid;
-    overflow: hidden;
-  }
+#slider-wrap {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  // z-index: -1;
+}
 
-  .slide-list{
-    width: 100%;
-    height: 100%;
-  }
+#slider-wrap ul#slider {
+  width: 400%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
-  .item{
-    @include mixin.size(100%, 100%);
-  }
+#slider-wrap ul#slider li {
+  float: left;
+  position: relative;
+  width: 640px;
+  height: 100%;
+}
 
-  .slide1{background-color:#ddbdff ;}
+#slider-wrap ul#slider li img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 
-  .slide2{background-color:#9fd6c2;}
+/*btns*/
+.slider-btns {
+  position: absolute;
+  width: 50px;
+  height: 60px;
+  top: 50%;
+  margin-top: -25px;
+  line-height: 57px;
+  text-align: center;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  -webkit-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
 
-  .slide3{background-color:#abe2f7 ;}
+.slider-btns:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
 
-  .slide4{background-color:#f08c78 ;}
+#next {
+  right: -50px;
+  border-radius: 7px 0px 0px 7px;
+  color: #eee;
+}
 
-  .slide-btn{
-    display: flex;
-    &>button{
-      @include mixin.container-style(40px,40px, center, center);
-      position: absolute;
-      top: 40%;
-      color: #999; 
-      background: rgba(255, 255, 255, 0.2); 
-      border-radius: 50%;
-      border: none; 
-      cursor: pointer;
-    }
+#previous {
+  left: -50px;
+  border-radius: 0px 7px 7px 7px;
+  color: #eee;
+}
 
-    &>button:hover{
-      color: rgb(14, 14, 14);
-    }
-  }
+#slider-wrap.active #next {
+  right: 0px;
+}
 
-  .prev{
-    left: 1%;
-  }
+#slider-wrap.active #previous {
+  left: 0px;
+}
 
-  .next{
-    right: 1%;
-  }
+/*bar*/
+#slider-pagination-wrap {
+  min-width: 20px;
+  margin-top: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 15px;
+  position: relative;
+  text-align: center;
+}
 
-  .slide-nav{
-    @include mixin.container-style(50%,10%, space-around, center);
-    list-style: none; 
-  }
+#slider-pagination-wrap ul {
+  width: 100%;
+}
 
-  .dot {
-    width: 15px; 
-    height: 15px; 
-    overflow: hidden; 
-    background: #ddd; 
-    border-radius: 50%; 
-    transition: 0.5s;
-    }
+#slider-pagination-wrap ul li {
+  margin: 0 4px;
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.5;
+  position: relative;
+  top: 0;
+}
 
-  .dot:hover{
-    background: #333; 
-  }
+#slider-pagination-wrap ul li.active {
+  width: 12px;
+  height: 12px;
+  top: 3px;
+  opacity: 1;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 0px;
+}
 
-  .dot_active { background: #333; }
-
-  .dot a { 
-    display: block; 
-    width: 100%; 
-    height: 100%; }
+/*ANIMATION*/
+#slider-wrap ul,
+#slider-pagination-wrap ul li {
+  -webkit-transition: all 0.3s cubic-bezier(1, .01, .32, 1);
+  -o-transition: all 0.3s cubic-bezier(1, .01, .32, 1);
+  transition: all 0.3s cubic-bezier(1, .01, .32, 1);
+}
 
 // slide-----------------------------------
 
 #best{
-  @include mixin.container-style(100%, 50%, space-between, center, column);
-  background-color: aqua;
+  @include mixin.container-style(100%, 40%, space-evenly, center, column);
+  // background-color: aqua;
 
   &>div{
     @include mixin.container-style(100%,24.5%, center, center);
-    border: solid 2px black;
-  }
+    // border: solid 2px black;
 
-  &>div:nth-child(1){
-    background-color: wheat;
-  }
-
-  &>div:nth-child(2){
-    background-color: royalblue;
-  }
-
-  &>div:nth-child(3){
-    background-color: palevioletred;
-  }
-
-  &>div:nth-child(4){
-    background-color: teal;
+    &>a{
+      @include mixin.container-style(100%,100%, center, center);
+      
+          &>img{
+            @include mixin.container-style(100%,100%, center, center);
+          }
+    }
+    // cursor: pointer;
   }
 
 }
@@ -322,7 +335,7 @@ main{
 }
 
 #recommend{
-  @include mixin.container-style(100%, 5%, space-between, center, column);
+  @include mixin.container-style(100%, 8%, space-between, center, column);
   background-color: antiquewhite;
 
   &>div:first-child{
@@ -359,7 +372,7 @@ main{
 }
 
 #popular{
-  @include mixin.container-style(100%, 5%, space-between, center, column);
+  @include mixin.container-style(100%, 8%, space-between, center, column);
   background-color: green;
 
   &>div:first-child{
@@ -395,8 +408,9 @@ main{
   }
 }
 
-#popular{
-  @include mixin.container-style(100%, 5%, space-between, center, column);
+
+#set{
+  @include mixin.container-style(100%, 8%, space-between, center, column);
   background-color: darkorange;
 
   &>div:first-child{
@@ -433,7 +447,7 @@ main{
 }
 
 footer{
-  @include mixin.container-style(100%, 5%, space-around, center, column);
+  @include mixin.container-style(100%, 8%, space-around, center, column);
   background-color: var.$col-dark-gray;
 
   &>div:nth-child(1){

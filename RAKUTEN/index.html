@@ -19,15 +19,14 @@
 <link rel="stylesheet" href="/JS/slick-1.8.1/slick/slick-theme.css" />
 <link rel="stylesheet" href="./CSS/style.css">
 <link rel="stylesheet" href="./CSS/desktop_ver.css">
-<script type="module" src="./app.js" defer></script>
 
 
 
 <body oncontextmenu='return false' 
 onselectstart='return false' ondragstart='return false'>
-  <div id="root">
-    <header>
-      <section id="mobile-area">
+<div id="root">
+  <header>
+    <section id="mobile-area">
         <div class="hamburger-menu">
           <input id="menu__toggle" type="checkbox" />
           <label class="menu__btn" for="menu__toggle">
@@ -131,42 +130,49 @@ onselectstart='return false' ondragstart='return false'>
       </section>
       <!-- desktop-ver-header -->
     </header>
-
+    
     <main>
-      <section id="slider">
-        <div class="slide-wrap">
-
-          <div class="slide-box">
-            <div class="slide-list">
-              <div class="item slide1 slide-active"></div>
-              <div class="item slide2"></div>
-              <div class="item slide3"></div>
-              <div class="item slide4"></div>
-            </div>
-          </div>
-          <!-- slide-box -->
-          
-          <div class="slide-btn">
-            <button type="button" class="prev">Prev</button>
-            <button type="button" class="next">Next</button>
-          </div>
-          <!-- slide-btn -->
-          <ul class="slide-nav">
-            <li class="dot dot-active" data-index="0"><a href="#"></a></li>
-            <li class="dot" data-index="1"><a href="#"></a></li>
-            <li class="dot" data-index="2"><a href="#"></a></li>
-            <li class="dot" data-index="3"><a href="#"></a></li>
-          </ul>
+      <section id="slider-wrap">
+        <ul id="slider">
+          <li><img src="https://image.rakuten.co.jp/smartforyou/cabinet/azulen.jpg" alt=""></li>
+          <li><img src="https://image.rakuten.co.jp/smartforyou/cabinet/soothing.jpg" alt=""></li>
+          <li><img src="https://image.rakuten.co.jp/smartforyou/cabinet/repair.jpg" alt=""></li>
+          <li><img src="https://image.rakuten.co.jp/smartforyou/cabinet/mgfplus.jpg" alt=""></li>
+        </ul>
+        <div class="slider-btns" id="next">
+          <span>▶</span>
+        </div>
+        <div class="slider-btns" id="previous">
+          <span>◀</span>
+        </div>
+        <div id="slider-pagination-wrap">
+          <ul></ul>
         </div>
       </section>
-
+      
       <section id="best">
-        <div>제품 1</div>
-        <div>제품 2</div>
-        <div>제품 3</div>
-        <div>제품 4</div>
+        <div>
+          <a href="#">
+            <img src="https://image.rakuten.co.jp/smartforyou/cabinet/azulen-ampolue/azulen_ampolue_2.jpg" alt="">
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <img src="https://image.rakuten.co.jp/smartforyou/cabinet/repair-ampolue/repair_ampolue.jpg" alt="">
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <img src="https://image.rakuten.co.jp/smartforyou/cabinet/soothing-ampolue/soothing_ampolue.jpg" alt="">
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <img src="https://image.rakuten.co.jp/smartforyou/cabinet/mgf-pleu-cream/mgf_plus_cream.jpg" alt="">
+          </a>
+        </div>
       </section>
-
+      
       <section id="brand">
         <div>브랜드스토리</div>
         <ul>
@@ -176,7 +182,7 @@ onselectstart='return false' ondragstart='return false'>
           <li></li>
         </ul>
       </section>
-
+      
       <section id="categories">
         <div>categories</div>
         <div>
@@ -190,7 +196,7 @@ onselectstart='return false' ondragstart='return false'>
           <div>지성</div>
         </div>
       </section>
-
+      
       <section id="recommend">
         <div>추천 상품</div>
         <div>
@@ -211,7 +217,7 @@ onselectstart='return false' ondragstart='return false'>
           </div>
         </div>
       </section>
-
+      
       <section id="popular">
         <div>인기 상품</div>
         <div>
@@ -232,7 +238,7 @@ onselectstart='return false' ondragstart='return false'>
           </div>
         </div>
       </section>
-
+      
       <section id="set">
         <div>세트 상품</div>
         <div>
@@ -253,9 +259,9 @@ onselectstart='return false' ondragstart='return false'>
           </div>
         </div>
       </section>
-
+      
     </main>
-
+    
     <footer>
       <div>Shopping Guid</div>
       <div>
@@ -273,32 +279,11 @@ onselectstart='return false' ondragstart='return false'>
         </div>
       </div>
     </footer>
-
+    
   </div>
+  <script  src="./app.js"></script>
   <script>
-    // $(function(){
-    //     $('.slider').slick({
-    //       rows:1,
-    //       infinite : true,     
-    //       slidesToShow : 3,     
-    //       slidesToScroll : 1,        
-    //       speed : 500,     
-    //       dots : true,        
-    //       autoplay : true,            
-    //       autoplaySpeed : 2000,         
-    //       pauseOnHover : true,      
-    //       vertical : false,        
-    //       draggable : false,     
-    //       responsive: [ 
-    //         {  
-    //           breakpoint: 700, 
-    //           settings: {
-    //             slidesToShow: 1
-    //           } 
-    //         }
-    //       ]
-    //     });
-    // });
-    </script>
+    
+  </script>
 </body>
 </html>

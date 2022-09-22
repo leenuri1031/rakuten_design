@@ -3,7 +3,7 @@
 @use './basic';
 // -------------------------------------------
 
-@media(min-width:1020px){
+@media(min-width:1024px){
   #root{
     height: 400vh;
     // height: 100vh;
@@ -147,38 +147,48 @@
   }
   // search-box-class-setting------------------------------
 
-
-
-
   main{
     width: 75%;
     border: 5px solid black;
   }
 
-
-
-
-
 // slide-----------------------------------
 
-  #slide{
-      order: 1;
-  }
-// slide-----------------------------------
+#slider-wrap {
+  width: 100%;
+}
+
+#slider-wrap ul#slider {
+  width: 400%;
+}
+
+#slider-wrap ul#slider li {
+  @include mixin.container-style(100%,100%, center, center);
+  position: relative;
+}
 
 
-// .item{
-//   // border: solid black 1px;
-//   margin-left: 2vw;
-// }
+#slider-wrap ul#slider li img {
+  display: flex;
+  width: 50%;
+}
 
-// .slick-prev{
-//   left: 2%;
-// }
+#next {
+  right: -50px;
+}
 
-// .slick-next{
-//   left: 94%;
-// }
+#previous {
+  left: -50px;
+}
+
+#slider-wrap.active #next {
+  right: 0px;
+}
+
+#slider-wrap.active #previous {
+  left: 0px;
+}
+
 
 // slide-----------------------------------
 
