@@ -132,21 +132,32 @@ onselectstart='return false' ondragstart='return false'>
     </header>
     
     <main>
-      <section id="slider-wrap">
-        <ul id="slider">
-          <li><img src="https://image.rakuten.co.jp/smartforyou/cabinet/azulen.jpg" alt=""></li>
-          <li><img src="https://image.rakuten.co.jp/smartforyou/cabinet/soothing.jpg" alt=""></li>
-          <li><img src="https://image.rakuten.co.jp/smartforyou/cabinet/repair.jpg" alt=""></li>
-          <li><img src="https://image.rakuten.co.jp/smartforyou/cabinet/mgfplus.jpg" alt=""></li>
-        </ul>
-        <div class="slider-btns" id="next">
-          <span>▶</span>
+      <section id="slide">
+        <div class="slider">
+          <div class="item">
+            <a href="#">
+              <img src="https://image.rakuten.co.jp/smartforyou/cabinet/azulen_1.jpg" alt="">
+            </a>
+          </div>
+          <div class="item">
+            <a href="#">
+              <img src="https://image.rakuten.co.jp/smartforyou/cabinet/soothing_1.jpg" alt="">
+            </a>
+          </div>
+          <div class="item">
+            <a href="#">
+              <img src="https://image.rakuten.co.jp/smartforyou/cabinet/repair_1.jpg" alt="">
+            </a>
+          </div>
+          <div class="item">
+            <a href="#">
+              <img src="https://image.rakuten.co.jp/smartforyou/cabinet/mgfplus_1.jpg" alt="">
+              </a>
+          </div>
         </div>
-        <div class="slider-btns" id="previous">
-          <span>◀</span>
-        </div>
-        <div id="slider-pagination-wrap">
-          <ul></ul>
+        <div class="btn">
+          <span id="prevArrow"><img src="./IMG/arrow_left.png" alt=""></span>
+          <span id="nextArrow"><img src="./IMG/arrow_right.png" alt=""></span>
         </div>
       </section>
       
@@ -172,6 +183,7 @@ onselectstart='return false' ondragstart='return false'>
           </a>
         </div>
       </section>
+      <!-- pc버전에 맞는 이미지 변경예정 -->
       
       <section id="brand">
         <div>브랜드스토리</div>
@@ -281,9 +293,33 @@ onselectstart='return false' ondragstart='return false'>
     </footer>
     
   </div>
-  <script  src="./app.js"></script>
   <script>
-    
-  </script>
+        $(function(){
+          $('.slider').slick({
+          rows:1,
+          infinite : true,     
+          slidesToShow : 3,     
+          slidesToScroll : 1,        
+          speed : 500,     
+          dots : true,        
+          autoplay : true,            
+          autoplaySpeed : 2000,         
+          pauseOnHover : true,      
+          vertical : false,        
+          draggable : false,   
+          prevArrow : $('#prevArrow'), 
+          nextArrow : $('#nextArrow'),   
+          responsive: [ 
+              {  
+                  breakpoint: 700, 
+                  settings: {
+                      slidesToShow: 1
+                    } 
+                  }
+                ]
+              });
+          });
+          </script>
+  <script  src="./app.js"></script>
 </body>
 </html>

@@ -107,6 +107,8 @@
 header{
   @include mixin.container-style(100%, 2%, space-around, center);
   // background-color: salmon;
+  position: relative;
+  z-index: 1;
 
   &>section:first-child{
     @include mixin.container-style(100%, 100%, center, center);
@@ -149,119 +151,78 @@ main{
 // background-color: chartreuse;
 }
 // slide-----------------------------------
-
-#slider-wrap {
-  width: 100%;
-  height: 400px;
+#slide{
+  @include mixin.container-style(100%, 12%, center, center);
   position: relative;
-  overflow: hidden;
-  // z-index: -1;
+  // z-index: -10;
+
 }
 
-#slider-wrap ul#slider {
-  width: 400%;
-  height: 100%;
+.slider{
+  @include mixin.container-style(100%, 100%, center, center);
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 5%;
 }
 
-#slider-wrap ul#slider li {
-  float: left;
-  position: relative;
-  width: 640px;
-  height: 100%;
+.slick-list{
+  @include mixin.size(100%, 90%);
 }
 
-#slider-wrap ul#slider li img {
-  display: block;
-  width: 100%;
-  height: 100%;
+.slick-track{
+  @include mixin.size(100%, 100%);
 }
 
-/*btns*/
-.slider-btns {
+.slick-slide{
+  @include mixin.size(100%, 100%);
+  
+    &>div{
+      @include mixin.size(100%, 80%);
+    }
+}
+
+.item{
+  @include mixin.size(100%, 100%);
+
+  // border: 2px solid black;
+
+  &>a{
+    @include mixin.size(100%, 100%);
+    &>img{
+      @include mixin.size(100%, 100%);
+      object-fit: cover;
+    }
+  }
+}
+
+.btn{
+  @include mixin.container-style(100%, 10%, space-between, center);
   position: absolute;
-  width: 50px;
-  height: 60px;
-  top: 50%;
-  margin-top: -25px;
-  line-height: 57px;
-  text-align: center;
-  cursor: pointer;
-  background: rgba(0, 0, 0, 0.1);
-  z-index: 100;
-  -webkit-transition: all 0.1s ease;
-  -o-transition: all 0.1s ease;
-  transition: all 0.1s ease;
+
+  &>span{
+    @include mixin.container-style(25px, 25px, center, center);
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.7;
+    cursor: pointer;
+
+    &>img{
+    @include mixin.size(100%, 100%);
+    }
+  }
+
+  &>span:hover{
+    opacity: 1;
+    background-color: rgb(222, 222, 222);
+  }
 }
 
-.slider-btns:hover {
-  background: rgba(0, 0, 0, 0.3);
-}
+#prevArrow{position: relative; left: 1%;  top: -55%;}
+#nextArrow{position: relative; right: 1%; top: -55%;}
 
-#next {
-  right: -50px;
-  border-radius: 7px 0px 0px 7px;
-  color: #eee;
-}
-
-#previous {
-  left: -50px;
-  border-radius: 0px 7px 7px 7px;
-  color: #eee;
-}
-
-#slider-wrap.active #next {
-  right: 0px;
-}
-
-#slider-wrap.active #previous {
-  left: 0px;
-}
-
-/*bar*/
-#slider-pagination-wrap {
-  min-width: 20px;
-  margin-top: 350px;
-  margin-left: auto;
-  margin-right: auto;
-  height: 15px;
-  position: relative;
-  text-align: center;
-}
-
-#slider-pagination-wrap ul {
-  width: 100%;
-}
-
-#slider-pagination-wrap ul li {
-  margin: 0 4px;
-  display: inline-block;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: #fff;
-  opacity: 0.5;
-  position: relative;
-  top: 0;
-}
-
-#slider-pagination-wrap ul li.active {
-  width: 12px;
-  height: 12px;
-  top: 3px;
-  opacity: 1;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 0px;
-  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 0px;
-}
-
-/*ANIMATION*/
-#slider-wrap ul,
-#slider-pagination-wrap ul li {
-  -webkit-transition: all 0.3s cubic-bezier(1, .01, .32, 1);
-  -o-transition: all 0.3s cubic-bezier(1, .01, .32, 1);
-  transition: all 0.3s cubic-bezier(1, .01, .32, 1);
+.slick-dots{
+  @include mixin.container-style(100%, 5%, center, center);
+  position: absolute;
+  top: 80%;
 }
 
 // slide-----------------------------------
@@ -271,7 +232,7 @@ main{
   // background-color: aqua;
 
   &>div{
-    @include mixin.container-style(100%,24.5%, center, center);
+    @include mixin.container-style(100%,24%, center, center);
     // border: solid 2px black;
 
     &>a{
@@ -287,7 +248,7 @@ main{
 }
 
 #brand{
-  @include mixin.container-style(100%, 10%, space-between, center, column);
+  @include mixin.container-style(100%, 12%, space-evenly, center, column);
   background-color: darkkhaki;
   
   &>div{
@@ -297,8 +258,12 @@ main{
 
   &>ul{
     @include mixin.container-style(20%, 5%, space-around, center);
+    border: #2c2c2c solid 1px;
 
     &>li{
+      @include mixin.size(10px, 10px);
+      background-color: #fff;
+      border-radius: 50%;
       cursor: pointer;
     }
   }
@@ -322,16 +287,7 @@ main{
     }
   }
 
-  // &>div:nth-child(2){
-  //   @include mixin.container-style(80%, 40%, space-around, center);
-  //   &>div{
-  //     cursor: pointer;
-  //   }
-  // }
 
-  // &>div:nth-child(3){
-  //   @include mixin.container-style(80%, 40%, space-around, center);
-  // }
 }
 
 #recommend{

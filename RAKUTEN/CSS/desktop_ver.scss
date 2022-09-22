@@ -149,51 +149,35 @@
 
   main{
     width: 75%;
-    border: 5px solid black;
+    // border: 5px solid black;
   }
 
 // slide-----------------------------------
+#slide{
+  @include mixin.container-style(100%, 15%, center, center);
 
-#slider-wrap {
-  width: 100%;
-}
-
-#slider-wrap ul#slider {
-  width: 400%;
-}
-
-#slider-wrap ul#slider li {
-  @include mixin.container-style(100%,100%, center, center);
-  position: relative;
 }
 
 
-#slider-wrap ul#slider li img {
-  display: flex;
-  width: 50%;
+.slick-slide{
+  width: auto;
+  height: auto;
+
+  &>div{
+    @include mixin.size(100%, 100%);
+  }
 }
 
-#next {
-  right: -50px;
+.slick-dots{
+  top: 80%;
 }
 
-#previous {
-  left: -50px;
-}
-
-#slider-wrap.active #next {
-  right: 0px;
-}
-
-#slider-wrap.active #previous {
-  left: 0px;
-}
 
 
 // slide-----------------------------------
 
   #best{
-    @include mixin.container-style(100%, 25%, space-around, center);
+    @include mixin.container-style(100%, 22%, space-between, center);
     order: 2;
     flex-wrap: wrap;
 
@@ -204,7 +188,7 @@
   }
 
   #brand{
-    @include mixin.container-style(100%, 20%, space-between, center, column);
+    @include mixin.container-style(100%, 15%, space-between, center, column);
     order: 3;
 
     &>ul{
