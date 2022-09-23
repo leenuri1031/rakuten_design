@@ -23,11 +23,11 @@
 
 @media (min-width: 1024px) {
   #root {
-    height: 400vh;
+    height: 300vh;
   }
   header {
-    width: 75%;
-    height: 5%;
+    width: 65%;
+    height: 8%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -150,8 +150,8 @@
     align-items: center;
     flex-direction: column;
     position: absolute;
-    top: 99%;
-    left: -20%;
+    top: 100%;
+    left: 0;
     z-index: 100;
   }
   .dropdown-btn {
@@ -220,12 +220,9 @@
     left: 83%;
     z-index: 100;
   }
-  main {
-    width: 75%;
-  }
   #slide {
-    width: 100%;
-    height: 15%;
+    width: 65%;
+    height: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -242,9 +239,103 @@
   .slick-dots {
     top: 80%;
   }
-  #best {
+  main {
+    width: 65%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+  #main-left {
+    width: 30%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: row;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20%;
+    left: 10%;
+  }
+  .accordion-box {
     width: 100%;
-    height: 22%;
+    height: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .accordion-box > h2 {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    border-bottom: 2px solid #363636;
+    padding-bottom: 1vw;
+  }
+  .accordion {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .accordion > .label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #363636;
+    position: relative;
+    cursor: pointer;
+    transform: translateY(-50%);
+  }
+  .accordion > .label::before {
+    content: "+";
+    position: absolute;
+    left: 250px;
+  }
+  .accordion > .sub-menu {
+    font-size: 1rem;
+    position: relative;
+    width: 288px;
+    height: 0;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+    border-bottom: 1px solid #dadada;
+  }
+  .accordion.active > .label::before {
+    content: "-";
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #363636;
+  }
+  .accordion.active > .sub-menu {
+    width: 288px;
+    height: 120px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+    border-bottom: 1px solid #dadada;
+    transition: all 1s;
+  }
+  #main-right {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  #main-right > div {
+    margin-left: 2vw;
+  }
+  #best {
+    width: 95%;
+    height: 32%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -257,8 +348,8 @@
     height: 45%;
   }
   #brand {
-    width: 100%;
-    height: 15%;
+    width: 95%;
+    height: 20%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -275,7 +366,7 @@
   }
   #categories {
     order: 7;
-    width: 100%;
+    width: 95%;
     height: 8%;
     display: flex;
     justify-content: space-between;
@@ -284,8 +375,8 @@
   }
   #recommend {
     order: 4;
-    width: 100%;
-    height: 10%;
+    width: 95%;
+    height: 11%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -293,8 +384,8 @@
   }
   #popular {
     order: 5;
-    width: 100%;
-    height: 10%;
+    width: 95%;
+    height: 11%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -302,14 +393,14 @@
   }
   #set {
     order: 6;
-    width: 100%;
-    height: 10%;
+    width: 95%;
+    height: 11%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
   }
   footer {
-    width: 75%;
+    width: 65%;
   }
 }/*# sourceMappingURL=desktop_ver.css.map */

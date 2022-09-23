@@ -89,5 +89,53 @@
   // console.log(innerWidth);
 
 
-
+  const carousel = document.querySelector(".carousel");
+  const sections = [...document.querySelectorAll(".carousel li")];
+  
+  const options = { threshold: 0.4 };
+  
+  const itemsCallback = (entries) => {
+    entries.forEach((entry, index) => {
+      entry.target.classList.toggle("is-visible", entry.isIntersecting);
+    });
+  };
+  
+  const firstItemCallback = (entries) => {
+    entries.forEach((entry, index) => {
+      carousel.classList.toggle("is-start", entry.isIntersecting);
+    });
+  };
+  
+  const lastItemCallback = (entries) => {
+    entries.forEach((entry, index) => {
+      carousel.classList.toggle("is-end", entry.isIntersecting);
+    });
+  };
+  
+  const itemsObserver = new IntersectionObserver(itemsCallback, options);
+  const firstItemsObserver = new IntersectionObserver(firstItemCallback, options);
+  const lastItemObserver = new IntersectionObserver(lastItemCallback, options);
+  
+  sections.forEach((section, index) => {
+    itemsObserver.observe(section);
+  });
+  firstItemsObserver.observe(sections[0]);
+  lastItemObserver.observe(sections[sections.length - 1]);
+  
+  document.querySelector("#prev-button").addEventListener('click', evt => {
+    const firstVisibleItem = carousel.querySelector('.is-visible');
+    const prevItemIndex = sections.indexOf(firstVisibleItem) - 1;
+    const prevItem = sections[prevItemIndex];
+    if (prevItem){
+      prevItem.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+    }
+  })
+  
+  document.querySelector("#next-button").addEventListener('click', evt => {
+    const nextItem = carousel.querySelector('.is-visible+li:not(.is-visible)');
+    if (nextItem){
+      nextItem.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'end' });
+    }
+  })
+  
 

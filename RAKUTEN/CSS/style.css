@@ -94,7 +94,7 @@
   margin: 0;
   padding: 80px 0;
   list-style: none;
-  background-color: rgba(247, 157, 157, 0.8);
+  background-color: rgba(205, 160, 223, 0.8);
   box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
   transition-duration: 0.25s;
 }
@@ -108,7 +108,7 @@
   flex-direction: row;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #fff;
+  color: rgb(255, 255, 255);
   font-family: "Roboto", sans-serif;
   text-decoration: none;
   transition-duration: 0.25s;
@@ -122,7 +122,7 @@
 
 #root {
   width: 100vw;
-  height: 500vh;
+  height: 400vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -180,15 +180,6 @@ header > section:first-child > div:last-child > div:last-child {
 }
 header > section:last-child {
   display: none;
-}
-
-main {
-  width: 100%;
-  height: 90%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
 }
 
 #slide {
@@ -299,9 +290,32 @@ main {
   top: 80%;
 }
 
+main {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+}
+
+#main-left {
+  display: none;
+}
+
+#main-right {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
 #best {
   width: 100%;
-  height: 40%;
+  height: 50%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -334,37 +348,96 @@ main {
 
 #brand {
   width: 100%;
-  height: 12%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  background-color: darkkhaki;
-}
-#brand > div {
-  width: 100%;
-  height: 90%;
+  height: 15%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  background-color: salmon;
+  flex-direction: row;
+  position: relative;
 }
-#brand > ul {
-  width: 20%;
-  height: 5%;
+
+.slideshow-container {
+  width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
-  border: #2c2c2c solid 1px;
+  position: relative;
 }
-#brand > ul > li {
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
-  border-radius: 50%;
+.slideshow-container > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.slideshow-container > div:nth-child(1) {
+  background-color: lightcoral;
+}
+.slideshow-container > div:nth-child(2) {
+  background-color: lemonchiffon;
+}
+.slideshow-container > div:nth-child(3) {
+  background-color: lightblue;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.brand-prev, .brand-next {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   cursor: pointer;
+  position: absolute;
+  transition: 0.6s ease;
+  top: 50%;
+  border-radius: 50%;
+}
+.brand-prev > img, .brand-next > img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Position the "next button" to the right */
+.brand-prev {
+  left: 1%;
+}
+
+.brand-next {
+  right: 1%;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(242, 242, 242, 0.8);
 }
 
 #categories {
@@ -374,18 +447,19 @@ main {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  background-color: thistle;
+  border-bottom: 1px solid #CDA0DF;
 }
 #categories > div:nth-child(1) {
-  width: 50%;
-  height: 10%;
+  width: 100%;
+  height: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   font-size: 1.2rem;
   font-weight: 500;
-  color: black;
+  color: rgb(255, 255, 255);
+  background-color: #CDA0DF;
 }
 #categories > div:nth-child(2) {
   width: 80%;
@@ -396,7 +470,20 @@ main {
   flex-direction: row;
 }
 #categories > div:nth-child(2) > div {
-  cursor: pointer;
+  width: 30%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+#categories > div:nth-child(2) > div > a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 #categories > div:nth-child(3) {
   width: 80%;
@@ -407,7 +494,20 @@ main {
   flex-direction: row;
 }
 #categories > div:nth-child(3) > div {
-  cursor: pointer;
+  width: 30%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+#categories > div:nth-child(3) > div > a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
 #recommend {
@@ -417,17 +517,19 @@ main {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  background-color: antiquewhite;
+  border-bottom: 1px solid #CDA0DF;
 }
 #recommend > div:first-child {
   width: 100%;
   height: 15%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-color: dimgray;
-  color: white;
+  background-color: #CDA0DF;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
 }
 #recommend > div:last-child {
   width: 95%;
@@ -444,28 +546,36 @@ main {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  cursor: pointer;
 }
-#recommend > div:last-child > div > div:nth-child(1) {
-  width: 15vw;
-  height: 15vw;
+#recommend > div:last-child > div > a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+#recommend > div:last-child > div > a > div:nth-child(1) {
+  width: 100%;
+  height: 65%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   background-color: aliceblue;
 }
-#recommend > div:last-child > div > div:nth-child(2) {
-  width: 15vw;
+#recommend > div:last-child > div > a > div:nth-child(2) {
+  width: 100%;
   height: 15%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   font-size: 0.7rem;
+  text-align: center;
 }
-#recommend > div:last-child > div > div:nth-child(3) {
-  width: 15vw;
+#recommend > div:last-child > div > a > div:nth-child(3) {
+  width: 100%;
   height: 15%;
   display: flex;
   justify-content: center;
@@ -481,17 +591,19 @@ main {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  background-color: green;
+  border-bottom: 1px solid #CDA0DF;
 }
 #popular > div:first-child {
   width: 100%;
   height: 15%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-color: dimgray;
-  color: white;
+  background-color: #CDA0DF;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
 }
 #popular > div:last-child {
   width: 95%;
@@ -508,11 +620,10 @@ main {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  cursor: pointer;
 }
 #popular > div:last-child > div > div:nth-child(1) {
-  width: 15vw;
-  height: 15vw;
+  width: 100%;
+  height: 65%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -520,7 +631,7 @@ main {
   background-color: aliceblue;
 }
 #popular > div:last-child > div > div:nth-child(2) {
-  width: 15vw;
+  width: 100%;
   height: 15%;
   display: flex;
   justify-content: center;
@@ -529,7 +640,7 @@ main {
   font-size: 0.7rem;
 }
 #popular > div:last-child > div > div:nth-child(3) {
-  width: 15vw;
+  width: 100%;
   height: 15%;
   display: flex;
   justify-content: center;
@@ -545,17 +656,19 @@ main {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  background-color: darkorange;
+  border-bottom: 1px solid #CDA0DF;
 }
 #set > div:first-child {
   width: 100%;
   height: 15%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-color: dimgray;
-  color: white;
+  background-color: #CDA0DF;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
 }
 #set > div:last-child {
   width: 95%;
@@ -572,11 +685,10 @@ main {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  cursor: pointer;
 }
 #set > div:last-child > div > div:nth-child(1) {
-  width: 15vw;
-  height: 15vw;
+  width: 100%;
+  height: 65%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -584,7 +696,7 @@ main {
   background-color: aliceblue;
 }
 #set > div:last-child > div > div:nth-child(2) {
-  width: 15vw;
+  width: 100%;
   height: 15%;
   display: flex;
   justify-content: center;
@@ -593,7 +705,7 @@ main {
   font-size: 0.7rem;
 }
 #set > div:last-child > div > div:nth-child(3) {
-  width: 15vw;
+  width: 100%;
   height: 15%;
   display: flex;
   justify-content: center;
@@ -640,7 +752,6 @@ footer > div:nth-child(2) > div {
 }
 footer > div:nth-child(2) > div > div {
   color: white;
-  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;

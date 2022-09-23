@@ -5,12 +5,12 @@
 
 @media(min-width:1024px){
   #root{
-    height: 400vh;
+    height: 300vh;
     // height: 100vh;
   }
 
   header{
-    @include mixin.container-style(75%, 5%, center, center,column);
+    @include mixin.container-style(65%, 8%, center, center,column);
 
     &>section:first-child{
       display: none;
@@ -99,7 +99,7 @@
 
   .dropdown:hover .item{
     @include mixin.container-style(100%, 300px, space-around, center,column);
-    @include mixin.posi(absolute, 99%, -20%);
+    @include mixin.posi(absolute, 100%);
   }
 
   .dropdown-btn{
@@ -147,17 +147,11 @@
   }
   // search-box-class-setting------------------------------
 
-  main{
-    width: 75%;
-    // border: 5px solid black;
-  }
-
 // slide-----------------------------------
 #slide{
-  @include mixin.container-style(100%, 15%, center, center);
+  @include mixin.container-style(65%, 20%, center, center);
 
 }
-
 
 .slick-slide{
   width: auto;
@@ -172,12 +166,89 @@
   top: 80%;
 }
 
-
-
 // slide-----------------------------------
 
+main{
+  @include mixin.container-style(65%, 90%, center, flex-start);
+  // position: relative;
+  // border: 5px solid black;
+}
+
+#main-left{
+  @include mixin.container-style(30%, 30%, space-around, flex-start);
+  // background-color: aliceblue;
+  position: sticky;
+  top: 20%;
+  left: 10%;
+}
+
+// side-menu-----------------------------------
+
+.accordion-box{
+  @include mixin.container-style(100%, 70%, space-around, flex-start, column);
+
+  &>h2{
+    @include mixin.container-style(100%, 10%, flex-start, center);
+    border-bottom: 2px solid #363636;
+    padding-bottom: 1vw;
+  }
+}
+
+.accordion{
+  position: relative;
+  @include mixin.flex(space-around, flex-start,column);
+  
+  &>.label{
+    @include mixin.font(1.2rem, 500, #363636);
+    position: relative;
+    cursor: pointer;
+    transform: translateY(-50%);
+  }
+
+  &>.label::before{
+    content: "+";
+    position: absolute;
+    left: 250px;
+  }
+
+  &>.sub-menu{
+    font-size: 1rem;
+    position: relative;
+    width: 288px;
+    height: 0;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+    border-bottom: 1px solid #dadada;
+  }
+}
+
+.accordion.active{
+  &>.label::before{
+    content: "-";
+    @include mixin.font(1.5rem, 500, #363636);
+
+  }
+  &>.sub-menu{
+    @include mixin.container-style(288px, 120px, space-around, flex-start, column);
+    border-bottom: 1px solid #dadada;
+    transition: all 1s ;
+  }
+}
+
+// side-menu-----------------------------------
+
+
+#main-right{
+  @include mixin.container-style(100%, 100%, space-around, center, column);
+
+  &>div{
+    margin-left: 2vw;
+  }
+  // border: 2px solid black;
+}
+
   #best{
-    @include mixin.container-style(100%, 22%, space-between, center);
+    @include mixin.container-style(95%, 32%, space-between, center);
     order: 2;
     flex-wrap: wrap;
 
@@ -187,8 +258,9 @@
     }
   }
 
+
   #brand{
-    @include mixin.container-style(100%, 15%, space-between, center, column);
+    @include mixin.container-style(95%, 20%, space-between, center, column);
     order: 3;
 
     &>ul{
@@ -198,35 +270,32 @@
 
   #categories{
     order: 7;
-    @include mixin.container-style(100%, 8%, space-between, center, column);
+    @include mixin.container-style(95%, 8%, space-between, center, column);
 
   }
 
   #recommend{
     order: 4;
-    @include mixin.container-style(100%, 10%, space-between, center, column);
+    @include mixin.container-style(95%, 11%, space-between, center, column);
 
   }
 
   #popular{
     order: 5;
-    @include mixin.container-style(100%, 10%, space-between, center, column);
+    @include mixin.container-style(95%, 11%, space-between, center, column);
 
   }
 
   #set{
     order: 6;
-    @include mixin.container-style(100%, 10%, space-between, center, column);
+    @include mixin.container-style(95%, 11%, space-between, center, column);
 
   }
 
 
 
-
-
-
   footer{
-    width: 75%;
+    width: 65%;
   }
 
 

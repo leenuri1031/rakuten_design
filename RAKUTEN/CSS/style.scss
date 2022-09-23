@@ -74,7 +74,7 @@
 
   list-style: none;
 
-  background-color: rgba(247, 157, 157, 0.8);
+  background-color: rgba(205, 160, 223,0.8);
   box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
 
   transition-duration: .25s;
@@ -84,7 +84,7 @@
   // border: solid black 1px;
   // padding: 12px 24px;
   @include mixin.container-style(200px,50px, center, center);
-  @include mixin.font(1.2rem, 600, #fff);
+  @include mixin.font(1.2rem, 600, rgb(255, 255, 255));
   font-family: 'Roboto', sans-serif;
   text-decoration: none;
   transition-duration: .25s;
@@ -100,7 +100,7 @@
 // class-setting-----------------------------------------
 
 #root{
-  @include mixin.container-style(100vw, 500vh, space-between, center, column );
+  @include mixin.container-style(100vw, 400vh, space-between, center, column );
 
 }
 
@@ -146,10 +146,7 @@ header{
 
 
 
-main{
-  @include mixin.container-style(100%, 90%, space-around, center, column);
-// background-color: chartreuse;
-}
+
 // slide-----------------------------------
 #slide{
   @include mixin.container-style(100%, 12%, center, center);
@@ -162,6 +159,7 @@ main{
   @include mixin.container-style(100%, 100%, center, center);
   position: absolute;
   top: 5%;
+  
 }
 
 .slick-list{
@@ -227,8 +225,24 @@ main{
 
 // slide-----------------------------------
 
+main{
+  // display: none;
+  @include mixin.container-style(100%, 90%, space-around, center);
+// background-color: chartreuse;
+position: relative;
+}
+
+#main-left{
+  display: none;
+}
+
+#main-right{
+  @include mixin.container-style(100%, 100%, space-around, center, column);
+}
+
+// best-item-----------------------------------
 #best{
-  @include mixin.container-style(100%, 40%, space-evenly, center, column);
+  @include mixin.container-style(100%, 50%, space-evenly, center, column);
   // background-color: aqua;
 
   &>div{
@@ -246,58 +260,112 @@ main{
   }
 
 }
+// best-item-----------------------------------
 
+// brand-story-----------------------------------
 #brand{
-  @include mixin.container-style(100%, 12%, space-evenly, center, column);
-  background-color: darkkhaki;
-  
+  @include mixin.container-style(100%,15%, center, center);
+  position: relative;
+  // border: solid black 3px;
+}
+// brand-story-slide-----------------------------------
+.slideshow-container {
+  @include mixin.container-style(100%,100%, center, center);
+  position: relative;
+
   &>div{
-    @include mixin.container-style(100%, 90%, center, center, column);
-    background-color: salmon;
+    @include mixin.container-style(100%,100%, center, center);
   }
 
-  &>ul{
-    @include mixin.container-style(20%, 5%, space-around, center);
-    border: #2c2c2c solid 1px;
+  &>div:nth-child(1){background-color: lightcoral;}
+  &>div:nth-child(2){background-color: lemonchiffon;}
+  &>div:nth-child(3){background-color: lightblue;}
+}
 
-    &>li{
-      @include mixin.size(10px, 10px);
-      background-color: #fff;
-      border-radius: 50%;
-      cursor: pointer;
-    }
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.brand-prev, .brand-next {
+  @include mixin.container-style(25px,25px, center, center);
+  cursor: pointer;
+  position: absolute;
+  transition: 0.6s ease;
+  top: 50%;
+  border-radius: 50%;
+
+  &>img{
+    @include mixin.size(100%, 100%);
+
   }
 }
 
+/* Position the "next button" to the right */
+.brand-prev{
+  left: 1%;
+}
+
+.brand-next {
+  right: 1%;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  @include mixin.size(30px, 30px);
+  background-color: rgba(242, 242, 242, 0.8);
+}
+// brand-story-slide-----------------------------------
+
+// categories-----------------------------------
 #categories{
   @include mixin.container-style(100%, 5%, space-around, center, column);
-  background-color: thistle;
+  border-bottom: 1px solid var.$col-2;
   
   &>div:nth-child(1){
-    @include mixin.container-style(50%, 10%, center, center);
-    @include mixin.font(1.2rem, 500, black);
+    @include mixin.container-style(100%, 25%, center, center);
+    @include mixin.font(1.2rem, 500, rgb(255, 255, 255));
+    background-color: var.$col-2;
   }
 
   @for$i from 2 through 3{
     &>div:nth-child(#{$i}){
       @include mixin.container-style(80%, 40%, space-around, center);
+
       &>div{
-        cursor: pointer;
+        @include mixin.container-style(30%, 90%, center, center);
+
+        &>a{
+          @include mixin.container-style(100%, 100%, center, center);
+        }
       }
+
     }
   }
-
-
 }
+// categories-----------------------------------
 
+// recommend-item-----------------------------------
 #recommend{
   @include mixin.container-style(100%, 8%, space-between, center, column);
-  background-color: antiquewhite;
+  border-bottom: 1px solid var.$col-2;
 
   &>div:first-child{
-    @include mixin.container-style(100%, 15%, flex-start, center);
-    background-color: dimgray;
-    color: white;
+    @include mixin.container-style(100%, 15%, center, center);
+    background-color: var.$col-2;
+    @include mixin.font(1.2rem, 500, rgb(255, 255, 255));
   }
 
   &>div:last-child{
@@ -305,36 +373,45 @@ main{
     
     &>div{
       @include mixin.container-style(30%, 90%, space-around, center, column);
-      cursor: pointer;
       // border: solid black 1px;
 
-      &>div:nth-child(1){
-        @include mixin.container-style(15vw, 15vw ,center, center);
-        background-color: aliceblue;
+      &>a{
+
+        @include mixin.container-style(100%, 100% ,space-around, center, column);
+
+
+        &>div:nth-child(1){
+          @include mixin.container-style(100%, 65% ,center, center);
+          background-color: aliceblue;
+          
+        }
         
-      }
-      
-      &>div:nth-child(2){
-        @include mixin.container-style(15vw,15%, center, center);
-        font-size: 0.7rem;
+        &>div:nth-child(2){
+          @include mixin.container-style(100%,15%, center, center);
+          font-size: 0.7rem;
+          text-align: center;
+        }
+  
+        &>div:nth-child(3){
+          @include mixin.container-style(100%,15%, center, center);
+          font-size: 0.8rem;
+        }
       }
 
-      &>div:nth-child(3){
-        @include mixin.container-style(15vw,15%, center, center);
-        font-size: 0.8rem;
-      }
     }
   }
 }
+// recommend-item-----------------------------------
 
+// popular-item-----------------------------------
 #popular{
   @include mixin.container-style(100%, 8%, space-between, center, column);
-  background-color: green;
+  border-bottom: 1px solid var.$col-2;
 
   &>div:first-child{
-    @include mixin.container-style(100%, 15%, flex-start, center);
-    background-color: dimgray;
-    color: white;
+    @include mixin.container-style(100%, 15%, center, center);
+    background-color: var.$col-2;
+    @include mixin.font(1.2rem, 500, rgb(255, 255, 255));
   }
   
   &>div:last-child{
@@ -342,37 +419,38 @@ main{
     
     &>div{
       @include mixin.container-style(30%, 90%, space-around, center, column);
-      cursor: pointer;
       // border: solid black 1px;
 
       &>div:nth-child(1){
-        @include mixin.container-style(15vw, 15vw ,center, center);
+        @include mixin.container-style(100%, 65% ,center, center);
         background-color: aliceblue;
         
       }
       
       &>div:nth-child(2){
-        @include mixin.container-style(15vw,15%, center, center);
+        @include mixin.container-style(100%,15%, center, center);
         font-size: 0.7rem;
       }
 
       &>div:nth-child(3){
-        @include mixin.container-style(15vw,15%, center, center);
+        @include mixin.container-style(100%,15%, center, center);
         font-size: 0.8rem;
       }
     }
   }
 }
+// popular-item-----------------------------------
 
-
+// set-item-----------------------------------
 #set{
   @include mixin.container-style(100%, 8%, space-between, center, column);
-  background-color: darkorange;
+  // background-color: darkorange;
+  border-bottom: 1px solid var.$col-2;
 
   &>div:first-child{
-    @include mixin.container-style(100%, 15%, flex-start, center);
-    background-color: dimgray;
-    color: white;
+    @include mixin.container-style(100%, 15%, center, center);
+    background-color: var.$col-2;
+    @include mixin.font(1.2rem, 500, rgb(255, 255, 255));
   }
 
   &>div:last-child{
@@ -380,27 +458,27 @@ main{
     
     &>div{
       @include mixin.container-style(30%, 90%, space-around, center, column);
-      cursor: pointer;
       // border: solid black 1px;
 
       &>div:nth-child(1){
-        @include mixin.container-style(15vw, 15vw ,center, center);
+        @include mixin.container-style(100%, 65% ,center, center);
         background-color: aliceblue;
         
       }
       
       &>div:nth-child(2){
-        @include mixin.container-style(15vw,15%, center, center);
+        @include mixin.container-style(100%,15%, center, center);
         font-size: 0.7rem;
       }
 
       &>div:nth-child(3){
-        @include mixin.container-style(15vw,15%, center, center);
+        @include mixin.container-style(100%,15%, center, center);
         font-size: 0.8rem;
       }
     }
   }
 }
+// set-item-----------------------------------
 
 footer{
   @include mixin.container-style(100%, 8%, space-around, center, column);
@@ -421,7 +499,6 @@ footer{
       
       &>div{
         color: white;
-        cursor: pointer;
         @include mixin.flex(center, center);
       }
       
