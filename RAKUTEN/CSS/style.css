@@ -94,7 +94,7 @@
   margin: 0;
   padding: 80px 0;
   list-style: none;
-  background-color: rgba(205, 160, 223, 0.8);
+  background-color: rgba(143, 43, 95, 0.8);
   box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
   transition-duration: 0.25s;
 }
@@ -160,23 +160,11 @@ header > section:first-child > div:last-child > div:first-child {
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   flex-direction: row;
   font-size: 2rem;
   font-weight: 500;
-  color: #2c2c2c;
-}
-header > section:first-child > div:last-child > div:last-child {
-  width: 15%;
-  height: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  margin-left: 2vw;
-  background-image: url(https://image.rakuten.co.jp/smartforyou/cabinet/askin/askin-logo/logo_1_no_text.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
+  color: #000;
 }
 header > section:last-child {
   display: none;
@@ -447,7 +435,7 @@ main {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  border-bottom: 1px solid #CDA0DF;
+  border-bottom: 1px solid #8F2B5F;
 }
 #categories > div:nth-child(1) {
   width: 100%;
@@ -459,7 +447,7 @@ main {
   font-size: 1.2rem;
   font-weight: 500;
   color: rgb(255, 255, 255);
-  background-color: #CDA0DF;
+  background-color: #8F2B5F;
 }
 #categories > div:nth-child(2) {
   width: 80%;
@@ -479,11 +467,15 @@ main {
 }
 #categories > div:nth-child(2) > div > a {
   width: 100%;
-  height: 100%;
+  height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+}
+#categories > div:nth-child(2) > div > a:hover {
+  background-color: #f2cce0;
+  border-radius: 20px;
 }
 #categories > div:nth-child(3) {
   width: 80%;
@@ -503,11 +495,15 @@ main {
 }
 #categories > div:nth-child(3) > div > a {
   width: 100%;
-  height: 100%;
+  height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+}
+#categories > div:nth-child(3) > div > a:hover {
+  background-color: #f2cce0;
+  border-radius: 20px;
 }
 
 #recommend {
@@ -517,7 +513,8 @@ main {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  border-bottom: 1px solid #CDA0DF;
+  border-bottom: 1px solid #8F2B5F;
+  position: relative;
 }
 #recommend > div:first-child {
   width: 100%;
@@ -526,36 +523,57 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-color: #CDA0DF;
+  background-color: #8F2B5F;
   font-size: 1.2rem;
   font-weight: 500;
   color: rgb(255, 255, 255);
 }
-#recommend > div:last-child {
+
+.carousel-wrapper {
   width: 95%;
   height: 80%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
+  overflow: hidden;
+  position: relative;
 }
-#recommend > div:last-child > div {
-  width: 30%;
-  height: 90%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 400%;
+  height: 100%;
+  transition: left 0.5s ease-out;
+  z-index: 0;
 }
-#recommend > div:last-child > div > a {
-  width: 100%;
+.carousel-slide > div:first-child {
+  margin-left: 20px;
+}
+.carousel-slide > div:not(:last-child) {
+  float: left;
+  margin-right: 50px;
+}
+.carousel-slide > div {
+  float: left;
+}
+
+.carousel-item {
+  width: 200px;
   height: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
 }
-#recommend > div:last-child > div > a > div:nth-child(1) {
+.carousel-item > a {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.carousel-item > a > div:first-child {
   width: 100%;
   height: 65%;
   display: flex;
@@ -564,17 +582,7 @@ main {
   flex-direction: row;
   background-color: aliceblue;
 }
-#recommend > div:last-child > div > a > div:nth-child(2) {
-  width: 100%;
-  height: 15%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  font-size: 0.7rem;
-  text-align: center;
-}
-#recommend > div:last-child > div > a > div:nth-child(3) {
+.carousel-item > a > div:nth-child(2) {
   width: 100%;
   height: 15%;
   display: flex;
@@ -582,6 +590,43 @@ main {
   align-items: center;
   flex-direction: row;
   font-size: 0.8rem;
+}
+.carousel-item > a > div:nth-child(3) {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 0.8rem;
+}
+
+.carousel-prev, .carousel-next {
+  width: 10%;
+  height: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: absolute;
+  border: none;
+  background-color: rgba(242, 204, 224, 0.2);
+  top: 15%;
+  z-index: 1;
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+  width: 20%;
+  background-color: rgba(242, 204, 224, 0.8);
+  z-index: 0;
+}
+
+.carousel-prev {
+  left: 0;
+}
+
+.carousel-next {
+  right: 0;
 }
 
 #popular {
@@ -591,7 +636,8 @@ main {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  border-bottom: 1px solid #CDA0DF;
+  border-bottom: 1px solid #8F2B5F;
+  position: relative;
 }
 #popular > div:first-child {
   width: 100%;
@@ -600,28 +646,57 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-color: #CDA0DF;
+  background-color: #8F2B5F;
   font-size: 1.2rem;
   font-weight: 500;
   color: rgb(255, 255, 255);
 }
-#popular > div:last-child {
+
+.carousel-wrapper2 {
   width: 95%;
   height: 80%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
+  overflow: hidden;
+  position: relative;
 }
-#popular > div:last-child > div {
-  width: 30%;
-  height: 90%;
+
+.carousel-slide2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 400%;
+  height: 100%;
+  transition: left 0.5s ease-out;
+  z-index: 0;
+}
+.carousel-slide2 > div:first-child {
+  margin-left: 20px;
+}
+.carousel-slide2 > div:not(:last-child) {
+  float: left;
+  margin-right: 50px;
+}
+.carousel-slide2 > div {
+  float: left;
+}
+
+.carousel-item2 {
+  width: 200px;
+  height: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
 }
-#popular > div:last-child > div > div:nth-child(1) {
+.carousel-item2 > a {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.carousel-item2 > a > div:first-child {
   width: 100%;
   height: 65%;
   display: flex;
@@ -630,16 +705,7 @@ main {
   flex-direction: row;
   background-color: aliceblue;
 }
-#popular > div:last-child > div > div:nth-child(2) {
-  width: 100%;
-  height: 15%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  font-size: 0.7rem;
-}
-#popular > div:last-child > div > div:nth-child(3) {
+.carousel-item2 > a > div:nth-child(2) {
   width: 100%;
   height: 15%;
   display: flex;
@@ -647,6 +713,43 @@ main {
   align-items: center;
   flex-direction: row;
   font-size: 0.8rem;
+}
+.carousel-item2 > a > div:nth-child(3) {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 0.8rem;
+}
+
+.carousel-prev2, .carousel-next2 {
+  width: 10%;
+  height: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: absolute;
+  border: none;
+  background-color: rgba(242, 204, 224, 0.2);
+  top: 15%;
+  z-index: 1;
+}
+
+.carousel-prev2:hover, .carousel-next2:hover {
+  width: 20%;
+  background-color: rgba(242, 204, 224, 0.8);
+  z-index: 0;
+}
+
+.carousel-prev2 {
+  left: 0;
+}
+
+.carousel-next2 {
+  right: 0;
 }
 
 #set {
@@ -656,7 +759,8 @@ main {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  border-bottom: 1px solid #CDA0DF;
+  position: relative;
+  border-bottom: 1px solid #8F2B5F;
 }
 #set > div:first-child {
   width: 100%;
@@ -665,28 +769,57 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-color: #CDA0DF;
+  background-color: #8F2B5F;
   font-size: 1.2rem;
   font-weight: 500;
   color: rgb(255, 255, 255);
 }
-#set > div:last-child {
+
+.carousel-wrapper3 {
   width: 95%;
   height: 80%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
+  overflow: hidden;
+  position: relative;
 }
-#set > div:last-child > div {
-  width: 30%;
-  height: 90%;
+
+.carousel-slide3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 400%;
+  height: 100%;
+  transition: left 0.5s ease-out;
+  z-index: 0;
+}
+.carousel-slide3 > div:first-child {
+  margin-left: 20px;
+}
+.carousel-slide3 > div:not(:last-child) {
+  float: left;
+  margin-right: 50px;
+}
+.carousel-slide3 > div {
+  float: left;
+}
+
+.carousel-item3 {
+  width: 200px;
+  height: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
 }
-#set > div:last-child > div > div:nth-child(1) {
+.carousel-item3 > a {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.carousel-item3 > a > div:first-child {
   width: 100%;
   height: 65%;
   display: flex;
@@ -695,16 +828,16 @@ main {
   flex-direction: row;
   background-color: aliceblue;
 }
-#set > div:last-child > div > div:nth-child(2) {
+.carousel-item3 > a > div:nth-child(2) {
   width: 100%;
   height: 15%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
-#set > div:last-child > div > div:nth-child(3) {
+.carousel-item3 > a > div:nth-child(3) {
   width: 100%;
   height: 15%;
   display: flex;
@@ -714,18 +847,45 @@ main {
   font-size: 0.8rem;
 }
 
+.carousel-prev3, .carousel-next3 {
+  width: 10%;
+  height: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: absolute;
+  border: none;
+  background-color: rgba(242, 204, 224, 0.2);
+  top: 15%;
+  z-index: 1;
+}
+
+.carousel-prev3:hover, .carousel-next3:hover {
+  width: 20%;
+  background-color: rgba(242, 204, 224, 0.8);
+  z-index: 0;
+}
+
+.carousel-prev3 {
+  left: 0;
+}
+
+.carousel-next3 {
+  right: 0;
+}
+
 footer {
   width: 100%;
   height: 8%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #838383;
 }
 footer > div:nth-child(1) {
-  width: 50%;
-  height: 10%;
+  width: 100%;
+  height: 15%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -733,35 +893,43 @@ footer > div:nth-child(1) {
   font-size: 1.5rem;
   font-weight: 550;
   color: white;
+  background-color: #5D5D5D;
 }
 footer > div:nth-child(2) {
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 85%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+  background-color: #444;
 }
 footer > div:nth-child(2) > div {
-  width: 100%;
-  height: 30%;
+  width: 80%;
+  height: 35%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
 }
-footer > div:nth-child(2) > div > div {
+footer > div:nth-child(2) > div > div > a {
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
 }
-footer > div:nth-child(2) > div > div:nth-child(1) {
-  width: 50%;
-  height: 50%;
+footer > div:nth-child(2) > div:nth-child(3) {
+  width: 80%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: white;
 }
-footer > div:nth-child(2) > div > div:nth-child(2) {
-  width: 30%;
-  height: 50%;
+footer > div:nth-child(3) {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

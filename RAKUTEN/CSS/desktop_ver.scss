@@ -5,7 +5,7 @@
 
 @media(min-width:1024px){
   #root{
-    height: 300vh;
+    height: 350vh;
     // height: 100vh;
   }
 
@@ -37,7 +37,7 @@
 
             &>div:first-child{
               @include mixin.container-style(15%, 70%, center, center);
-              background-image: url(https://image.rakuten.co.jp/smartforyou/cabinet/askin/askin-logo/logo_1_no_text.jpg);
+              // background-image: url(https://image.rakuten.co.jp/smartforyou/cabinet/askin/askin-logo/logo_1_no_text.jpg);
               background: {
                 size: contain;
                 repeat : no-repeat;
@@ -149,7 +149,7 @@
 
 // slide-----------------------------------
 #slide{
-  @include mixin.container-style(65%, 20%, center, center);
+  @include mixin.container-style(65%, 15%, center, center);
 
 }
 
@@ -169,7 +169,7 @@
 // slide-----------------------------------
 
 main{
-  @include mixin.container-style(65%, 90%, center, flex-start);
+  @include mixin.container-style(65%, 85%, center, flex-start);
   // position: relative;
   // border: 5px solid black;
 }
@@ -189,7 +189,7 @@ main{
 
   &>h2{
     @include mixin.container-style(100%, 10%, flex-start, center);
-    border-bottom: 2px solid #363636;
+    border-bottom: 2px solid var.$col-5;
     padding-bottom: 1vw;
   }
 }
@@ -218,7 +218,7 @@ main{
     height: 0;
     overflow: hidden;
     transition: all 1s ease-in-out;
-    border-bottom: 1px solid #dadada;
+    border-bottom: 1px solid var.$col-2;
   }
 }
 
@@ -230,8 +230,9 @@ main{
   }
   &>.sub-menu{
     @include mixin.container-style(288px, 120px, space-around, flex-start, column);
-    border-bottom: 1px solid #dadada;
+    border-bottom: 1px solid var.$col-2;
     transition: all 1s ;
+    padding-left: 1vw;
   }
 }
 
@@ -280,10 +281,28 @@ main{
 
   }
 
+  .carousel-prev,.carousel-next{
+    @include mixin.container-style(5%, 85%, center,center);
+    background-color: rgba(242, 204, 224,0.1);
+  }
+  
+  .carousel-prev:hover,.carousel-next:hover{
+    width: 15%;
+  }
+
   #popular{
     order: 5;
     @include mixin.container-style(95%, 11%, space-between, center, column);
 
+  }
+
+  .carousel-prev2,.carousel-next2{
+    @include mixin.container-style(5%, 85%, center,center);
+    background-color: rgba(242, 204, 224,0.1);
+  }
+  
+  .carousel-prev2:hover,.carousel-next2:hover{
+    width: 15%;
   }
 
   #set{
@@ -292,10 +311,19 @@ main{
 
   }
 
+  .carousel-prev3,.carousel-next3{
+    @include mixin.container-style(5%, 85%, center,center);
+    background-color: rgba(242, 204, 224,0.1);
+  }
+  
+  .carousel-prev3:hover,.carousel-next3:hover{
+    width: 15%;
+  }
+
 
 
   footer{
-    width: 65%;
+    @include mixin.size(65%,10%);
   }
 
 
