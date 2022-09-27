@@ -682,12 +682,14 @@ footer{
   &>div:nth-child(1){
     @include mixin.container-style(100%, 15%, center, center);
     @include mixin.font(1.5rem, 550, var.$col-white);
-    background-color: #5D5D5D;
+    background-color: var.$col-dark-gray;
+    border-bottom: var.$col-mid-gray 1px solid;
+
   }
 
   &>div:nth-child(2){
     @include mixin.container-style(100%, 85%, space-around, center, column);
-    background-color: #444;
+    background-color:var.$col-dark-gray;
     // border: solid 2px wheat;
 
     // &>div{
@@ -724,6 +726,10 @@ footer{
         &>a{
           color: white;
           @include mixin.flex(center, center);
+        }
+
+        &>a:hover{
+          font-weight: 600;
         }
       }
     }
