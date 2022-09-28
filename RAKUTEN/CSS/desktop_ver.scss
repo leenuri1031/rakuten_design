@@ -268,13 +268,17 @@ main{
       @include mixin.container-style(15%, 5%, space-around, center);
     }
   }
+// brand-story------------------------------------
 
+// categories-----------------------------------
   #categories{
     // order: 7;
     @include mixin.container-style(95%, 8%, space-between, center, column);
 
   }
+// categories-----------------------------------
 
+// recommend-item-----------------------------------
   #recommend{
     // order: 4;
     @include mixin.container-style(95%, 11%, space-between, center, column);
@@ -289,7 +293,9 @@ main{
   .carousel-prev:hover,.carousel-next:hover{
     width: 15%;
   }
+// recommend-item-----------------------------------
 
+// popular-item-----------------------------------
   #popular{
     // order: 5;
     @include mixin.container-style(95%, 11%, space-between, center, column);
@@ -304,11 +310,33 @@ main{
   .carousel-prev2:hover,.carousel-next2:hover{
     width: 15%;
   }
+// popular-item-----------------------------------
+
+
+// set-item-----------------------------------
 
   #set{
     // order: 6;
     @include mixin.container-style(95%, 11%, space-between, center, column);
 
+  }
+
+  .carousel-wrapper3{
+    @include mixin.container-style(95%, 80%, center, center);
+  }
+
+  .carousel-slide3{
+    // @include mixin.container-style(100%, 100%, space-around, center);
+    @include mixin.container-style(100%, 100%, flex-start, center);
+  
+    &>div:first-child{
+      margin-left: 0px;
+    }
+
+    &>div:nth-child(2),div:nth-child(3){
+      display: none;
+    }
+  
   }
 
   .carousel-prev3,.carousel-next3{
@@ -318,11 +346,12 @@ main{
   .carousel-prev3:hover,.carousel-next3:hover{
     display: none;
   }
+// set-item-----------------------------------
 
 
 
   footer{
-    @include mixin.size(65%,18%);
+    @include mixin.size(92%,18%);
 
     &>div:nth-child(1){
       @include mixin.container-style(100%, 8%, center, center);
@@ -379,7 +408,7 @@ main{
       padding-left: 0.5vw;
       // border: #2c2c2c solid 1px;
       @include mixin.font(0.8rem, 500, var.$col-dark-gray);
-      line-height: 1.5;
+      line-height: 2;
     }
 
     &>div:nth-child(3){
@@ -454,15 +483,18 @@ main{
     }
 
     &>div:nth-child(2){
-      @include mixin.container-style(100%, 50%, flex-start, center, column);
+      @include mixin.container-style(100%, 48%, flex-start, center, column);
 
 
       &>div:nth-child(1){
-        @include mixin.container-style(95%, 15%, space-around, center);
+        @include mixin.container-style(95%, 20%, flex-start, center);
       // border: #222 solid 1px;
 
         &>a{
-          @include mixin.container-style(50%, 100%, space-around, center);
+          @include mixin.container-style(30%, 100%, space-around, center);
+      // border: #222 solid 1px;
+
+
           &>img{
             @include mixin.container-style(124px, 19px, flex-start, center);
           }
@@ -470,15 +502,20 @@ main{
       }
 
       &>div:nth-child(2){
-        @include mixin.container-style(95%, 80%, flex-start, center, column);
-        @include mixin.font(0.8rem, 500, var.$col-dark-gray);
+        @include mixin.container-style(95%, 70%, flex-start, center, column);
         margin-top: 0.5vw;
-        line-height: 1.5;
         border-bottom: var.$col-gray 1px dotted;
         // border: #222 solid 1px;
 
+        &>div:nth-child(1){
+          @include mixin.container-style(90%, 60%, flex-start, center);
+          @include mixin.font(0.8rem, 500, var.$col-dark-gray);
+          line-height: 1.5;
+          // border: #222 solid 1px;
+        }
+
         &>span{
-          @include mixin.container-style(100%, 50%, flex-start, center);
+          @include mixin.container-style(90%, 30%, flex-start, center);
           @include mixin.font(0.8rem, 500, red);
           line-height: 1.5;
         };
@@ -486,21 +523,22 @@ main{
     }
 
     &>div:nth-child(3){
-      @include mixin.container-style(100%, 40%, flex-start, center, column);
+      @include mixin.container-style(90%, 43%, flex-start, center, column);
 
       &>img{
         @include mixin.container-style(134px, 19px, flex-start, center);
         position: relative;
-        left: -28%;
+        left: -35%;
       }
 
       &>div{
-        @include mixin.container-style(95%, 100%, flex-start, center);
+        @include mixin.container-style(95%, 95%, flex-start, center);
         @include mixin.font(0.8rem, 500, var.$col-dark-gray);
-        line-height: 1.5;
+        line-height: 1.8;
       }
     }
   }
+  
   .foot-menu{
     @include mixin.container-style(100%, 8%, center, center);
     background-color: var.$col-bright-gray;

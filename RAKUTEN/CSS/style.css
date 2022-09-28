@@ -361,11 +361,21 @@ main {
   align-items: center;
   flex-direction: row;
 }
-.slideshow-container > div:nth-child(1) {
-  background-color: lightcoral;
+.slideshow-container > div > a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
-.slideshow-container > div:nth-child(2) {
-  background-color: lemonchiffon;
+.slideshow-container > div > a > img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 .slideshow-container > div:nth-child(3) {
   background-color: lightblue;
@@ -566,7 +576,7 @@ main {
   flex-direction: column;
 }
 .carousel-item > a {
-  width: 90%;
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: space-around;
@@ -575,30 +585,98 @@ main {
 }
 .carousel-item > a > div:first-child {
   width: 100%;
-  height: 65%;
+  height: 128px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-color: aliceblue;
 }
 .carousel-item > a > div:nth-child(2) {
   width: 100%;
-  height: 15%;
+  height: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  text-align: center;
   font-size: 0.8rem;
 }
-.carousel-item > a > div:nth-child(3) {
-  width: 100%;
-  height: 15%;
+
+.carousel-item:nth-child(1) > a > div:first-child > img {
+  width: 140px;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  font-size: 0.8rem;
+}
+
+.carousel-item:nth-child(2) > a > div:first-child {
+  width: 100%;
+  height: 128px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.carousel-item:nth-child(2) > a > div:first-child > img {
+  width: 140px;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.carousel-item:nth-child(3) > a > div:first-child {
+  width: 100%;
+  height: 128px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.carousel-item:nth-child(3) > a > div:first-child > img {
+  width: 140px;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.carousel-item:nth-child(4) > a > div:first-child {
+  width: 100%;
+  height: 128px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.carousel-item:nth-child(4) > a > div:first-child > img {
+  width: 140px;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.carousel-item:nth-child(5) > a > div:first-child {
+  width: 100%;
+  height: 128px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.carousel-item:nth-child(5) > a > div:first-child > img {
+  width: 140px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
 .carousel-prev, .carousel-next {
@@ -689,7 +767,7 @@ main {
   flex-direction: column;
 }
 .carousel-item2 > a {
-  width: 90%;
+  width: 180px;
   height: 100%;
   display: flex;
   justify-content: space-around;
@@ -697,13 +775,21 @@ main {
   flex-direction: column;
 }
 .carousel-item2 > a > div:first-child {
-  width: 100%;
-  height: 65%;
+  width: 180px;
+  height: 128px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   background-color: aliceblue;
+}
+.carousel-item2 > a > div:first-child > img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 .carousel-item2 > a > div:nth-child(2) {
   width: 100%;
@@ -712,15 +798,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  font-size: 0.8rem;
-}
-.carousel-item2 > a > div:nth-child(3) {
-  width: 100%;
-  height: 15%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+  text-align: center;
   font-size: 0.8rem;
 }
 
@@ -812,7 +890,7 @@ main {
   flex-direction: column;
 }
 .carousel-item3 > a {
-  width: 90%;
+  width: 180px;
   height: 100%;
   display: flex;
   justify-content: space-around;
@@ -820,13 +898,21 @@ main {
   flex-direction: column;
 }
 .carousel-item3 > a > div:first-child {
-  width: 100%;
-  height: 65%;
+  width: 180px;
+  height: 128px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   background-color: aliceblue;
+}
+.carousel-item3 > a > div:first-child > img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 .carousel-item3 > a > div:nth-child(2) {
   width: 100%;
@@ -835,15 +921,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  font-size: 0.8rem;
-}
-.carousel-item3 > a > div:nth-child(3) {
-  width: 100%;
-  height: 15%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+  text-align: center;
   font-size: 0.8rem;
 }
 
