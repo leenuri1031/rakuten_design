@@ -130,37 +130,11 @@ onselectstart='return false' ondragstart='return false'>
       <!-- desktop-ver-header -->
   </header>
     
-    <section id="slide">
-      <div class="slider">
-        <div class="item">
-          <a href="#">
-            <img src="IMG/renewal_1.jpg" alt="">
-          </a>
-        </div>
-        <div class="item">
-          <a href="#">
-            <img src="IMG/renewal_2.jpg" alt="">
-          </a>
-        </div>
-        <div class="item">
-          <a href="#">
-            <img src="IMG/renewal_3.jpg" alt="">
-          </a>
-        </div>
-        <div class="item">
-          <a href="#">
-            <img src="IMG/renewal_4.jpg" alt="">
-            </a>
-        </div>
-      </div>
-      <div class="btn">
-        <span id="prevArrow"><img src="./IMG/arrow_left.png" alt=""></span>
-        <span id="nextArrow"><img src="./IMG/arrow_right.png" alt=""></span>
-      </div>
+    <section id="slide-html">
+      <iframe src="/slide.html" frameborder="0"></iframe>
     </section>
 
     <main>
-      
       <section id="main-left">
 
         <ul class="accordion-box">
@@ -212,189 +186,71 @@ onselectstart='return false' ondragstart='return false'>
           </li>
         </ul>
       </section>
-      
+
       <section id="main-right">
-        <div id="best">
-          <div>
-            <a href="https://item.rakuten.co.jp/smartforyou/test1/">
-              <img src="https://image.rakuten.co.jp/smartforyou/cabinet/azulen-ampolue/azulen_ampolue_2.jpg" alt="">
-            </a>
+        <div id="right-top">
+          <h2>Title</h2>
+          <div class="banner-top">
+            <div>banner1</div>
+            <div>banner2</div>
           </div>
-          <div>
-            <a href="https://item.rakuten.co.jp/smartforyou/test1/">
-              <img src="https://image.rakuten.co.jp/smartforyou/cabinet/repair-ampolue/repair_ampolue.jpg" alt="">
-            </a>
-          </div>
-          <div>
-            <a href="https://item.rakuten.co.jp/smartforyou/test1/">
-              <img  src="https://image.rakuten.co.jp/smartforyou/cabinet/soothing-ampolue/soothing_ampolue.jpg" alt="">
-            </a>
-          </div>
-          <div>
-            <a href="https://item.rakuten.co.jp/smartforyou/test1/">
-              <img src="https://image.rakuten.co.jp/smartforyou/cabinet/mgf-pleu-cream/mgf_plus_cream.jpg" alt="">
-            </a>
-          </div>
-        </div>
-        <!-- pc버전에 맞는 이미지 변경예정 -->
-        <div id="brand">
-          <div class="slideshow-container">
-            <div class="mySlideDiv fade active">
-              <a href="">
-                <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09434625/bs_thumbnail_1.jpg" alt="">
-              </a>
-            </div>
-            <div class="mySlideDiv fade">
-              <a href="">
-                <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09434625/bs_thumbnail_2.jpg" alt="">
-              </a>
-            </div>
-            <div class="mySlideDiv fade">
-              <a href="">
-                <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09434625/bs_thumbnail_3.jpg" alt="">
-              </a>
-            </div>
-            <a class="brand-prev" onclick="prevSlide()"><img src="./IMG/arrow_left.png" alt=""></a>
-            <a class="brand-next" onclick="nextSlide()"><img src="./IMG/arrow_right.png" alt=""></a>
-          </div>
-        </div>
-        
-        <div id="categories">
-          <div>categories</div>
-          <div>
-            <div><a href="#">Skin/Toner</a></div>
-            <div><a href="#">Cream/Lotion</a></div>
-            <div><a href="#">Ampoule</a></div>
-          </div>
-          <div>
-            <div><a href="#">Sensitive Skin</a></div>
-            <div><a href="#">Dry Skin</a></div>
-            <div><a href="#">All</a></div>
-          </div>
-        </div>
-        
-        <div id="recommend">
-          <div>Recommend Items</div>
-          <div class="carousel-wrapper">
-            <div class="carousel-slide">
-              <div class="carousel-item">
-                <a href="#">
-                  <div><img src="https://image.rakuten.co.jp/smartforyou/cabinet/skin-booster/skin-booster_1.jpg" alt=""></div>
-                  <div>SKIN-BOOSTER</br>スキンブースター</br>3,490￥</div>
-                </a>
-              </div>
-              <div class="carousel-item">
-                <a href="#">
-                  <div><img src="https://image.rakuten.co.jp/smartforyou/cabinet/repair-ampolue/repair-anpoule_1.jpg" alt=""></div>
-                  <div>Repair-Ampoule</br>リペアアンプル</br>9,990￥</div>
-
-                </a>
-              </div>
-              <div class="carousel-item">
-                <a href="#">
-                  <div><img src="https://image.rakuten.co.jp/smartforyou/cabinet/soothing-ampolue/soothing-ampoule_1.jpg" alt=""></div>
-                  <div>Soothing-Ampoule</br>スージングアンプル</br>9,990￥</div>
-
-                </a>
-              </div>
-              <div class="carousel-item">
-                <a href="#">
-                  <div><img src="https://image.rakuten.co.jp/smartforyou/cabinet/azulen-ampolue/azulen-anpoule_1.jpg" alt=""></div>
-                  <div>Azulen-Ampoule</br>アズレンアンプル</br>9,390￥</div>
-
-                </a>
-              </div>
-              <div class="carousel-item">
-                <a href="#">
-                  <div><img src="https://image.rakuten.co.jp/smartforyou/cabinet/mgf-pleu-cream/mgf-plus_1.jpg" alt=""></div>
-                  <div>mgfPlus-Cream</br>mgfプラスクリーム</br>7,790￥</div>
-
-                </a>
-              </div>
-              
-            </div>
-          </div>
-          <button id="carousel-prev" class="carousel-prev"></button>
-          <button id="carousel-next" class="carousel-next"></button>
-        </div>
-        
-        <div id="popular">
-          <div>Popular Items</div>
-          <div class="carousel-wrapper2">
-            <div class="carousel-slide2">
-              <div class="carousel-item2">
-                <a href="#">
-                  <div>img1</div>
-                  <div>SKIN-BOOSTER</br>スキンブースター</br>3,490￥</div>
-
-                </a>
-              </div>
-              <div class="carousel-item2">
-                <a href="#">
-                  <div>img1</div>
-                  <div>SKIN-BOOSTER</br>スキンブースター</br>3,490￥</div>
-
-                </a>
-              </div>
-              <div class="carousel-item2">
-                <a href="#">
-                  <div>img1</div>
-                  <div>SKIN-BOOSTER</br>スキンブースター</br>3,490￥</div>
-
-                </a>
-              </div>
-              <div class="carousel-item2">
-                <a href="#">
-                  <div>img1</div>
-                  <div>SKIN-BOOSTER</br>スキンブースター</br>3,490￥</div>
-
-                </a>
-              </div>
-              <div class="carousel-item2">
-                <a href="#">
-                  <div>img1</div>
-                  <div>SKIN-BOOSTER</br>スキンブースター</br>3,490￥</div>
-
-                </a>
+          <div id="best">
+            <div class="carousel-wrapper">
+              <div class="carousel-slide">
+                <div class="carousel-item">
+                  <a href="#">
+                    <div><img src="" alt=""></div>
+                    <div>SKIN-BOOSTER</br>スキンブースター</br>3,490￥</div>
+                  </a>
+                </div>
+                <div class="carousel-item">
+                  <a href="#">
+                    <div><img src="" alt=""></div>
+                    <div>Repair-Ampoule</br>リペアアンプル</br>9,990￥</div>
+                  </a>
+                </div>
+                <div class="carousel-item">
+                  <a href="#">
+                    <div><img src="" alt=""></div>
+                    <div>Azulen-Ampoule</br>アズレンアンプル</br>9,390￥</div>
+                  </a>
+                </div>
+                <div class="carousel-item">
+                  <a href="#">
+                    <div><img src="" alt=""></div>
+                    <div>mgfPlus-Cream</br>mgfプラスクリーム</br>7,790￥</div>
+                  </a>
+                </div>
               </div>
             </div>
+            <button id="carousel-prev" class="carousel-prev">prev</button>
+            <button id="carousel-next" class="carousel-next">next</button>
           </div>
-          <button id="carousel-prev2" class="carousel-prev2"></button>
-          <button id="carousel-next2" class="carousel-next2"></button>
         </div>
-        
-        <div id="set">
-          <div>Set Items</div>
-          <div class="carousel-wrapper3">
-            <div class="carousel-slide3">
-              <div class="carousel-item3">
-                <a href="#">
-                  <div>img1</div>
-                  <div>Lorem ipsum, </br>dolor sit amet.</div>
-                  <div>9800￥</div>
-                </a>
-              </div>
-              <div class="carousel-item3">
-                <a href="#">
-                  <div>img1</div>
-                  <div>Lorem ipsum, </br>dolor sit amet.</div>
-                  <div>9800￥</div>
-                </a>
-              </div>
-              <div class="carousel-item3">
-                <a href="#">
-                  <div>img1</div>
-                  <div>Lorem ipsum, </br>dolor sit amet.</div>
-                  <div>9800￥</div>
-                </a>
-              </div>
+
+        <div id="main-notice">
+          <div>
+            <div>A-SKIN</div>
+            <div>Information</div>
+          </div>
+          <div>
+            <div>
+              <div>2022.10</div>
+              <div>notice info1</div>
+            </div>
+            <div>
+              <div>2022.12</div>
+              <div>notice info2</div>
             </div>
           </div>
-          <button id="carousel-prev3" class="carousel-prev3"></button>
-          <button id="carousel-next3" class="carousel-next3"></button>
         </div>
+
+        <div id="right-mid">
+          <iframe src="https://www.youtube.com/embed/2G4lQ4QOkhU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div id="right-bottom"></div>
       </section>
-
     </main>
     
     <footer>
@@ -530,32 +386,14 @@ onselectstart='return false' ondragstart='return false'>
 
   </div>
   <script>
-    // recommend-popular-set------------------------------
     const carouselSlides = document.querySelector('.carousel-slide');
     const slideItems = document.querySelectorAll('.carousel-item');
     const slideCount = slideItems.length;
-    const carouselSlides2 = document.querySelector('.carousel-slide2');
-    const slideItems2 = document.querySelectorAll('.carousel-item2');
-    const slideCount2 = slideItems2.length;
-    const carouselSlides3 = document.querySelector('.carousel-slide3');
-    const slideItems3 = document.querySelectorAll('.carousel-item3');
-    const slideCount3 = slideItems3.length;
     const prevBtn = document.getElementById('carousel-prev');
     const nextBtn = document.getElementById('carousel-next');
-    const prevBtn2 = document.getElementById('carousel-prev2');
-    const nextBtn2 = document.getElementById('carousel-next2');
-    const prevBtn3 = document.getElementById('carousel-prev3');
-    const nextBtn3 = document.getElementById('carousel-next3');
     let currentIndex = 0;
     let slideItemsWith = 300;
     let slideItemsMargin = 50;
-
-    // carouselSlides.style.with = (slideItemsWith+slideItemsMargin)*slideCount+'px';
-
-    // function init(){
-    //   carouselSlides.style.width = (slideItemsWith + slideItemsMargin)* slideCount + 'px';
-    //   carouselSlides.style.left = -(slideItemsWith + slideItemsMargin) + 'px';
-    // }
 
     function slideMove(num){
       carouselSlides.style.left = -num * 200 + 'px';
@@ -574,75 +412,6 @@ onselectstart='return false' ondragstart='return false'>
         slideMove(currentIndex+1);
       }
     });
-    // recommend-popular-set------------------------------
-
-    function slideMove2(num){
-      carouselSlides2.style.left = -num * 200 + 'px';
-      currentIndex = num;
-    }
-
-    prevBtn2.addEventListener('click', function(){
-      if(currentIndex !== 0){
-        slideMove2(currentIndex-1);
-      }
-    });
-
-    nextBtn2.addEventListener('click', function(){
-      if(currentIndex !== slideCount2-1){
-        slideMove2(currentIndex+1);
-      }
-    });
-    // recommend-popular-set------------------------------
-    
-    function slideMove3(num){
-      carouselSlides3.style.left = -num * 200 + 'px';
-      currentIndex = num;
-    }
-
-    prevBtn3.addEventListener('click', function(){
-      if(currentIndex !== 0){
-        slideMove3(currentIndex-1);
-      }
-    });
-
-    nextBtn3.addEventListener('click', function(){
-      if(currentIndex !== slideCount3-1){
-        slideMove3(currentIndex+1);
-      }
-    });
-
-
-    // recommend-popular-set------------------------------
-
-
-    // slick-slider-----------------------------------
-    $(function(){
-      $('.slider').slick({
-      rows:1,
-      infinite : true,     
-      slidesToShow : 3,     
-      slidesToScroll : 1,        
-      speed : 500,     
-      dots : true,        
-      autoplay : true,            
-      autoplaySpeed : 2000,         
-      pauseOnHover : true,      
-      vertical : false,        
-      draggable : false,   
-      prevArrow : $('#prevArrow'), 
-      nextArrow : $('#nextArrow'),   
-      responsive: [ 
-          {  
-              breakpoint: 700, 
-              settings: {
-                  slidesToShow: 1
-                } 
-              }
-            ]
-          });
-      });
-    // slick-slider-----------------------------------
-
     // accordion-menu-pc-----------------------------------
     const accordion = document.getElementsByClassName('accordion');
     for (i = 0; i < accordion.length; i++) {
@@ -651,80 +420,6 @@ onselectstart='return false' ondragstart='return false'>
       });
     }
     // accordion-menu-pc-----------------------------------
-
-    // brnad-stoy-slide-----------------------------------
-    $(document).ready(function () {
-	$(".mySlideDiv").not(".active").hide(); //화면 로딩 후 첫번째 div를 제외한 나머지 숨김
-	
-	setInterval(nextSlide, 4000); //4초(4000)마다 다음 슬라이드로 넘어감
-});
-
-//이전 슬라이드
-function prevSlide() {
-	$(".mySlideDiv").hide(); //모든 div 숨김
-	var allSlide = $(".mySlideDiv"); //모든 div 객체를 변수에 저장
-	var currentIndex = 0; //현재 나타난 슬라이드의 인덱스 변수
-	
-	//반복문으로 현재 active클래스를 가진 div를 찾아 index 저장
-	$(".mySlideDiv").each(function(index,item){ 
-		if($(this).hasClass("active")) {
-			currentIndex = index;
-		}
-        
-	});
-	
-	//새롭게 나타낼 div의 index
-	var newIndex = 0;
-    
-	if(currentIndex <= 0) {
-		//현재 슬라이드의 index가 0인 경우 마지막 슬라이드로 보냄(무한반복)
-		newIndex = allSlide.length-1;
-	} else {
-		//현재 슬라이드의 index에서 한 칸 만큼 뒤로 간 index 지정
-		newIndex = currentIndex-1;
-	}
-
-	//모든 div에서 active 클래스 제거
-	$(".mySlideDiv").removeClass("active");
-    
-	//새롭게 지정한 index번째 슬라이드에 active 클래스 부여 후 show()
-	$(".mySlideDiv").eq(newIndex).addClass("active");
-	$(".mySlideDiv").eq(newIndex).show();
-
-}
-
-//다음 슬라이드
-function nextSlide() {
-	$(".mySlideDiv").hide();
-	var allSlide = $(".mySlideDiv");
-	var currentIndex = 0;
-	
-	$(".mySlideDiv").each(function(index,item){
-		if($(this).hasClass("active")) {
-			currentIndex = index;
-		}
-        
-	});
-	
-	var newIndex = 0;
-	
-	if(currentIndex >= allSlide.length-1) {
-		//현재 슬라이드 index가 마지막 순서면 0번째로 보냄(무한반복)
-		newIndex = 0;
-	} else {
-		//현재 슬라이드의 index에서 한 칸 만큼 앞으로 간 index 지정
-		newIndex = currentIndex+1;
-	}
-
-	$(".mySlideDiv").removeClass("active");
-	$(".mySlideDiv").eq(newIndex).addClass("active");
-	$(".mySlideDiv").eq(newIndex).show();
-	
-}
-    // brnad-stoy-slide-----------------------------------
-
-
-
 
 
   </script>
