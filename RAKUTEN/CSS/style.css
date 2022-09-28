@@ -377,9 +377,6 @@ main {
   align-items: center;
   flex-direction: row;
 }
-.slideshow-container > div:nth-child(3) {
-  background-color: lightblue;
-}
 
 .fade {
   -webkit-animation-name: fade;
