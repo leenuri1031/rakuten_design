@@ -178,14 +178,16 @@ position: relative;
       @include mixin.container-style(45%, 100%, space-around, center );
     background-color: var.$col-bright-gray;
   }
-
-
 }
 
 #best{
   @include mixin.container-style(100%, 55%, space-around, center );
   // border: solid black 1px;
   position: relative;
+}
+
+#best-desktop{
+  display: none;
 }
 
 .carousel-wrapper{
@@ -225,9 +227,12 @@ position: relative;
   // border: dotted 1px darkblue;
   
   &>div:first-child{
-    background-color: aliceblue;
+    // background-color: aliceblue;
     @include mixin.container-style(150px, 150px ,center, center);
     // border: solid rebeccapurple 1px;
+    &>img{
+      @include mixin.size(100%, 100%);
+    }
   }
     
     &>div:nth-child(2){
@@ -308,10 +313,8 @@ position: relative;
 
     &>div:first-child{
     border-bottom: var.$col-mid-gray 1px solid;
-
     }
   }
-
 }
 // notice-----------------------------------
 
@@ -320,7 +323,7 @@ position: relative;
   @include mixin.container-style(100%, 30%, space-around, center, column);
   // background-color: salmon;
   &>iframe{
-    @include mixin.size(80%,80%);
+    @include mixin.size(90%,75%);
   }
 }
 // mid-media-----------------------------------
@@ -339,41 +342,54 @@ footer{
   // border: #000 solid 1px;
 
   &>div:nth-child(1){
-    @include mixin.container-style(100%, 15%, center, center);
-    @include mixin.font(1.5rem, 550, var.$col-white);
+    @include mixin.container-style(100%, 10%, center, center);
+    @include mixin.font(1.2rem, 550, var.$col-white);
     background-color: var.$col-dark-gray;
     border-bottom: var.$col-mid-gray 1px solid;
-
+    // border: #000 solid 1px;
   }
-
-  &>div:nth-child(2){
-    @include mixin.container-style(100%, 85%, space-around, center, column);
-    background-color:var.$col-dark-gray;
-    // border: solid 2px wheat;
-
-    &>div{
-      @include mixin.container-style(80%, 35%, space-between, center);
-      &>div{
-        &>a{
-          color: white;
-          @include mixin.flex(center, center);
-        }
-
-        &>a:hover{
-          font-weight: 600;
-        }
-      }
-    }
-
-    &>div:nth-child(3){
-      @include mixin.container-style(80%, 20%, center, center);
-      @include mixin.font(0.9rem, 400, var.$col-white);
-    }
-  }
+  // shopping-guid-part
 
   &>div:nth-child(3){
     display: none;
   }
-
 }
 
+.mobile-footer{
+  @include mixin.container-style(100%, 90%, space-around, center, column);
+  background-color:var.$col-dark-gray;
+
+  &>div:nth-child(2){
+    @include mixin.container-style(90%, 55%, space-around, center,
+    column);
+    // border: #ffffff solid 1px;
+    
+    &>div{
+    @include mixin.container-style(100%, 100%, flex-start,center);
+    @include mixin.font(0.8rem, 500, var.$col-white);
+    line-height: 1.5;
+    }
+  }
+
+  &>div:last-child{
+    @include mixin.container-style(100%, 10%, center, center);
+    @include mixin.font(0.8rem, 500, var.$col-white);
+  }
+}
+
+.footer-menu{
+  @include mixin.container-style(100%, 30%, space-around, center);
+  // border: #ffffff solid 1px;
+
+  &>div{
+    @include mixin.container-style(40%, 90%, space-around, center, column);
+
+    &>div{
+      @include mixin.container-style(80%, 20%, flex-start, center);
+      &>a{
+        @include mixin.size(100%,100%);
+        @include mixin.font(0.8rem, 500, var.$col-white);
+      }
+    }
+  }
+}

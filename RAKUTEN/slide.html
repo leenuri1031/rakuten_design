@@ -90,6 +90,11 @@ body{
   align-items: center;
 }
 
+.item > a >img{
+  width: 100%;
+  height: 100%;
+}
+
 
 .btn {
   width: 100%;
@@ -118,7 +123,6 @@ body{
 }
 .btn > span:hover {
   opacity: 1;
-  background-color: rgb(222, 222, 222);
 }
 
 #prevArrow {
@@ -145,26 +149,46 @@ body{
 }
 
 @media(min-width: 1024px){
-  #prevArrow {
-  left: 5%;
+  .btn {
+  width: 100%;
+  height: 100%;
+}
+.btn > span {
+  width: 8%;
+  height: 100%;
+  opacity: 0.2;
+  border-radius: 0;
+}
+.btn > span > img {
+  width: 50px;
+  height: 50px;
+}
+.btn > span:hover {
+  opacity: 0.7;
+}
+
+#prevArrow {
+  left: 0%;
+  top: 0%;
 }
 
 #nextArrow {
-  right: 5%;
+  right: 0%;
+  top: 0%;
 }
+
 }
 
 </style>
 
-  <title>Document</title>
 </head>
 <body>
   <section id="slide">
     <div class="slider">
-      <div class="item"><a href="">1</a></div>
-      <div class="item"><a href="">2</a></div>
-      <div class="item"><a href="">3</a></div>
-      <div class="item"><a href="">4</a></div>
+      <div class="item"><a href=""><img src="https://image.rakuten.co.jp/smartforyou/cabinet/09434625/new_renewal_1.jpg" alt=""></a></div>
+      <div class="item"><a href=""><img src="https://image.rakuten.co.jp/smartforyou/cabinet/09434625/new_renewal_2.jpg" alt=""></a></div>
+      <div class="item"><a href=""><img src="https://image.rakuten.co.jp/smartforyou/cabinet/09434625/new_renewal_3.jpg" alt=""></a></div>
+      <div class="item"><a href=""><img src="https://image.rakuten.co.jp/smartforyou/cabinet/09434625/new_renewal_4.jpg" alt=""></a></div>
     </div>
     <div class="btn">
       <span id="prevArrow"><img src="./IMG/arrow_left.png" alt=""></span>
@@ -178,10 +202,9 @@ body{
       infinite : true,     
       slidesToShow : 1,     
       slidesToScroll : 1,        
-      speed : 1000,     
+      speed : 2000,     
       dots : true,        
       autoplay : true,            
-      autoplaySpeed : 2000,         
       pauseOnHover : true,      
       prevArrow : $('#prevArrow'), 
       nextArrow : $('#nextArrow'),   

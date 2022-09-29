@@ -254,6 +254,10 @@ main {
   position: relative;
 }
 
+#best-desktop {
+  display: none;
+}
+
 .carousel-wrapper {
   width: 95%;
   height: 90%;
@@ -299,13 +303,16 @@ main {
   flex-direction: column;
 }
 .carousel-item > a > div:first-child {
-  background-color: aliceblue;
   width: 150px;
   height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+}
+.carousel-item > a > div:first-child > img {
+  width: 100%;
+  height: 100%;
 }
 .carousel-item > a > div:nth-child(2) {
   width: 100%;
@@ -432,8 +439,8 @@ main {
   flex-direction: column;
 }
 #right-mid > iframe {
-  width: 80%;
-  height: 80%;
+  width: 90%;
+  height: 75%;
 }
 
 #right-bottom {
@@ -456,55 +463,90 @@ footer {
 }
 footer > div:nth-child(1) {
   width: 100%;
-  height: 15%;
+  height: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 550;
   color: white;
   background-color: #838383;
   border-bottom: #BDBCBC 1px solid;
 }
-footer > div:nth-child(2) {
+footer > div:nth-child(3) {
+  display: none;
+}
+
+.mobile-footer {
   width: 100%;
-  height: 85%;
+  height: 90%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
   background-color: #838383;
 }
-footer > div:nth-child(2) > div {
-  width: 80%;
-  height: 35%;
+.mobile-footer > div:nth-child(2) {
+  width: 90%;
+  height: 55%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.mobile-footer > div:nth-child(2) > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-}
-footer > div:nth-child(2) > div > div > a {
+  font-size: 0.8rem;
+  font-weight: 500;
   color: white;
+  line-height: 1.5;
+}
+.mobile-footer > div:last-child {
+  width: 100%;
+  height: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: white;
 }
-footer > div:nth-child(2) > div > div > a:hover {
-  font-weight: 600;
+
+.footer-menu {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
 }
-footer > div:nth-child(2) > div:nth-child(3) {
+.footer-menu > div {
+  width: 40%;
+  height: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.footer-menu > div > div {
   width: 80%;
   height: 20%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-  font-size: 0.9rem;
-  font-weight: 400;
-  color: white;
 }
-footer > div:nth-child(3) {
-  display: none;
+.footer-menu > div > div > a {
+  width: 100%;
+  height: 100%;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: white;
 }/*# sourceMappingURL=style.css.map */
