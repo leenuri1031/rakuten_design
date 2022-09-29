@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -19,6 +20,10 @@
 
 * a {
   color: #222;
+}
+
+* {
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 @media (min-width: 1024px) {
@@ -70,8 +75,8 @@
     align-items: center;
     flex-direction: row;
   }
-  header > section:last-child > div:nth-child(1) > div:first-child > a > div {
-    width: 45%;
+  header > section:last-child > div:nth-child(1) > div:first-child > a > img {
+    width: 80%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -96,7 +101,6 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    background-color: #e4e4e4;
     margin-top: 2vh;
     border-top: #2c2c2c 1px solid;
     border-bottom: #2c2c2c 1px solid;
@@ -160,7 +164,7 @@
   }
   .item {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.192);
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgb(255, 255, 255);
     font-size: 1rem;
     font-weight: 550;
     color: #2c2c2c;
@@ -217,6 +221,26 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
+  }
+  .slider {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    top: -5%;
+  }
+  .btn {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    position: absolute;
+    top: -8%;
   }
   .btn > span {
     width: 8%;
@@ -408,13 +432,22 @@
   }
   #best-desktop > div > a > div:nth-child(2) {
     width: 100%;
-    height: 20%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    line-height: 2;
+  }
+  #best-desktop > div > a > div:nth-child(2) > span {
+    width: 100%;
+    height: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    text-align: center;
-    font-size: 0.8rem;
+    color: #b8648e;
   }
   #main-notice {
     height: 8%;
@@ -448,6 +481,97 @@
     font-size: 0.9rem;
     font-weight: 500;
     color: #222;
+  }
+  #right-mid {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  #right-mid > div:nth-child(1) {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .mid-products {
+    display: none;
+  }
+  .desktop-mid-products {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    border: solid 1px violet;
+  }
+  .desktop-mid-products > div {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+  }
+  .desktop-mid-products > div > div {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  .desktop-mid-products > div > div > a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  .desktop-mid-products > div > div > a > div:first-child {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .desktop-mid-products > div > div > a > div:first-child > img {
+    width: 100%;
+    height: 100%;
+  }
+  .desktop-mid-products > div > div > a > div:nth-child(2) {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    line-height: 1.5;
+  }
+  .desktop-mid-products > div > div > a > div:nth-child(2) > span {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    color: #b8648e;
+  }
+  #right-bottom {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
   }
   footer {
     width: 92%;

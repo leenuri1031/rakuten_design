@@ -85,7 +85,6 @@
   // padding: 12px 24px;
   @include mixin.container-style(200px,50px, center, center);
   @include mixin.font(1.2rem, 600, rgb(255, 255, 255));
-  font-family: 'Roboto', sans-serif;
   text-decoration: none;
   transition-duration: .25s;
 }
@@ -137,29 +136,30 @@ header{
 
 // slide-----------------------------------
 #slide{
-  @include mixin.container-style(100%, 40%, center, center);
+  @include mixin.container-style(100%, 12%, center, center);
   position: relative;
 }
 
 .slider{
-  @include mixin.container-style(100%, 100%, space-around, center);
+  @include mixin.container-style(100%, 100%, center, center);
+  position: absolute;
+  top: 5%;
 }
 
 .slick-list{
   @include mixin.size(100%, 100%);
-  position: relative;
 }
 
 .slick-track {
   @include mixin.size(100%, 100%);
-  position: relative;
 }
+
 
 .slide-item {
   @include mixin.size(100%, 100%);
   &>a{
     @include mixin.container-style(100%, 100%, center, center);
-    &>{
+    &>img{
       @include mixin.size(100%, 100%);
     }
   }
@@ -183,11 +183,12 @@ header{
 
   &>span:hover{
     opacity: 1;
+    background-color: rgb(222, 222, 222);
   }
 
 }
-#prevArrow{position: relative; left: 1%;  top: -55%;}
-#nextArrow{position: relative; right: 1%; top: -55%;}
+#prevArrow{position: relative; left: 1%;  top: 10%;}
+#nextArrow{position: relative; right: 1%; top: 10%;}
 
 .slick-dots{
   @include mixin.container-style(100%, 5%, center, center);
@@ -199,7 +200,7 @@ header{
 
 main{
   // display: none;
-  @include mixin.container-style(100%, 60%, space-evenly, center);
+  @include mixin.container-style(100%, 65%, space-around, center);
 position: relative;
 }
 
@@ -209,6 +210,8 @@ position: relative;
 
 #main-right{
   @include mixin.container-style(100%, 100%, space-around, center, column);
+  // border: #000 solid 1px;
+
 }
 
 // top-----------------------------------
@@ -231,7 +234,7 @@ position: relative;
 }
 
 #best{
-  @include mixin.container-style(100%, 55%, space-around, center );
+  @include mixin.container-style(100%, 50%, space-around, center );
   // border: solid black 1px;
   position: relative;
 }
@@ -286,10 +289,14 @@ position: relative;
   }
     
     &>div:nth-child(2){
-      @include mixin.container-style(100%,20%, center, center);
+      @include mixin.container-style(100%,25%, center, center, column);
       text-align: center;
       font-size: 0.8rem;
-      // border: solid rebeccapurple 1px;
+      line-height: 2;
+      &>span{
+        @include mixin.container-style(100%,40%, center, center);
+        color: var.$col-2;
+      }
     }
   }
 }
@@ -321,7 +328,7 @@ position: relative;
 
 // notice-----------------------------------
 #main-notice{
-  @include mixin.container-style(100%, 10%, space-between, center);
+  @include mixin.container-style(100%, 8%, space-between, center);
   // background-color: cadetblue;
   border-top: var.$col-mid-gray 1px solid;
   border-bottom: var.$col-mid-gray 1px solid;
@@ -370,17 +377,59 @@ position: relative;
 
 // mid-media-----------------------------------
 #right-mid{
-  @include mixin.container-style(100%, 30%, space-around, center, column);
-  // background-color: salmon;
-  &>iframe{
-    @include mixin.size(90%,75%);
+  @include mixin.container-style(100%, 40%, space-around, center, column);
+  
+  &>div:nth-child(1){
+    @include mixin.container-style(100%, 5%, center, center );
+    // background-color: antiquewhite;
+    @include mixin.font(1.5rem, 550, #222);
   }
+}
+
+.mid-products{
+  @include mixin.container-style(100%, 90%, space-around, center );
+  flex-wrap: wrap;
+  // background-color: antiquewhite;
+  &>div{
+    @include mixin.container-style(32%, 30%, space-around, center,column );
+    // border: solid black 1px;
+
+    &>a{
+      @include mixin.container-style(100%, 100%, space-around, center,column );
+      
+      &>div:first-child{
+        @include mixin.container-style(100px, 100px ,center, center);
+        // border: solid rebeccapurple 1px;
+
+        &>img{
+          @include mixin.size(100%, 100%);
+        }
+      }
+        
+      &>div:nth-child(2){
+        @include mixin.container-style(100%,30%, space-around, center,column);
+        font-size: 0.8rem;
+        // border: solid rebeccapurple 1px;
+        text-align: center;
+        line-height: 1.5;
+        &>span{ 
+          @include mixin.container-style(100%,40%, center, center);
+          color: var.$col-2;
+        }
+      }
+      
+    }
+  }
+}
+
+.desktop-mid-products{
+  display: none;
 }
 // mid-media-----------------------------------
 
 // bottom-----------------------------------
 #right-bottom{
-  @include mixin.container-style(100%, 20%, space-around, center, column);
+  @include mixin.container-style(100%, 10%, space-around, center, column);
   background-color:var.$col-bright-gray;
 }
 // bottom-----------------------------------
