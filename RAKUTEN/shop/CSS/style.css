@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+* {
+  transition: 1s;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+* a {
+  color: #222;
+  text-decoration: none;
+}
+
+* {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer {
+  width: 100%;
+  height: 690%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer > div:nth-child(1) {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 1.2rem;
+  font-weight: 550;
+  color: white;
+  background-color: #838383;
+  border-bottom: #BDBCBC 1px solid;
+}
+footer > div:nth-child(3) {
+  display: none;
+}
+
+.mobile-footer {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background-color: #838383;
+}
+.mobile-footer > div:nth-child(2) {
+  width: 90%;
+  height: 55%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.mobile-footer > div:nth-child(2) > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: white;
+  line-height: 1.5;
+}
+.mobile-footer > div:last-child {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: white;
+}
+
+.footer-menu {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+.footer-menu > div {
+  width: 40%;
+  height: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.footer-menu > div > div {
+  width: 80%;
+  height: 20%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.footer-menu > div > div > a {
+  width: 100%;
+  height: 100%;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: white;
+}/*# sourceMappingURL=style.css.map */

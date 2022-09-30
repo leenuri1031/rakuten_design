@@ -454,6 +454,9 @@ footer{
   @include mixin.container-style(100%, 18%, center, center, column);
   // background-color: var.$col-dark-gray;
   // border: #000 solid 1px;
+  // &>iframe{
+  //   @include mixin.size(100%,100%);
+  // }
 
   &>div:nth-child(1){
     @include mixin.container-style(100%, 10%, center, center);
