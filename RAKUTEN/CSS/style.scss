@@ -218,21 +218,27 @@ main{
 
 // top-----------------------------------
 #right-top{
-  @include mixin.container-style(100%, 30%, space-around, center, column);
+  @include mixin.container-style(100%, 30%, space-evenly, center, column);
   // border: solid black 1px;
-    
+
+}
+
+.banner-top{
+  @include mixin.container-style(100%, 30%, space-between, center, column );
+  // border: solid black 1px;
+      
   &>h2{
     @include mixin.container-style(100%, 10%, center, center );
     // border: solid black 1px;
   }
-}
-
-.banner-top{
-  @include mixin.container-style(100%, 25%, space-around, center );
-  // border: solid black 1px;
+  
+  &>div{
+    @include mixin.container-style(100%, 80%, space-around, center );
+    // border: solid black 1px;
     &>div{
       @include mixin.container-style(45%, 100%, space-around, center );
-    background-color: var.$col-bright-gray;
+      background-color: var.$col-bright-gray;
+    }
   }
 }
 
@@ -247,7 +253,7 @@ main{
 }
 
 .carousel-wrapper{
-  @include mixin.size(95%, 90%);
+  @include mixin.size(95%, 80%);
   overflow: hidden;
   position: relative;
   // border: solid rebeccapurple 1px;
@@ -380,10 +386,10 @@ main{
 
 // mid-media-----------------------------------
 #right-mid{
-  @include mixin.container-style(100%, 52%, space-around, center, column);
+  @include mixin.container-style(100%, 50%, center, center, column);
   // border: solid 1px salmon;
   &>div:nth-child(1){
-    @include mixin.container-style(100%, 5%, center, center );
+    @include mixin.container-style(100%, 5%, center, flex-end );
     // background-color: antiquewhite;
     @include mixin.font(1.5rem, 550, #222);
   }
@@ -435,7 +441,11 @@ main{
   @include mixin.container-style(100%, 12%, space-around, center, column);
   // border: solid 5px salmon;
 
-  background-color:var.$col-bright-gray;
+  &>div{
+    @include mixin.container-style(100%, 100%, space-around, center, column);
+    background-color:var.$col-bright-gray;
+  }
+
 }
 // bottom-----------------------------------
 

@@ -134,50 +134,59 @@ onselectstart='return false' ondragstart='return false'>
 
   <main>
     <section id="main-left">
-      <ul class="accordion-box">
-        <h2>Categories</h2>
-        <li class="accordion" id="accordian">
-          <div class="label">Products</div>
-          <ul class="sub-menu">
-            <li><a href="#">Cleanser</a></li>
-            <li><a href="#">Skin/Toner</a></li>
-            <li><a href="#">Lotion/Cream</a></li>
-            <li><a href="#">Ampoule</a></li>
-            <li><a href="#">Sun Care</a></li>
-            <li><a href="#">Hair Care</a></li>
-          </ul>
-        </li>
-        <li class="accordion">
-          <div class="label">Skin Type</div>
-          <ul class="sub-menu">
-            <li><a href="#">Sensitive Skin</a></li>
-            <li><a href="#">Dry Skin</a></li>
-            <li><a href="#">Oily Skin</a></li>
-            <li><a href="#">Sun Care</a></li>
-            <li><a href="#">Hair Care</a></li>
-          </ul>
-        </li>
-        <li class="accordion">
-          <div class="label">Set</div>
-          <ul class="sub-menu">
-            <li><a href="#">Soothing Set</a></li>
-            <li><a href="#">Repair Set</a></li>
-            <li><a href="#">Trouble Set</a></li>
-          </ul>
-        </li>
-        <li class="accordion">
-          <div class="label" id="no-accordion"><a href="#">About A-skin</a></div>
-        </li>
-      </ul>
+      <h2>Categories</h2>
+      <div class="tabs">
+        <div class="tab">
+          <input type="checkbox" id="chck1" class="chck">
+          <label class="tab-label" for="chck1">Products</label>
+          <div class="tab-content">
+            <div><a href="#">Cleanser</a></div>
+            <div><a href="#">Skin/Toner</a></div>
+            <div><a href="#">Lotion/Cream</a></div>
+            <div><a href="#">Ampoule</a></div>
+            <div><a href="#">Sun Care</a></div>
+            <div><a href="#">Hair Care</a></div>
+          </div>
+        </div>
+        <div class="tab">
+          <input type="checkbox" id="chck2" class="chck">
+          <label class="tab-label" for="chck2">Skin Type </label>
+          <div class="tab-content">
+              <div><a href="#">Sensitive Skin</a></div>
+              <div><a href="#">Dry Skin</a></div>
+              <div><a href="#">Oily Skin</a></div>
+              <div><a href="#">Sun Care</a></div>
+              <div><a href="#">Hair Care</a></div>
+          </div>
+        </div>
+        <div class="tab">
+          <input type="checkbox" id="chck3" class="chck">
+          <label class="tab-label" for="chck3">Set</label>
+          <div class="tab-content">
+              <div><a href="#">Soothing Set</a></div>
+              <div><a href="#">Repair Set</a></div>
+              <div><a href="#">Trouble Set</a></div>
+          </div>
+        </div>
+          <div class="tab">
+          <input type="checkbox" id="chck4" class="chck" >
+          <label class="tab-label" id="no-chck" for="chck4">About A-SKIN</label>
+            <div class="tab-content">
+              <div><a href="#">Brand Story</a></div>
+            </div>
+        </div>
+      </div>
     </section>
 
     <section id="main-right">
         <div id="right-top">
           <div class="banner-top">
-            <div>banner1</div>
-            <div>banner2</div>
+            <h2>Title</h2>
+            <div>
+              <div>banner1</div>
+              <div>banner2</div>
+            </div>
           </div>
-          <h2>Title</h2>
           <div id="best">
             <div class="carousel-wrapper">
               <div class="carousel-slide">
@@ -220,6 +229,8 @@ onselectstart='return false' ondragstart='return false'>
           </div>
 
           <div id="best-desktop">
+            <h2>Title</h2>
+            <div>
               <div>
                 <a href="#">
                   <div><img src="https://image.rakuten.co.jp/smartforyou/cabinet/skin-booster/skin-booster-new.jpg" alt=""></div>
@@ -256,6 +267,7 @@ onselectstart='return false' ondragstart='return false'>
                   </div>
                 </a>
               </div>
+            </div>
           </div>
 
         </div>
@@ -445,8 +457,9 @@ onselectstart='return false' ondragstart='return false'>
           </div>
         </div>
   
-        <div id="right-bottom">banner-bottom</div>
-      <!-- </div> -->
+        <div id="right-bottom">
+          <div>banner-bottom</div>
+        </div>
 
 
     </section>
@@ -664,12 +677,12 @@ onselectstart='return false' ondragstart='return false'>
     // }
 
     // accordion-menu-pc-----------------------------------
-    const accordion = document.getElementsByClassName('accordion');
-    for (i = 0; i < accordion.length; i++) {
-      accordion[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-      });
-    }
+    // const accordion = document.getElementsByClassName('accordion');
+    // for (i = 0; i < accordion.length; i++) {
+    //   accordion[i].addEventListener("click", function () {
+    //     this.classList.toggle("active");
+    //   });
+    // }
     // accordion-menu-pc-----------------------------------
     $(function(){
       $('.slider').slick({
