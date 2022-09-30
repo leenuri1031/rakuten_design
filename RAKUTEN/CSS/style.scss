@@ -28,7 +28,7 @@
   display: flex;
   align-items: center;
   position: fixed;
-  top: 7%;
+  top: 5%;
   left: 5%;
   width: 26px;
   height: 26px;
@@ -117,7 +117,7 @@ header{
       // border: solid black 1px;
 
       &>div:first-child{
-        @include mixin.container-style(50%, 100%, center, flex-end);
+        @include mixin.container-style(50%, 80%, center, flex-end);
         @include mixin.font(2rem, 500, #000);
         // border: solid red 1px;
       }
@@ -143,7 +143,7 @@ header{
 .slider{
   @include mixin.container-style(100%, 100%, center, center);
   position: absolute;
-  top: 5%;
+  top: 2%;
 }
 
 .slick-list{
@@ -187,21 +187,21 @@ header{
   }
 
 }
-#prevArrow{position: relative; left: 1%;  top: 10%;}
-#nextArrow{position: relative; right: 1%; top: 10%;}
+#prevArrow{position: relative; left: 1%;  top: 5%;}
+#nextArrow{position: relative; right: 1%; top: 5%;}
 
 .slick-dots{
   @include mixin.container-style(100%, 5%, center, center);
   position: absolute;
-  top: 90%;
+  top: 95%;
 }
 
 // slide-----------------------------------
 
 main{
-  // display: none;
-  @include mixin.container-style(100%, 65%, space-around, center);
-position: relative;
+  @include mixin.container-style(100%, 67%, space-around, center);
+  position: relative;
+  // border: solid 3px black;
 }
 
 #main-left{
@@ -209,7 +209,9 @@ position: relative;
 }
 
 #main-right{
-  @include mixin.container-style(100%, 100%, space-around, center, column);
+  @include mixin.container-style(100%, 100%, space-evenly, center, column);
+  padding-top: 1vw;
+
   // border: #000 solid 1px;
 
 }
@@ -217,6 +219,7 @@ position: relative;
 // top-----------------------------------
 #right-top{
   @include mixin.container-style(100%, 30%, space-around, center, column);
+  // border: solid black 1px;
     
   &>h2{
     @include mixin.container-style(100%, 10%, center, center );
@@ -377,8 +380,8 @@ position: relative;
 
 // mid-media-----------------------------------
 #right-mid{
-  @include mixin.container-style(100%, 40%, space-around, center, column);
-  
+  @include mixin.container-style(100%, 52%, space-around, center, column);
+  // border: solid 1px salmon;
   &>div:nth-child(1){
     @include mixin.container-style(100%, 5%, center, center );
     // background-color: antiquewhite;
@@ -429,7 +432,9 @@ position: relative;
 
 // bottom-----------------------------------
 #right-bottom{
-  @include mixin.container-style(100%, 10%, space-around, center, column);
+  @include mixin.container-style(100%, 12%, space-around, center, column);
+  // border: solid 5px salmon;
+
   background-color:var.$col-bright-gray;
 }
 // bottom-----------------------------------
