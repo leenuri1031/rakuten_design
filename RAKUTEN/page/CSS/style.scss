@@ -218,12 +218,6 @@ main{
     @include mixin.container-style(90%, 20%, space-around, center);
     border: 1px solid black;
   }
-  
-  @for$i from 5 through 7{
-    &>div:nth-child(#{$i}){
-      display: none;
-    }
-  }
 
   &>button{
     @include mixin.container-style(10vw,10vw, center,center);
