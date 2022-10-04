@@ -143,6 +143,7 @@
 // slide-----------------------------------
 #slide{
   @include mixin.container-style(100%, 15%, center, center);
+  // border: #222 solid 3px;
 }
 
 .slider{
