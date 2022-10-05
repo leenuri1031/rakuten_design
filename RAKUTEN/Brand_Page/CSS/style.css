@@ -50,7 +50,7 @@
   display: flex;
   align-items: center;
   position: fixed;
-  top: 5%;
+  top: 3.5%;
   left: 5%;
   width: 26px;
   height: 26px;
@@ -297,9 +297,9 @@ main {
 
 .brand-top {
   width: 100%;
-  height: 68vh;
+  height: 65vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
 }
@@ -311,17 +311,70 @@ main {
   align-items: center;
   flex-direction: column;
 }
-.brand-top > div:nth-child(1) > img {
-  width: 100%;
-  height: 100%;
+.brand-top > div:nth-child(1) > div:nth-child(1) {
+  width: 90%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #E8D5DA;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #222;
+  line-height: 1.5;
+}
+.brand-top > div:nth-child(1) > div:nth-child(2) {
+  width: 90%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.brand-top > div:nth-child(1) > div:nth-child(2) > img {
+  width: 90%;
+  height: 55%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
 }
+.brand-top > div:nth-child(1) > div:nth-child(2) > div {
+  width: 90%;
+  height: 25%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+}
+.brand-top > div:nth-child(1) > div:nth-child(2) > div > div {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #99415A;
+  position: absolute;
+}
+.brand-top > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(1) {
+  left: 4%;
+}
+.brand-top > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) {
+  left: 25%;
+}
+.brand-top > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(3) {
+  left: 45%;
+}
 .brand-top > div:nth-child(2) {
   width: 100%;
-  height: 18%;
+  height: 20%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -330,7 +383,7 @@ main {
 }
 .brand-top > div:nth-child(2) > div:first-child {
   width: 90%;
-  height: 50%;
+  height: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -343,10 +396,10 @@ main {
 }
 .brand-top > div:nth-child(2) > div:last-child {
   width: 0%;
-  height: 35%;
+  height: 30%;
   border: solid 1px #99415A;
   position: absolute;
-  bottom: 10%;
+  bottom: 1%;
 }
 .brand-top > div:nth-child(3) {
   width: 100%;
@@ -367,7 +420,7 @@ main {
 
 .brand-media {
   width: 100%;
-  height: 92vh;
+  height: 90vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -375,7 +428,7 @@ main {
 }
 .brand-media > iframe {
   width: 90%;
-  height: 30%;
+  height: 27%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -399,7 +452,7 @@ main {
 }
 .brand-media > div {
   width: 98%;
-  height: 15%;
+  height: 18%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -408,12 +461,12 @@ main {
   font-weight: 400;
   color: #222;
   text-align: center;
-  line-height: 1.8;
+  line-height: 2;
 }
 
 .brand-patent {
   width: 100%;
-  height: 82vh;
+  height: 80vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -430,27 +483,40 @@ main {
 }
 .patent-top > div:nth-child(1) {
   width: 90%;
-  height: 54px;
+  height: 9%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  position: relative;
+}
+.patent-top > div:nth-child(1) > div {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: absolute;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #99415A;
 }
 .patent-top > div:nth-child(1) > img {
   width: 100%;
-  height: 100%;
+  height: 80%;
 }
 .patent-top > div:nth-child(2) {
   width: 90%;
   height: 80%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
 }
 .patent-top > div:nth-child(2) > img {
   width: 100%;
-  height: 100%;
+  height: 45%;
 }
 
 .patent-bottom {
@@ -463,15 +529,28 @@ main {
 }
 .patent-bottom > div:nth-child(1) {
   width: 90%;
-  height: 54px;
+  height: 8%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  position: relative;
+}
+.patent-bottom > div:nth-child(1) > div {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: absolute;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #99415A;
 }
 .patent-bottom > div:nth-child(1) > img {
   width: 100%;
-  height: 100%;
+  height: 80%;
 }
 .patent-bottom > div:nth-child(2) {
   width: 90%;
@@ -535,80 +614,320 @@ main {
 
 .brand-promiss {
   width: 100%;
-  height: 55vh;
+  height: 60vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
 }
-.brand-promiss > div:first-child {
-  width: 100%;
-  height: 54px;
+.brand-promiss > div:nth-child(1) {
+  width: 90%;
+  height: 8%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   position: relative;
 }
-.brand-promiss > div:first-child > img {
-  width: 100%;
+.brand-promiss > div:nth-child(1) > div {
+  width: 70%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: absolute;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #99415A;
+}
+.brand-promiss > div:nth-child(1) > img {
+  width: 100%;
+  height: 80%;
 }
 .brand-promiss > div:nth-child(2) {
   width: 100%;
   height: 25%;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+.brand-promiss > div:nth-child(2) > img {
+  width: 40%;
+  height: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  border-right: 1px solid rgba(2, 2, 2, 0.2);
 }
-.brand-promiss > div:nth-child(2) > img {
-  width: 100%;
+.brand-promiss > div:nth-child(2) > div {
+  width: 60%;
   height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.brand-promiss > div:nth-child(2) > div > div:first-child {
+  width: 95%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: row;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #222;
+  letter-spacing: 5px;
+}
+.brand-promiss > div:nth-child(2) > div > div:last-child {
+  width: 95%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #222;
+  text-align: center;
+  line-height: 1.8;
 }
 .brand-promiss > div:nth-child(3) {
   width: 100%;
   height: 25%;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+.brand-promiss > div:nth-child(3) > img {
+  width: 40%;
+  height: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  border-right: 1px solid rgba(2, 2, 2, 0.2);
 }
-.brand-promiss > div:nth-child(3) > img {
-  width: 100%;
+.brand-promiss > div:nth-child(3) > div {
+  width: 60%;
   height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.brand-promiss > div:nth-child(3) > div > div:first-child {
+  width: 95%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: row;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #222;
+  letter-spacing: 5px;
+}
+.brand-promiss > div:nth-child(3) > div > div:last-child {
+  width: 95%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #222;
+  text-align: center;
+  line-height: 1.8;
 }
 .brand-promiss > div:nth-child(4) {
   width: 100%;
   height: 25%;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+.brand-promiss > div:nth-child(4) > img {
+  width: 40%;
+  height: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  border-right: 1px solid rgba(2, 2, 2, 0.2);
 }
-.brand-promiss > div:nth-child(4) > img {
-  width: 100%;
+.brand-promiss > div:nth-child(4) > div {
+  width: 60%;
   height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.brand-promiss > div:nth-child(4) > div > div:first-child {
+  width: 95%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: row;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #222;
+  letter-spacing: 5px;
+}
+.brand-promiss > div:nth-child(4) > div > div:last-child {
+  width: 95%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #222;
+  text-align: center;
+  line-height: 1.8;
 }
 
 .brand-history {
   width: 100%;
-  height: 120vh;
+  height: 110vh;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  background-color: cornflowerblue;
+}
+.brand-history > div:nth-child(1) {
+  width: 90%;
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #222;
+  letter-spacing: 0.3rem;
+  background-color: #E8D5DA;
+}
+.brand-history > div:nth-child(2) {
+  width: 90%;
+  height: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.brand-history > div:nth-child(2) > img {
+  width: 100%;
+  height: 100%;
+}
+.brand-history > div:nth-child(3) {
+  width: 95%;
+  height: 22%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.brand-history > div:nth-child(3) > img {
+  width: 100%;
+  height: 100%;
 }
 
 .brand-bottom {
   width: 100%;
-  height: 40vh;
+  height: 50vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  background-color: darksalmon;
+}
+.brand-bottom > div:first-child {
+  width: 95%;
+  height: 75%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  border-top: solid 2px #99415A;
+  border-bottom: solid 2px #99415A;
+}
+.brand-bottom > div:first-child > h3 {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.brand-bottom > div:first-child > div:nth-child(2) {
+  width: 98%;
+  height: 10%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #222;
+}
+.brand-bottom > div:first-child > div:nth-child(3) {
+  width: 98%;
+  height: 10%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #222;
+}
+.brand-bottom > div:first-child div:nth-child(4) {
+  width: 98%;
+  height: 25%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #222;
+  line-height: 1.8;
+}
+.brand-bottom > div:first-child div:nth-child(5) {
+  width: 98%;
+  height: 35%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #222;
+  line-height: 1.8;
+}
+.brand-bottom > div:last-child {
+  width: 80%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.brand-bottom > div:last-child > img {
+  width: 100%;
+  height: 100%;
 }
 
 footer {
