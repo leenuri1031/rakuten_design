@@ -554,7 +554,7 @@ onselectstart='return false' ondragstart='return false'>
     $(function(){
       $('.slider').slick({
       infinite : true,     
-      slidesToShow : 1,     
+      slidesToShow : 3,     
       slidesToScroll : 1,        
       speed : 2000,     
       dots : true,        
@@ -562,8 +562,17 @@ onselectstart='return false' ondragstart='return false'>
       pauseOnHover : true,      
       prevArrow : $('#prevArrow'), 
       nextArrow : $('#nextArrow'),   
-          });
+      responsive: [
+        {
+          breakpoint: 720,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
       });
+    });
 
   </script>
   <!-- <script  src="./app.js"></script> -->
