@@ -464,6 +464,7 @@
     justify-content: center;
     align-items: flex-start;
     flex-direction: row;
+    letter-spacing: 5px;
   }
   .banner-top > div {
     width: 100%;
@@ -472,15 +473,6 @@
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-  }
-  .banner-top > div > div {
-    width: 45%;
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    background-color: #ebebeb;
   }
   #best {
     display: none;
@@ -500,6 +492,7 @@
     justify-content: center;
     align-items: flex-start;
     flex-direction: row;
+    letter-spacing: 5px;
   }
   #best-desktop > div {
     width: 100%;
@@ -567,11 +560,13 @@
     font-weight: 550;
     color: #b8648e;
     justify-content: flex-end;
+    letter-spacing: 5px;
   }
   #main-notice > div:nth-child(1) > div:nth-child(2) {
     font-size: 1.3rem;
     font-weight: 550;
     color: #b8648e;
+    letter-spacing: 5px;
   }
   #main-notice > div:nth-child(2) > div > div:first-child {
     font-size: 1rem;
@@ -583,11 +578,13 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    letter-spacing: 5px;
   }
   #main-notice > div:nth-child(2) > div > div:last-child {
     font-size: 0.9rem;
     font-weight: 500;
-    color: #222;
+    color: #b8648e;
+    letter-spacing: 3px;
   }
   #right-mid {
     width: 100%;
@@ -604,6 +601,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    letter-spacing: 5px;
   }
   .mid-products {
     display: none;

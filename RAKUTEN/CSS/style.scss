@@ -235,9 +235,12 @@ main{
   &>div{
     @include mixin.container-style(100%, 80%, space-around, center );
     // border: solid black 1px;
-    &>div{
+    &>a{
       @include mixin.container-style(45%, 100%, space-around, center );
-      background-color: var.$col-bright-gray;
+      // background-color: var.$col-bright-gray;
+      &>img{
+        @include mixin.size(100%, 100%);
+      }
     }
   }
 }

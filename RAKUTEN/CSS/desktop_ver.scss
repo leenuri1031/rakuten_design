@@ -484,14 +484,11 @@ color: #ff7c7c;
   &>h2{
     @include mixin.container-style(100%, 15%, center, flex-start );
   // border: solid black 1px;
+    letter-spacing: 5px;
   }
   &>div{
     @include mixin.container-style(100%, 60%, space-around, center );
     // border: solid black 1px;
-    &>div{
-      @include mixin.container-style(45%, 100%, space-around, center );
-      background-color: var.$col-bright-gray;
-    }
   }
 }
 
@@ -504,6 +501,7 @@ color: #ff7c7c;
   // border: solid 1px violet;
   &>h2{
     @include mixin.container-style(100%, 10%, center, flex-start );
+    letter-spacing: 5px;
     // border: solid black 1px;
   }
 
@@ -559,10 +557,12 @@ color: #ff7c7c;
     &>div:nth-child(1){
       @include mixin.font(1rem, 550, var.$col-2);
       justify-content: flex-end;
+      letter-spacing: 5px;
     }
 
     &>div:nth-child(2){
       @include mixin.font(1.3rem, 550, var.$col-2);
+      letter-spacing: 5px;
     }
   }
 
@@ -571,10 +571,12 @@ color: #ff7c7c;
       &>div:first-child{
         @include mixin.font(1rem, 500, #222);
         @include mixin.container-style(25%, 45%, center, center);
+        letter-spacing: 5px;
       }
 
       &>div:last-child{
-        @include mixin.font(0.9rem, 500, #222);
+        @include mixin.font(0.9rem, 500, var.$col-2);
+        letter-spacing: 3px;
       }
     }
   }
@@ -589,6 +591,8 @@ color: #ff7c7c;
   &>div:nth-child(1){
     @include mixin.container-style(100%,10%, center, center );
     // background-color: antiquewhite;
+    letter-spacing: 5px;
+
   }
 }
 
