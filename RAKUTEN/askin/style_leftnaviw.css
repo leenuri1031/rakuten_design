@@ -349,3 +349,9 @@ header, section, article, aside, figure {
 .sidebar .accordionbox .accordion_icon.active:hover{
 color: #ff7c7c;
 }
+
+@media(max-width:720px){
+  .side-menu{
+    display: none;
+  }
+}
