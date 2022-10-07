@@ -204,99 +204,174 @@ main{
 }
 
 #main-left{
-  @include mixin.container-style(30%, 17%, flex-start, flex-start, column);
+  @include mixin.container-style(300px, 500px, space-around, flex-start, column);
   // background-color: aliceblue;
   position: sticky;
   top: 30%;
   left: 10%;
-
-  &>h2{
-    @include mixin.container-style(100%, 10%, flex-start, center);
-    border-bottom: 2px solid var.$col-5;
-    padding-top: 1vw;
-    // background-color: #ff7c7c;;
-  }
 }
 
 // side-menu-----------------------------------
-.chck {
-  position: absolute;
-  opacity: 0;
-}
-
-/* Accordion styles */
-.tabs {
-  @include mixin.size(100%, 87%);
-  overflow: hidden;
-  // background-color: #ff7c7c;
-  // box-shadow: 0 4px 4px -2px rgba(0,0,0,0.5);
-}
-
-.tab {
-  width: 100%;
-  overflow: hidden;
-  &-label {
-    display: flex;
-    justify-content: space-between;
-    padding: 1em;
-    font-weight: bold;
-    cursor: pointer;
-    border-bottom: 1px solid var.$col-2;
-    /* Icon */
-
-    &::after {
-      content: "\276F";
-      width: 1em;
-      height: 1em;
-      text-align: center;
-      transition: all .35s;
+.side-menu{
+  &>nav{
+    margin-top: 30px;
+    &>section{
+      margin-bottom: 30px;
+      &>h3{
+        width: 280px;
+        height: 60px;
+        @include mixin.flex(flex-start, center);
+        @include mixin.font(1.5rem, #222, 700);
+        border-bottom: 2px solid var.$col-5;
+        padding-left: 1vw;
+        // background-color: #ff7c7c;;
+      }
     }
   }
-  &-content {
-    max-height: 0;
-    padding: 0 1em;
-    transition: all .35s;
-  }
-  &-close {
-    display: flex;
-    justify-content: flex-end;
-    padding: 1em;
-    font-size: 0.75em;
-    cursor: pointer;
+}
+
+.side-menu-list{
+  display: block;
+  line-height: 42px;
+  border-bottom: 1px solid #b8648e;
+  position: relative;
+  cursor: pointer;
+  &>a{
+    display: block;
+    padding-left: 10px;
   }
 }
 
-.tab-label:hover{
+.side-menu .info {
+  display: block;
+}
+
+.sidebar .accordionbox .accordionlist dt {
+  display: block;
+  padding-left: 1vw;
+  height: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid var.$col-5;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.sidebar .accordionbox .accordionlist dt > div > p:hover{
   color: #ff7c7c;
 }
 
-.tab-content{
-  &>div{
-    &>a:hover{
-      color: #ff7c7c;
-    }
-  }
+.sidebar .accordionbox .accordionlist dd {
+  display: none;
+  position: relative;
 }
 
-
-// :checked
-input:checked {
-  + .tab-label {
-    // background: darken(#2c3e50, 10%);
-    &::after {
-      transform: rotate(90deg);
-    }
-  }
-  ~ .tab-content {
-    max-height: 100vh;
-    padding: 1em;
-
-    &>div{
-      margin-top: 1vw;
-    }
-    
-  }
+.sidebar .accordionbox .accordionlist dd > ul > li {
+  line-height: 42px;
+  position: relative;
+  padding: 0;
 }
+
+.sidebar .accordionbox .accordionlist dd > ul > li a {
+  display: block;
+  padding-left: 20px;
+  // font-size: 1rem;
+}
+
+.sidebar .accordionbox .accordionlist dd > ul > li a:hover {
+  text-decoration: none;
+  /* background: #ccc; */
+  color: #ff7c7c;
+}
+
+.sidebar .accordionbox .accordionlist dd > ul > li > ul {
+  position: absolute;
+  z-index: 11;
+  top: 0;
+  left: 188px;
+  overflow: hidden;
+  height: 0;
+  min-width: 390px;
+  padding: 0;
+  cursor: auto;
+}
+
+.sidebar .accordionbox .accordionlist dd > ul > li > ul > li {
+  line-height: 40px;
+}
+.sidebar .accordionbox .accordionlist dd > ul > li > ul > li > a {
+  padding: 0 20px;
+  /* font-size: 1.5rem;
+  font-weight: 700; */
+}
+.sidebar .accordionbox .accordion_icon,
+.sidebar .accordionbox .accordion_icon span {
+  display: inline-block;
+  // transition: all .4s;
+  box-sizing: border-box;
+}
+.sidebar .accordionbox .accordion_icon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 25px;
+  right: 6px;
+  /* background-color: #ff7c7c; */
+}
+
+.sidebar .accordionbox .accordion_icon span {
+  position: absolute;
+  left: 6px;
+  width: 50%;
+  height: 2px;
+  background-color: #555;
+  color: #ff7c7c;
+}
+
+.sidebar .accordionbox .accordion_icon:hover>span{
+  background-color: #ff7c7c;
+}
+
+.sidebar .accordionbox .accordion_icon span:nth-of-type(1) {
+  top: 5px;
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+}
+.sidebar .accordionbox .accordion_icon span:nth-of-type(2) {
+  top: 5px;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+}
+.sidebar .accordionbox .accordion_icon.active span:nth-of-type(1) {
+  top: 5px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+.sidebar .accordionbox .accordion_icon.active span:nth-of-type(2) {
+  top: 5px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+}
+
+.sidebar .accordionbox .accordion_icon.active:hover{
+color: #ff7c7c;
+}
+
 
 // side-menu-----------------------------------
 

@@ -133,7 +133,94 @@ onselectstart='return false' ondragstart='return false'>
   </section>
 
   <main>
-    <section id="main-left">
+    <div id="main-left" class="side-menu" style="position:sticky; top: 8%;">
+      <nav class="sidebar">
+        <section>
+        <h3>Categories</h3>
+          <div id="accordion" class="accordionbox">
+              <dl class="accordionlist">
+                <dt class="clearfix">
+                  <div class="title">
+                    <p>Products</p>
+                  </div>
+                  <p class="accordion_icon">
+                    <span></span><span></span>
+                  </p>
+                </dt>
+                <dd>
+                  <ul>
+                    <li><a href="#">Cleanser</a></li>
+                    <li><a href="#">Skin/Toner</a></li>
+                    <li><a href="#">Lotion/Cream</a></li>
+                    <li><a href="#">Ampoule</a></li>
+                    <li><a href="#">Sun Care</a></li>
+                    <li><a href="#">Hair Care</a></li>
+                  </ul>
+                </dd>
+              </dl>
+            </div>		
+  
+            <div id="accordion" class="accordionbox">
+              <dl class="accordionlist">
+                <dt class="clearfix">
+                  <div class="title">
+                    <p>Skin Type</p>
+                  </div>
+                  <p class="accordion_icon">
+                    <span></span><span></span>
+                  </p>
+                </dt>
+                <dd>
+                  <ul>
+                    <li><a href="#">Sensitive Skin</a></li>
+                    <li><a href="#">Dry Skin</a></li>
+                    <li><a href="#">Oily Skin</a></li>
+                    <li><a href="#">Sun Care</a></li>
+                    <li><a href="#">Hair Care</a></li>
+                  </ul>
+                </dd>
+              </dl>
+            </div>
+            
+            <div id="accordion" class="accordionbox">
+              <dl class="accordionlist">
+                <dt class="clearfix">
+                  <div class="title">
+                    <p>Set</p>
+                  </div>
+                  <p class="accordion_icon">
+                    <span></span><span></span>
+                  </p>
+                </dt>
+                <dd>
+                  <ul>
+                    <li><a href="#">Soothing Set</a></li>
+                    <li><a href="#">Repair Set</a></li>
+                    <li><a href="#">Trouble Set</a></li>
+                  </ul>
+                </dd>
+              </dl>
+            </div>
+            
+            <div id="accordion" class="accordionbox">
+              <dl class="accordionlist">
+                <dt class="clearfix">
+                  <div class="title">
+                    <p>A-SKIN</p>
+                  </div>
+                  <p class="accordion_icon"><span></span><span></span></p>
+                </dt>
+                <dd>
+                  <ul>
+                    <li><a href="./Brand_Page/brand_page.html">Brand Story</a></li>
+                  </ul>
+                </dd>
+              </dl>
+            </div>
+        </section>
+      </nav>
+    </div>
+    <!-- <section id="main-left" class="side-menu" style="position:sticky; top: 8%;">
       <h2>Categories</h2>
       <div class="tabs">
         <div class="tab">
@@ -176,7 +263,7 @@ onselectstart='return false' ondragstart='return false'>
             </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section id="main-right">
         <div id="right-top">
@@ -691,6 +778,26 @@ onselectstart='return false' ondragstart='return false'>
     //     this.classList.toggle("active");
     //   });
     // }
+  $(document).ready(function() {
+    $(".accordionbox dt").on('click', function () {
+      if ($(this).hasClass('active')) {
+        $(this).children(".accordion_icon").removeClass('active');
+        slideUp();
+      } else {
+        slideUp();
+        removeClass();
+        $(this).children(".accordion_icon").addClass('active');
+        $(this).addClass('active').next().slideDown();
+      };
+      function slideUp() {		
+        $('dt').removeClass('active').next().slideUp();
+      };
+      function removeClass() {		
+        $('p').removeClass('active');
+      };
+    });
+  });
+
     // accordion-menu-pc-----------------------------------
     $(function(){
       $('.slider').slick({

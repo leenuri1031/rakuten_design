@@ -133,50 +133,93 @@ onselectstart='return false' ondragstart='return false'>
   </section>
 
   <main>
-    <section id="main-left">
-      <h2>Categories</h2>
-      <div class="tabs">
-        <div class="tab">
-          <input type="checkbox" id="chck1" class="chck">
-          <label class="tab-label" for="chck1">Products</label>
-          <div class="tab-content">
-            <div><a href="#">Cleanser</a></div>
-            <div><a href="#">Skin/Toner</a></div>
-            <div><a href="#">Lotion/Cream</a></div>
-            <div><a href="#">Ampoule</a></div>
-            <div><a href="#">Sun Care</a></div>
-            <div><a href="#">Hair Care</a></div>
-          </div>
-        </div>
-        <div class="tab">
-          <input type="checkbox" id="chck2" class="chck">
-          <label class="tab-label" for="chck2">Skin Type </label>
-          <div class="tab-content">
-              <div><a href="#">Sensitive Skin</a></div>
-              <div><a href="#">Dry Skin</a></div>
-              <div><a href="#">Oily Skin</a></div>
-              <div><a href="#">Sun Care</a></div>
-              <div><a href="#">Hair Care</a></div>
-          </div>
-        </div>
-        <div class="tab">
-          <input type="checkbox" id="chck3" class="chck">
-          <label class="tab-label" for="chck3">Set</label>
-          <div class="tab-content">
-              <div><a href="#">Soothing Set</a></div>
-              <div><a href="#">Repair Set</a></div>
-              <div><a href="#">Trouble Set</a></div>
-          </div>
-        </div>
-          <div class="tab">
-          <input type="checkbox" id="chck4" class="chck" >
-          <label class="tab-label" id="no-chck" for="chck4">About A-SKIN</label>
-            <div class="tab-content">
-              <div><a href="#">Brand Story</a></div>
+    <div id="main-left" class="side-menu" style="position:sticky; top: 8%;">
+      <nav class="sidebar">
+        <section>
+        <h3>Categories</h3>
+          <div id="accordion" class="accordionbox">
+              <dl class="accordionlist">
+                <dt class="clearfix">
+                  <div class="title">
+                    <p>Products</p>
+                  </div>
+                  <p class="accordion_icon">
+                    <span></span><span></span>
+                  </p>
+                </dt>
+                <dd>
+                  <ul>
+                    <li><a href="#">Cleanser</a></li>
+                    <li><a href="#">Skin/Toner</a></li>
+                    <li><a href="#">Lotion/Cream</a></li>
+                    <li><a href="#">Ampoule</a></li>
+                    <li><a href="#">Sun Care</a></li>
+                    <li><a href="#">Hair Care</a></li>
+                  </ul>
+                </dd>
+              </dl>
+            </div>		
+  
+            <div id="accordion" class="accordionbox">
+              <dl class="accordionlist">
+                <dt class="clearfix">
+                  <div class="title">
+                    <p>Skin Type</p>
+                  </div>
+                  <p class="accordion_icon">
+                    <span></span><span></span>
+                  </p>
+                </dt>
+                <dd>
+                  <ul>
+                    <li><a href="#">Sensitive Skin</a></li>
+                    <li><a href="#">Dry Skin</a></li>
+                    <li><a href="#">Oily Skin</a></li>
+                    <li><a href="#">Sun Care</a></li>
+                    <li><a href="#">Hair Care</a></li>
+                  </ul>
+                </dd>
+              </dl>
             </div>
-        </div>
-      </div>
-    </section>
+            
+            <div id="accordion" class="accordionbox">
+              <dl class="accordionlist">
+                <dt class="clearfix">
+                  <div class="title">
+                    <p>Set</p>
+                  </div>
+                  <p class="accordion_icon">
+                    <span></span><span></span>
+                  </p>
+                </dt>
+                <dd>
+                  <ul>
+                    <li><a href="#">Soothing Set</a></li>
+                    <li><a href="#">Repair Set</a></li>
+                    <li><a href="#">Trouble Set</a></li>
+                  </ul>
+                </dd>
+              </dl>
+            </div>
+            
+            <div id="accordion" class="accordionbox">
+              <dl class="accordionlist">
+                <dt class="clearfix">
+                  <div class="title">
+                    <p>A-SKIN</p>
+                  </div>
+                  <p class="accordion_icon"><span></span><span></span></p>
+                </dt>
+                <dd>
+                  <ul>
+                    <li><a href="./Brand_Page/brand_page.html">Brand Story</a></li>
+                  </ul>
+                </dd>
+              </dl>
+            </div>
+        </section>
+      </nav>
+    </div>
 
     <section id="main-right">
       <div class="brand-top">
@@ -509,47 +552,26 @@ onselectstart='return false' ondragstart='return false'>
 </div>
 
   <script>
-    // const root = document.getElementById('root');
-    // const carouselSlides = document.querySelector('.carousel-slide');
-    // const slideItems = document.querySelectorAll('.carousel-item');
-    // const slideCount = slideItems.length;
-    // const prevBtn = document.getElementById('carousel-prev');
-    // const nextBtn = document.getElementById('carousel-next');
-    // let currentIndex = 0;
-    // let slideItemsWith = 300;
-    // let slideItemsMargin = 100;
-
-    // console.log(root.clientWidth);
-
-    // function slideMove(num){
-    //   carouselSlides.style.left = -num * 250 + 'px';
-    //   currentIndex = num;
-    // }
-
-
-    // prevBtn.addEventListener('click', function(){
-    //   if(currentIndex !== 0){
-    //     slideMove(currentIndex-1);
-    //   }
-    // });
-
-    // nextBtn.addEventListener('click', function(){
-    //   if(currentIndex !== slideCount-1){
-    //     slideMove(currentIndex+1);
-    //   }
-    // });
-
-    // if(root.clientWidth>1024){
-    //   slideItemsMargin = 20;
-    // }
-
     // accordion-menu-pc-----------------------------------
-    // const accordion = document.getElementsByClassName('accordion');
-    // for (i = 0; i < accordion.length; i++) {
-    //   accordion[i].addEventListener("click", function () {
-    //     this.classList.toggle("active");
-    //   });
-    // }
+    $(document).ready(function() {
+    $(".accordionbox dt").on('click', function () {
+      if ($(this).hasClass('active')) {
+        $(this).children(".accordion_icon").removeClass('active');
+        slideUp();
+      } else {
+        slideUp();
+        removeClass();
+        $(this).children(".accordion_icon").addClass('active');
+        $(this).addClass('active').next().slideDown();
+      };
+      function slideUp() {		
+        $('dt').removeClass('active').next().slideUp();
+      };
+      function removeClass() {		
+        $('p').removeClass('active');
+      };
+    });
+  });
     // accordion-menu-pc-----------------------------------
     $(function(){
       $('.slider').slick({
