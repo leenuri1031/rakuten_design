@@ -5,7 +5,7 @@
 
 @media(min-width:1024px){
   #root{
-    height: 150vh;
+    height: 100vh;
     // height: 100vh;
   }
   header{
@@ -302,7 +302,7 @@ input:checked {
 
 // footer--------------------------------------------------
   footer{
-    @include mixin.size(92%,52.5%);
+    @include mixin.size(92%,78%);
 
     &>div:nth-child(1){
       @include mixin.container-style(100%, 8%, center, center);

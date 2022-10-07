@@ -26,7 +26,7 @@
 
 @media (min-width: 1024px) {
   #root {
-    height: 150vh;
+    height: 100vh;
   }
   header {
     width: 65%;
@@ -361,7 +361,7 @@
   }
   footer {
     width: 92%;
-    height: 52.5%;
+    height: 78%;
   }
   footer > div:nth-child(1) {
     width: 100%;
