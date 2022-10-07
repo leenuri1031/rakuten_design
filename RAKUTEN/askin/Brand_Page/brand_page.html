@@ -121,10 +121,10 @@ onselectstart='return false' ondragstart='return false'>
 
   <section id="slide">
     <div class="slider">
-      <div class="slide-item"><a href=""><img src="https://image.rakuten.co.jp/smartforyou/cabinet/09434625/new_renewal_1.jpg" alt=""></a></div>
-      <div class="slide-item"><a href=""><img src="https://image.rakuten.co.jp/smartforyou/cabinet/09434625/new_renewal_2.jpg" alt=""></a></div>
-      <div class="slide-item"><a href=""><img src="https://image.rakuten.co.jp/smartforyou/cabinet/09434625/new_renewal_3.jpg" alt=""></a></div>
-      <div class="slide-item"><a href=""><img src="https://image.rakuten.co.jp/smartforyou/cabinet/09434625/new_renewal_4.jpg" alt=""></a></div>
+      <div class="slide-item"><a href=""><img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/banner1.jpg" alt=""></a></div>
+      <div class="slide-item"><a href=""><img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/banner2.jpg" alt=""></a></div>
+      <div class="slide-item"><a href=""><img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/banner3.jpg" alt=""></a></div>
+      <div class="slide-item"><a href=""><img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/banner4.jpg" alt=""></a></div>
     </div>
     <div class="btn">
       <span id="prevArrow"><img src="./IMG/arrow_left.png" alt=""></span>
@@ -133,54 +133,244 @@ onselectstart='return false' ondragstart='return false'>
   </section>
 
   <main>
-    <section id="main-left">
-      <h2>Categories</h2>
-      <div class="tabs">
-        <div class="tab">
-          <input type="checkbox" id="chck1" class="chck">
-          <label class="tab-label" for="chck1">Products</label>
-          <div class="tab-content">
-            <div><a href="#">Cleanser</a></div>
-            <div><a href="#">Skin/Toner</a></div>
-            <div><a href="#">Lotion/Cream</a></div>
-            <div><a href="#">Ampoule</a></div>
-            <div><a href="#">Sun Care</a></div>
-            <div><a href="#">Hair Care</a></div>
-          </div>
-        </div>
-        <div class="tab">
-          <input type="checkbox" id="chck2" class="chck">
-          <label class="tab-label" for="chck2">Skin Type </label>
-          <div class="tab-content">
-              <div><a href="#">Sensitive Skin</a></div>
-              <div><a href="#">Dry Skin</a></div>
-              <div><a href="#">Oily Skin</a></div>
-              <div><a href="#">Sun Care</a></div>
-              <div><a href="#">Hair Care</a></div>
-          </div>
-        </div>
-        <div class="tab">
-          <input type="checkbox" id="chck3" class="chck">
-          <label class="tab-label" for="chck3">Set</label>
-          <div class="tab-content">
-              <div><a href="#">Soothing Set</a></div>
-              <div><a href="#">Repair Set</a></div>
-              <div><a href="#">Trouble Set</a></div>
-          </div>
-        </div>
-          <div class="tab">
-          <input type="checkbox" id="chck4" class="chck" >
-          <label class="tab-label" id="no-chck" for="chck4">About A-SKIN</label>
-            <div class="tab-content">
-              <div><a href="#">Brand Story</a></div>
+    <div id="main-left" class="side-menu" style="position:sticky; top: 8%;">
+      <nav class="sidebar">
+        <section>
+        <h3>Categories</h3>
+          <div id="accordion" class="accordionbox">
+              <dl class="accordionlist">
+                <dt class="clearfix">
+                  <div class="title">
+                    <p>Products</p>
+                  </div>
+                  <p class="accordion_icon">
+                    <span></span><span></span>
+                  </p>
+                </dt>
+                <dd>
+                  <ul>
+                    <li><a href="#">Cleanser</a></li>
+                    <li><a href="#">Skin/Toner</a></li>
+                    <li><a href="#">Lotion/Cream</a></li>
+                    <li><a href="#">Ampoule</a></li>
+                    <li><a href="#">Sun Care</a></li>
+                    <li><a href="#">Hair Care</a></li>
+                  </ul>
+                </dd>
+              </dl>
+            </div>		
+  
+            <div id="accordion" class="accordionbox">
+              <dl class="accordionlist">
+                <dt class="clearfix">
+                  <div class="title">
+                    <p>Skin Type</p>
+                  </div>
+                  <p class="accordion_icon">
+                    <span></span><span></span>
+                  </p>
+                </dt>
+                <dd>
+                  <ul>
+                    <li><a href="#">Sensitive Skin</a></li>
+                    <li><a href="#">Dry Skin</a></li>
+                    <li><a href="#">Oily Skin</a></li>
+                    <li><a href="#">Sun Care</a></li>
+                    <li><a href="#">Hair Care</a></li>
+                  </ul>
+                </dd>
+              </dl>
             </div>
-        </div>
-      </div>
-    </section>
+            
+            <div id="accordion" class="accordionbox">
+              <dl class="accordionlist">
+                <dt class="clearfix">
+                  <div class="title">
+                    <p>Set</p>
+                  </div>
+                  <p class="accordion_icon">
+                    <span></span><span></span>
+                  </p>
+                </dt>
+                <dd>
+                  <ul>
+                    <li><a href="#">Soothing Set</a></li>
+                    <li><a href="#">Repair Set</a></li>
+                    <li><a href="#">Trouble Set</a></li>
+                  </ul>
+                </dd>
+              </dl>
+            </div>
+            
+            <div id="accordion" class="accordionbox">
+              <dl class="accordionlist">
+                <dt class="clearfix">
+                  <div class="title">
+                    <p>A-SKIN</p>
+                  </div>
+                  <p class="accordion_icon"><span></span><span></span></p>
+                </dt>
+                <dd>
+                  <ul>
+                    <li><a href="./Brand_Page/brand_page.html">Brand Story</a></li>
+                  </ul>
+                </dd>
+              </dl>
+            </div>
+        </section>
+      </nav>
+    </div>
 
     <section id="main-right">
-      
+      <div class="brand-top">
+        <div>
+          <div>K-Beautyの先、</br>
+            敏感な肌のための初めてのソリューションA-SKIN</div>
+          <div>
+            <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09447895/brandstory_top_4.jpg" alt="">
+            <div>
+              <div>
+                信頼できる</br>皮膚科学
+              </div>
+              <div>新鮮な</br>原料</div>
+              <div>健康な美</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>どの化粧品が良い化粧品でしょうか？</br>
+            この答えを探すため長い間悩んできました。</div>
+          <div></div>
+        </div>
+        <div>
+          <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09447895/brandstory_top2.jpg" alt="">
+          <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09447895/brandstory_top3.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="brand-media">
+        <iframe src="https://www.youtube.com/embed/2G4lQ4QOkhU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09447895/brandstory_media4.jpg" alt="">
+        <div>
+          健康な皮膚ケアのため
+          エースキンは</br>信頼できる
+          専門家の諮問を受け、</br>
+          根本的な美を求める</br>
+          ソリューションを提供します。
+        </div>
+        <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09447895/brandstory_media3.jpg" alt="">
+        <div>
+          ヒューマンコスメティックはヒューマン皮膚科と共にします。</br>ヒューマン皮膚科は専門医たちが集まって作られた</br>ネットワークを持っています。</br>ヒューマンコスメティックは専門家の諮問を受け、絶えずに研究に尽くしてます。
+        </div>
+      </div>
+
+      <div class="brand-patent">
+        <div class=" patent-top">
+          <div>
+            <div>韓国から認証されたパテント原料</div>
+            <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09447895/bracket.jpg" alt="">
+          </div>
+          <div>
+            <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09447895/brandstory_patent4.jpg" alt="">
+            <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09447895/brandstory_patent5.jpg" alt="">
+          </div>
+        </div>
+        <div class="patent-bottom">
+          <div>
+            <div>エースキン国際原料辞典登載</div>
+            <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09447895/bracket.jpg" alt="">
+          </div>
+          <div>
+            <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09447895/brandstory_patent3.jpg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="brand-lap">
+        <div>
+          <div>
+            <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09447895/brandstory_lab1.jpg" alt="">
+          </div>
+          <div>
+            "独自の技術開発のため</br>今まで走ってきました。"
+          </div>
+        </div>
+        <div>
+          <div>
+            "有効成分を肌に効果的に与える</br>品質力に集中しています。"
+          </div>
+          <div>
+            <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09447895/brandstory_lab2.jpg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="brand-promiss">
+        <div>
+          <div>エースキンの３つの約束</div>
+          <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09447895/bracket.jpg" alt="">
+        </div>
+        <div>
+          <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09447895/brandstory_promiss6.jpg" alt="">
+          <div>
+            <div>皮膚刺激テスト完了</div>
+            <div>
+            エースキンの全商品は</br>多数の臨床経験を行い、</br>
+            皮膚刺激テスト完了済みの</br>製品のみ取り扱っております。
+          </div>
+          </div>
+        </div>
+        <div>
+          <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09447895/brandstory_promiss5.jpg" alt="">
+          <div>
+            <div>信頼できる皮膚科学</div>
+            <div>成分を効果的に伝達するための</br>
+              化粧品開発と優秀な品質管理システムで</br>
+              顧客様の満足を目指します</div>
+          </div>
+        </div>
+        <div>
+          <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09447895/brandstory_promiss4.jpg" alt="">
+          <div>
+            <div>製品の安定性</div>
+            <div>原料の研究・開発から生産まで、</br>
+              全てのプロセスをエースキンから</br>
+              直接ケアします。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="brand-history">
+        <div>A-SKIN History</div>
+        <div>
+          <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09447895/brandstory_history.jpg" alt="">
+        </div>
+        <div>
+          <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09447895/brandstory_history_2.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="brand-bottom">
+        <div>
+          <h3>肌に美しさを咲かせるA-SKIN</h3>
+          <div>美しさは健やかな肌から咲かれます。</div>
+          <div>
+            健やかな肌の改善は諦めない研究・開発から始めます。
+          </div>
+          <div>
+            ヒューマンコスメティックは付設研究所の研究員・装備・産学協力のため積極的な投資を行い、多数のパテント取得、国策課題の進行、論文発表など肌健康分野で成果を出しております。
+          </div>
+          <div>
+            肌トラブル・保湿・肌ハリ分野の数多い臨床経験とシワ・美白などの機能性化粧品のノウハウを保有しており、研究の結果を基盤でダーマコスメティック製品を開発し、ブランド価値を実現して、消費者の健やかな肌を守ります。
+          </div>
+        </div>
+        <div>
+          <img src="https://image.rakuten.co.jp/smartforyou/cabinet/askin/askin-logo/brand_name_gray.jpg" alt="">
+        </div>
+      </div> 
     </section>
+
   </main>
 <!-- 
   <div id="footer">
@@ -362,52 +552,31 @@ onselectstart='return false' ondragstart='return false'>
 </div>
 
   <script>
-    // const root = document.getElementById('root');
-    // const carouselSlides = document.querySelector('.carousel-slide');
-    // const slideItems = document.querySelectorAll('.carousel-item');
-    // const slideCount = slideItems.length;
-    // const prevBtn = document.getElementById('carousel-prev');
-    // const nextBtn = document.getElementById('carousel-next');
-    // let currentIndex = 0;
-    // let slideItemsWith = 300;
-    // let slideItemsMargin = 100;
-
-    // // console.log(root.clientWidth);
-
-    // function slideMove(num){
-    //   carouselSlides.style.left = -num * 250 + 'px';
-    //   currentIndex = num;
-    // }
-
-
-    // prevBtn.addEventListener('click', function(){
-    //   if(currentIndex !== 0){
-    //     slideMove(currentIndex-1);
-    //   }
-    // });
-
-    // nextBtn.addEventListener('click', function(){
-    //   if(currentIndex !== slideCount-1){
-    //     slideMove(currentIndex+1);
-    //   }
-    // });
-
-    // if(root.clientWidth>1024){
-    //   slideItemsMargin = 20;
-    // }
-
     // accordion-menu-pc-----------------------------------
-    // const accordion = document.getElementsByClassName('accordion');
-    // for (i = 0; i < accordion.length; i++) {
-    //   accordion[i].addEventListener("click", function () {
-    //     this.classList.toggle("active");
-    //   });
-    // }
+    $(document).ready(function() {
+    $(".accordionbox dt").on('click', function () {
+      if ($(this).hasClass('active')) {
+        $(this).children(".accordion_icon").removeClass('active');
+        slideUp();
+      } else {
+        slideUp();
+        removeClass();
+        $(this).children(".accordion_icon").addClass('active');
+        $(this).addClass('active').next().slideDown();
+      };
+      function slideUp() {		
+        $('dt').removeClass('active').next().slideUp();
+      };
+      function removeClass() {		
+        $('p').removeClass('active');
+      };
+    });
+  });
     // accordion-menu-pc-----------------------------------
     $(function(){
       $('.slider').slick({
       infinite : true,     
-      slidesToShow : 1,     
+      slidesToShow : 3,     
       slidesToScroll : 1,        
       speed : 2000,     
       dots : true,        
@@ -415,8 +584,17 @@ onselectstart='return false' ondragstart='return false'>
       pauseOnHover : true,      
       prevArrow : $('#prevArrow'), 
       nextArrow : $('#nextArrow'),   
-          });
+      responsive: [
+        {
+          breakpoint: 720,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
       });
+    });
 
   </script>
   <!-- <script  src="./app.js"></script> -->

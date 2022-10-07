@@ -235,9 +235,12 @@ main{
   &>div{
     @include mixin.container-style(100%, 80%, space-around, center );
     // border: solid black 1px;
-    &>div{
+    &>a{
       @include mixin.container-style(45%, 100%, space-around, center );
-      background-color: var.$col-bright-gray;
+      // background-color: var.$col-bright-gray;
+      &>img{
+        @include mixin.size(100%, 100%);
+      }
     }
   }
 }
@@ -483,14 +486,14 @@ footer{
     
     &>div{
     @include mixin.container-style(100%, 100%, flex-start,center);
-    @include mixin.font(0.8rem, 500, var.$col-white);
+    @include mixin.font(0.8rem, 400, var.$col-white);
     line-height: 1.5;
     }
   }
 
   &>div:last-child{
     @include mixin.container-style(100%, 10%, center, center);
-    @include mixin.font(0.8rem, 500, var.$col-white);
+    @include mixin.font(0.8rem, 400, var.$col-white);
   }
 }
 
@@ -505,7 +508,7 @@ footer{
       @include mixin.container-style(80%, 20%, flex-start, center);
       &>a{
         @include mixin.size(100%,100%);
-        @include mixin.font(0.8rem, 500, var.$col-white);
+        @include mixin.font(0.8rem, 400, var.$col-white);
       }
     }
   }
