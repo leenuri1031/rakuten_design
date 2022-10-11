@@ -107,7 +107,7 @@ header{
   @include mixin.container-style(100%, 8vh, space-around, center);
   // background-color: salmon;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 
   &>section:first-child{
     @include mixin.container-style(100%, 100%, center, center);
@@ -144,7 +144,7 @@ header{
   @include mixin.container-style(100%, 100%, center, center);
   position: absolute;
   top: 2%;
-  z-index: 5;
+  // z-index: 5;
 }
 
 .slick-list{
@@ -158,7 +158,7 @@ header{
 
 .slide-item {
   @include mixin.size(100%, 100%);
-  z-index: 10;
+  // z-index: 10;
   cursor: pointer;
   &>a{
     @include mixin.container-style(100%, 100%, center, center);
@@ -173,7 +173,7 @@ header{
   position: absolute;
   border-radius: 50%;
   opacity: 0.5;
-  z-index: 5;
+  z-index: 1;
   top: 52%;
   background-color: #fff;
 }

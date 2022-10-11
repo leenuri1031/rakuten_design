@@ -635,6 +635,7 @@ color: #ff7c7c;
 
   &>div{
     @include mixin.container-style(100%, 90%, space-around, center, column);
+
   }
 }
 // bottom-----------------------------------
