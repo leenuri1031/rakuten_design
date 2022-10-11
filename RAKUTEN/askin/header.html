@@ -212,6 +212,7 @@ header > section:last-child {
   flex-direction: row;
   position: absolute;
   top: 2%;
+  z-index: 5;
 }
 
 .slick-list {
@@ -241,46 +242,37 @@ header > section:last-child {
   height: 100%;
 }
 
-.btn {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  position: absolute;
-}
-.btn > span {
-  width: 25px;
-  height: 25px;
+.slick-arrow {
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  position: absolute;
   border-radius: 50%;
+  opacity: 0.5;
+  z-index: 5;
+  top: 52%;
   background-color: #fff;
-  opacity: 0.7;
-  cursor: pointer;
 }
-.btn > span > img {
-  width: 100%;
-  height: 100%;
-}
-.btn > span:hover {
-  opacity: 1;
+
+.slick-arrow:hover {
   background-color: rgb(222, 222, 222);
 }
 
-#prevArrow {
-  position: relative;
+.slick-prev {
   left: 1%;
-  top: 5%;
+}
+.slick-prev::before {
+  content: url(/IMG/arrow_left_1.png);
 }
 
-#nextArrow {
-  position: relative;
+.slick-next {
   right: 1%;
-  top: 5%;
+}
+.slick-next::before {
+  content: url(/IMG/arrow_right_1.png);
 }
 
 .slick-dots {
@@ -292,6 +284,7 @@ header > section:last-child {
   flex-direction: row;
   position: absolute;
   top: 95%;
+  z-index: 10;
 }
 @media (min-width: 1024px) {
   #root {
@@ -502,44 +495,23 @@ header > section:last-child {
     width: 1248px;
     height: 100%;
   }
-  .btn {
-    width: 100%;
+  .slick-arrow {
+    width: 13%;
     height: 100%;
+    border-radius: 0;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-direction: row;
-    position: absolute;
-    top: -8%;
+    top: 50%;
   }
-  .btn > span {
-    width: 25%;
-    height: 100%;
-    opacity: 0.2;
-    border-radius: 0%;
+  .slick-prev {
+    left: 23.36%;
+    justify-content: flex-end;
+    padding-right: 50px;
   }
-  .btn > span > img {
-    width: 50px;
-    height: 50px;
-  }
-  .btn > span:hover {
-    opacity: 0.5;
-  }
-  .btn #prevArrow {
-    left: 0%;
-    top: 3%;
-  }
-  .btn #prevArrow > img {
-    position: relative;
-    left: 40%;
-  }
-  .btn #nextArrow {
-    right: 0%;
-    top: 3%;
-  }
-  .btn #nextArrow > img {
-    position: relative;
-    right: 40%;
+  .slick-next {
+    right: 23.36%;
+    justify-content: flex-start;
+    padding-left: 50px;
   }
 }
   </style>
@@ -646,14 +618,26 @@ onselectstart='return false' ondragstart='return false'>
 
   <section id="slide">
     <div class="slider">
-      <div class="slide-item"><a href=""><img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/banner1.jpg" alt=""></a></div>
-      <div class="slide-item"><a href=""><img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/banner2.jpg" alt=""></a></div>
-      <div class="slide-item"><a href=""><img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/banner3.jpg" alt=""></a></div>
-      <div class="slide-item"><a href=""><img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/banner4.jpg" alt=""></a></div>
-    </div>
-    <div class="btn">
-      <span id="prevArrow"><img src="./IMG/arrow_left.png" alt=""></span>
-      <span id="nextArrow"><img src="./IMG/arrow_right.png" alt=""></span>
+      <div class="slide-item">
+        <a href="https://item.rakuten.co.jp/smartforyou/test1/" target="_blank">
+          <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/banner1.jpg" alt="">
+        </a>
+      </div>
+      <div class="slide-item">
+        <a href="https://item.rakuten.co.jp/smartforyou/test1/" target="_blank">
+          <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/banner2.jpg" alt="">
+        </a>
+      </div>
+      <div class="slide-item">
+        <a href="https://item.rakuten.co.jp/smartforyou/test1/" target="_blank">
+          <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/banner3.jpg" alt="">
+        </a>
+      </div>
+      <div class="slide-item">
+        <a href="https://item.rakuten.co.jp/smartforyou/test1/" target="_blank">
+          <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/banner4.jpg" alt="">
+        </a>
+      </div>
     </div>
   </section>
 
@@ -710,9 +694,9 @@ onselectstart='return false' ondragstart='return false'>
       speed : 2000,     
       dots : true,        
       autoplay : true,  
-      pauseOnHover : true,      
-      prevArrow : $('#prevArrow'), 
-      nextArrow : $('#nextArrow'),   
+      pauseOnHover : true,     
+      dotsClass : "slick-dots",
+      arrws:true,
       responsive: [
         {
           breakpoint: 720,

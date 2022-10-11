@@ -136,7 +136,7 @@ header{
 
 // slide-----------------------------------
 #slide{
-  @include mixin.container-style(100%, 30vh, center, center);
+  @include mixin.container-style(100%, 12%, center, center);
   position: relative;
 }
 
@@ -144,6 +144,7 @@ header{
   @include mixin.container-style(100%, 100%, center, center);
   position: absolute;
   top: 2%;
+  z-index: 5;
 }
 
 .slick-list{
@@ -157,6 +158,8 @@ header{
 
 .slide-item {
   @include mixin.size(100%, 100%);
+  z-index: 10;
+  cursor: pointer;
   &>a{
     @include mixin.container-style(100%, 100%, center, center);
     &>img{
@@ -165,35 +168,39 @@ header{
   }
 }
 
-.btn{
-  @include mixin.container-style(100%, 100%, space-between, center);
+.slick-arrow{
+  @include mixin.container-style(40px, 40px, center, center);
   position: absolute;
-
-  &>span{
-    @include mixin.container-style(25px, 25px, center, center);
-    border-radius: 50%;
-    background-color: #fff;
-    opacity: 0.7;
-    cursor: pointer;
-
-    &>img{
-      @include mixin.size(100%, 100%);
-    }
-  }
-
-  &>span:hover{
-    opacity: 1;
-    background-color: rgb(222, 222, 222);
-  }
-
+  border-radius: 50%;
+  opacity: 0.5;
+  z-index: 5;
+  top: 52%;
+  background-color: #fff;
 }
-#prevArrow{position: relative; left: 1%;  top: 5%;}
-#nextArrow{position: relative; right: 1%; top: 5%;}
+
+.slick-arrow:hover{
+  background-color: rgb(222, 222, 222);
+}
+
+.slick-prev {
+  left: 1%;
+  &::before{
+    content: url(/IMG/arrow_left_1.png);
+  }
+}
+
+.slick-next {
+  right: 1%;
+  &::before{
+    content: url(/IMG/arrow_right_1.png);
+  }
+}
 
 .slick-dots{
   @include mixin.container-style(100%, 5%, center, center);
   position: absolute;
   top: 95%;
+  z-index: 10;
 }
 
 // slide-----------------------------------

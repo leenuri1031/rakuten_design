@@ -156,42 +156,25 @@
   @include mixin.size(1248px, 100%);
 }
 
-.btn{
-  @include mixin.container-style(100%, 100%, space-between, center);
-  position: absolute;
-  top: -8%;
+.slick-arrow{
+  @include mixin.size(13%,100%);
+  // opacity: 0.5; 
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  top: 50%;
+}
 
-  &>span{
-    // @include mixin.container-style(20%, 100%, center, center);
-    @include mixin.size(25%,100%);
-    // background: none;
-    opacity: 0.2;
-    border-radius: 0%;
-    &>img{
-      @include mixin.size(50px, 50px);
-    }
-  }
-  &>span:hover{
-    opacity: 0.5;
-  }
+.slick-prev {
+  left: 23.36%;
+  justify-content: flex-end;
+  padding-right: 50px;
+}
 
-  #prevArrow {
-    left: 0%;
-    top: 0%;
-    &>img{
-      position: relative;
-      left: 40%;
-    }
-  }
-  
-  #nextArrow {
-    right: 0%;
-    top: 0%;
-    &>img{
-      position: relative;
-      right:40%;
-    }
-  }
+.slick-next {
+  right: 23.36%;
+  justify-content: flex-start;
+  padding-left: 50px;
 }
 
 
