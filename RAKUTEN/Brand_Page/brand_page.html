@@ -79,8 +79,8 @@ onselectstart='return false' ondragstart='return false'>
             <button class="dropdown-btn">Skin Type</button>
             <div class="item">
               <a href="#">Sensitive</a>
-              <a href="#">Dry Skin</a>
-              <a href="#">Oily Skin</a>
+              <a href="#">Dry & Oily Skin</a>
+              <a href="#">Special</a>
               <a href="#">Sun care</a>
               <a href="#">Hair care</a>
             </div>
@@ -121,14 +121,26 @@ onselectstart='return false' ondragstart='return false'>
 
   <section id="slide">
     <div class="slider">
-      <div class="slide-item"><a href=""><img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/banner1.jpg" alt=""></a></div>
-      <div class="slide-item"><a href=""><img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/banner2.jpg" alt=""></a></div>
-      <div class="slide-item"><a href=""><img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/banner3.jpg" alt=""></a></div>
-      <div class="slide-item"><a href=""><img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/banner4.jpg" alt=""></a></div>
-    </div>
-    <div class="btn">
-      <span id="prevArrow"><img src="./IMG/arrow_left.png" alt=""></span>
-      <span id="nextArrow"><img src="./IMG/arrow_right.png" alt=""></span>
+      <div class="slide-item">
+        <a href="https://item.rakuten.co.jp/smartforyou/test1/" target="_blank">
+          <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/banner1.jpg" alt="">
+        </a>
+      </div>
+      <div class="slide-item">
+        <a href="https://item.rakuten.co.jp/smartforyou/test1/" target="_blank">
+          <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/banner2.jpg" alt="">
+        </a>
+      </div>
+      <div class="slide-item">
+        <a href="https://item.rakuten.co.jp/smartforyou/test1/" target="_blank">
+          <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/banner3.jpg" alt="">
+        </a>
+      </div>
+      <div class="slide-item">
+        <a href="https://item.rakuten.co.jp/smartforyou/test1/" target="_blank">
+          <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/banner4.jpg" alt="">
+        </a>
+      </div>
     </div>
   </section>
 
@@ -173,8 +185,8 @@ onselectstart='return false' ondragstart='return false'>
                 <dd>
                   <ul>
                     <li><a href="#">Sensitive Skin</a></li>
-                    <li><a href="#">Dry Skin</a></li>
-                    <li><a href="#">Oily Skin</a></li>
+                    <li><a href="#">Dry & Oily Skin</a></li>
+                    <li><a href="#">Special</a></li>
                     <li><a href="#">Sun Care</a></li>
                     <li><a href="#">Hair Care</a></li>
                   </ul>
@@ -212,7 +224,7 @@ onselectstart='return false' ondragstart='return false'>
                 </dt>
                 <dd>
                   <ul>
-                    <li><a href="./Brand_Page/brand_page.html">Brand Story</a></li>
+                    <li><a href="#">Brand Story</a></li>
                   </ul>
                 </dd>
               </dl>
@@ -252,15 +264,15 @@ onselectstart='return false' ondragstart='return false'>
         <iframe src="https://www.youtube.com/embed/2G4lQ4QOkhU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09447895/brandstory_media4.jpg" alt="">
         <div>
-          健康な皮膚ケアのため
-          エースキンは</br>信頼できる
+          健康な皮膚ケアのため</br>
+          エースキンは信頼できる</br>
           専門家の諮問を受け、</br>
           根本的な美を求める</br>
           ソリューションを提供します。
         </div>
         <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09447895/brandstory_media3.jpg" alt="">
         <div>
-          ヒューマンコスメティックはヒューマン皮膚科と共にします。</br>ヒューマン皮膚科は専門医たちが集まって作られた</br>ネットワークを持っています。</br>ヒューマンコスメティックは専門家の諮問を受け、絶えずに研究に尽くしてます。
+          ヒューマンコスメティックはヒューマン皮膚科と共にします。</br>ヒューマン皮膚科は専門医たちが集まって作られた</br>ネットワークを持っています。</br>ヒューマンコスメティックは専門家の諮問を受け、</br>絶えずに研究に尽くしてます。
         </div>
       </div>
 
@@ -582,8 +594,8 @@ onselectstart='return false' ondragstart='return false'>
       dots : true,        
       autoplay : true,  
       pauseOnHover : true,      
-      prevArrow : $('#prevArrow'), 
-      nextArrow : $('#nextArrow'),   
+      dotsClass : "slick-dots",
+      arrws:true, 
       responsive: [
         {
           breakpoint: 720,

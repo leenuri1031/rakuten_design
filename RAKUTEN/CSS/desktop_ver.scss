@@ -5,12 +5,12 @@
 
 @media(min-width:1024px){
   #root{
-    height: 350vh;
+    height: 430vh;
     // height: 100vh;
   }
 
   header{
-    @include mixin.container-style(65%, 10%, center, center,column);
+    @include mixin.container-style(65%, 8%, center, center,column);
 
     &>section:first-child{
       display: none;
@@ -142,7 +142,7 @@
 
 // slide-----------------------------------
 #slide{
-  @include mixin.container-style(100%, 15%, center, center);
+  @include mixin.container-style(100%, 12%, center, center);
 }
 
 .slider{
@@ -153,51 +153,51 @@
 
 .slide-track {
   @include mixin.size(1248px, 100%);
+  // border: #ff7c7c 4px solid;
 }
 
-.btn{
-  @include mixin.container-style(100%, 100%, space-between, center);
-  position: absolute;
-  top: -8%;
-
-  &>span{
-    // @include mixin.container-style(20%, 100%, center, center);
-    @include mixin.size(25%,100%);
-    // background: none;
-    opacity: 0.2;
-    border-radius: 0%;
-    &>img{
-      @include mixin.size(50px, 50px);
-    }
-  }
-  &>span:hover{
-    opacity: 0.5;
-  }
-
-  #prevArrow {
-    left: 0%;
-    top: 0%;
-    &>img{
-      position: relative;
-      left: 40%;
-    }
-  }
-  
-  #nextArrow {
-    right: 0%;
-    top: 0%;
-    &>img{
-      position: relative;
-      right:40%;
-    }
-  }
+.slick-arrow{
+  @include mixin.size(10%,100%);
+  opacity: 0.5; 
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  top: 50%;
+  background-color:white;
 }
 
+.slick-arrow:hover{
+  background-color:rgb(255, 255, 255,0.7);
+  }
+
+.slick-prev {
+  left: 23.36%;
+  justify-content: flex-end;
+  padding-right: 50px;
+}
+
+.slick-next {
+  right: 23.36%;
+  justify-content: flex-start;
+  padding-left: 50px;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-size: 50px;
+  position: relative;
+}
+
+.slick-prev:before{
+  left: 35%;
+}
+.slick-next:before{
+  right: 35%
+}
 
 // slide-----------------------------------
 
 main{
-  @include mixin.container-style(65%, 60%, center, flex-start);
+  @include mixin.container-style(65%, 62%, center, flex-start);
   // position: relative;
   // border: 5px solid black;
 }
@@ -241,8 +241,8 @@ main{
   line-height: 42px;
   border-bottom: 1px solid #b8648e;
   position: relative;
-  cursor: pointer;
   &>a{
+    cursor: pointer;
     display: block;
     padding-left: 10px;
   }
@@ -461,7 +461,7 @@ color: #ff7c7c;
 
 
 #main-right{
-  @include mixin.container-style(100%, 100%, space-between, center, column);
+  @include mixin.container-style(100%, 100%, space-around, center, column);
   // border: 2px solid black;
   &>div{
     margin-left: 2vw;
@@ -471,10 +471,9 @@ color: #ff7c7c;
 
 // top-----------------------------------
 #right-top{
-  @include mixin.container-style(100%, 40%, space-between, center, column);
+  @include mixin.container-style(100%, 33%, space-between, center, column);
   // border: solid black 1px;
-    padding-bottom: 1vw;
-
+  padding-bottom: 1vw;
 }
 
 .banner-top{
@@ -497,7 +496,7 @@ color: #ff7c7c;
 }
 
 #best-desktop{
-  @include mixin.container-style(100%, 55%, space-between, center, column );
+  @include mixin.container-style(100%, 50%, space-between, center, column );
   // border: solid 1px violet;
   &>h2{
     @include mixin.container-style(100%, 10%, center, flex-start );
@@ -540,8 +539,6 @@ color: #ff7c7c;
   }
 
 }
-
-
 // top-----------------------------------
 
 // notice-----------------------------------
@@ -585,11 +582,11 @@ color: #ff7c7c;
 
 // mid-products-----------------------------------
 #right-mid{
-  @include mixin.container-style(100%, 35%, space-around, center, column);
+  @include mixin.container-style(100%, 40%, space-around, center, column);
   // border: solid black 1px;
 
   &>div:nth-child(1){
-    @include mixin.container-style(100%,10%, center, center );
+    @include mixin.container-style(100%,8%, center, center );
     // background-color: antiquewhite;
     letter-spacing: 5px;
 
@@ -601,12 +598,12 @@ color: #ff7c7c;
 }
 
 .desktop-mid-products{
-  @include mixin.container-style(100%, 80%, space-around, center, column );
+  @include mixin.container-style(100%, 85%, space-around, center, column );
   // border: solid 1px violet;
 
   &>div{
   @include mixin.container-style(100%, 45%, space-around, center );
-
+  // border: solid 1px violet;
     &>div{
       @include mixin.container-style(20%, 100%, space-around, center,column );
       // border: solid black 1px;
@@ -640,18 +637,20 @@ color: #ff7c7c;
 
 // bottom-----------------------------------
 #right-bottom{
+  @include mixin.container-style(95%, 10%, space-around, center, column);
   position: relative;
   bottom: 1.5vw;
 
   &>div{
     @include mixin.container-style(100%, 90%, space-around, center, column);
+
   }
 }
 // bottom-----------------------------------
 
 // footer--------------------------------------------------
   footer{
-    @include mixin.size(92%,25%);
+    @include mixin.size(92%,18%);
 
     &>div:nth-child(1){
       @include mixin.container-style(100%, 8%, center, center);

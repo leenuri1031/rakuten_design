@@ -21,7 +21,7 @@
 
 @media (min-width: 1024px) {
   #root {
-    height: 850vh;
+    height: 900vh;
   }
   header {
     width: 65%;
@@ -225,48 +225,42 @@
     width: 1248px;
     height: 100%;
   }
-  .btn {
-    width: 100%;
+  .slick-arrow {
+    width: 10%;
     height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    position: absolute;
-    top: -8%;
-  }
-  .btn > span {
-    width: 25%;
-    height: 100%;
-    opacity: 0.2;
-    border-radius: 0%;
-  }
-  .btn > span > img {
-    width: 50px;
-    height: 50px;
-  }
-  .btn > span:hover {
     opacity: 0.5;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    top: 50%;
+    background-color: white;
   }
-  .btn #prevArrow {
-    left: 0%;
-    top: 0%;
+  .slick-arrow:hover {
+    background-color: rgba(255, 255, 255, 0.7);
   }
-  .btn #prevArrow > img {
+  .slick-prev {
+    left: 23.36%;
+    justify-content: flex-end;
+    padding-right: 50px;
+  }
+  .slick-next {
+    right: 23.36%;
+    justify-content: flex-start;
+    padding-left: 50px;
+  }
+  .slick-prev:before, .slick-next:before {
+    font-size: 50px;
     position: relative;
-    left: 40%;
   }
-  .btn #nextArrow {
-    right: 0%;
-    top: 0%;
+  .slick-prev:before {
+    left: 35%;
   }
-  .btn #nextArrow > img {
-    position: relative;
-    right: 40%;
+  .slick-next:before {
+    right: 35%;
   }
   main {
     width: 65%;
-    height: 695vh;
+    height: 740vh;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -522,7 +516,7 @@
   }
   .brand-media {
     width: 90%;
-    height: 20%;
+    height: 17%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -842,9 +836,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    font-size: 1.4rem;
-    font-weight: 500;
+    font-size: 1.5rem;
+    font-weight: 520;
     color: #222;
+    letter-spacing: 0.5rem;
   }
   .brand-history > div:nth-child(2) {
     width: 80%;
@@ -864,7 +859,7 @@
   }
   .brand-bottom {
     width: 100%;
-    height: 8%;
+    height: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -872,7 +867,7 @@
   }
   .brand-bottom > div:first-child {
     width: 90%;
-    height: 65%;
+    height: 60%;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
@@ -925,6 +920,7 @@
     font-weight: 400;
     color: #222;
     padding-left: 2vw;
+    line-height: 2;
   }
   .brand-bottom > div:first-child div:nth-child(5) {
     width: 89%;
@@ -937,10 +933,11 @@
     font-weight: 400;
     color: #222;
     padding-left: 2vw;
+    line-height: 2;
   }
   .brand-bottom > div:last-child {
     width: 70%;
-    height: 20%;
+    height: 25%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -949,7 +946,7 @@
   }
   footer {
     width: 92%;
-    height: 70vh;
+    height: 75vh;
   }
   footer > div:nth-child(1) {
     width: 100%;

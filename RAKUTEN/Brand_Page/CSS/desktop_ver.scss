@@ -5,7 +5,7 @@
 
 @media(min-width:1024px){
   #root{
-    height: 850vh;
+    height: 900vh;
     // height: 100vh;
   }
 
@@ -156,49 +156,48 @@
   @include mixin.size(1248px, 100%);
 }
 
-.btn{
-  @include mixin.container-style(100%, 100%, space-between, center);
-  position: absolute;
-  top: -8%;
-
-  &>span{
-    // @include mixin.container-style(20%, 100%, center, center);
-    @include mixin.size(25%,100%);
-    // background: none;
-    opacity: 0.2;
-    border-radius: 0%;
-    &>img{
-      @include mixin.size(50px, 50px);
-    }
-  }
-  &>span:hover{
-    opacity: 0.5;
-  }
-
-  #prevArrow {
-    left: 0%;
-    top: 0%;
-    &>img{
-      position: relative;
-      left: 40%;
-    }
-  }
-  
-  #nextArrow {
-    right: 0%;
-    top: 0%;
-    &>img{
-      position: relative;
-      right:40%;
-    }
-  }
+.slick-arrow{
+  @include mixin.size(10%,100%);
+  opacity: 0.5; 
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  top: 50%;
+  background-color:white;
 }
 
+.slick-arrow:hover{
+  background-color:rgb(255, 255, 255,0.7);
+  }
+
+.slick-prev {
+  left: 23.36%;
+  justify-content: flex-end;
+  padding-right: 50px;
+}
+
+.slick-next {
+  right: 23.36%;
+  justify-content: flex-start;
+  padding-left: 50px;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-size: 50px;
+  position: relative;
+}
+
+.slick-prev:before{
+  left: 35%;
+}
+.slick-next:before{
+  right: 35%
+}
 
 // slide-----------------------------------
 
 main{
-  @include mixin.container-style(65%, 695vh, center, flex-start);
+  @include mixin.container-style(65%, 740vh, center, flex-start);
   // position: relative;
   // border: 5px solid black;
 }
@@ -371,8 +370,6 @@ main{
 .sidebar .accordionbox .accordion_icon.active:hover{
 color: #ff7c7c;
 }
-
-
 // side-menu-----------------------------------
 
 
@@ -440,7 +437,7 @@ color: #ff7c7c;
 
 // brand-media-----------------------------------
 .brand-media{
-  @include mixin.container-style(90%, 20%, space-around, center, column);
+  @include mixin.container-style(90%, 17%, space-around, center, column);
   position: relative;
   // background-color: burlywood;
 
@@ -605,7 +602,8 @@ color: #ff7c7c;
   &>div:nth-child(1){
     @include mixin.container-style(90%, 5%, center, center);
     // border: solid black 1px;
-    @include mixin.font(1.4rem, 500, #222);
+    @include mixin.font(1.5rem, 520, #222);
+    letter-spacing: 0.5rem;
   }
   &>div:nth-child(2){
     @include mixin.container-style(80%, 55%, center, center);
@@ -621,10 +619,10 @@ color: #ff7c7c;
 
 // brand-bottom-----------------------------------
 .brand-bottom{
-  @include mixin.container-style(100%, 8%, center, center, column);
+  @include mixin.container-style(100%, 10%, center, center, column);
   // background-color: darksalmon;
   &>div:first-child{
-    @include mixin.container-style(90%, 65%, space-around, flex-start, column);
+    @include mixin.container-style(90%, 60%, space-around, flex-start, column);
     border-top: solid 2px var.$col-3;
     border-bottom: solid 2px var.$col-3;
     padding: 1vw;
@@ -647,18 +645,20 @@ color: #ff7c7c;
       @include mixin.container-style(89%, 20%, flex-start, center);
       @include mixin.font(1rem, 400, #222);
       padding-left: 2vw;
+      line-height: 2;
     }
 
     div:nth-child(5){
       @include mixin.container-style(89%, 25%, flex-start, center);
       @include mixin.font(1rem, 400, #222);
       padding-left: 2vw;
+      line-height: 2;
     }
 
   }
 
   &>div:last-child{
-    @include mixin.container-style(70%, 20%, center, flex-start, column);
+    @include mixin.container-style(70%, 25%, center, flex-start, column);
     margin-top: 3vh;
   }
 }
@@ -667,7 +667,7 @@ color: #ff7c7c;
 
 // footer--------------------------------------------------
   footer{
-    @include mixin.size(92%,70vh);
+    @include mixin.size(92%,75vh);
 
     &>div:nth-child(1){
       @include mixin.container-style(100%, 8%, center, center);

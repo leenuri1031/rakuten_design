@@ -13,6 +13,7 @@
 * a {
   color: #222;
   text-decoration: none;
+  cursor: pointer;
 }
 
 * {
@@ -21,11 +22,11 @@
 
 @media (min-width: 1024px) {
   #root {
-    height: 350vh;
+    height: 430vh;
   }
   header {
     width: 65%;
-    height: 10%;
+    height: 8%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -205,7 +206,7 @@
   }
   #slide {
     width: 100%;
-    height: 15%;
+    height: 12%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -225,48 +226,42 @@
     width: 1248px;
     height: 100%;
   }
-  .btn {
-    width: 100%;
+  .slick-arrow {
+    width: 10%;
     height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    position: absolute;
-    top: -8%;
-  }
-  .btn > span {
-    width: 25%;
-    height: 100%;
-    opacity: 0.2;
-    border-radius: 0%;
-  }
-  .btn > span > img {
-    width: 50px;
-    height: 50px;
-  }
-  .btn > span:hover {
     opacity: 0.5;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    top: 50%;
+    background-color: white;
   }
-  .btn #prevArrow {
-    left: 0%;
-    top: 0%;
+  .slick-arrow:hover {
+    background-color: rgba(255, 255, 255, 0.7);
   }
-  .btn #prevArrow > img {
+  .slick-prev {
+    left: 23.36%;
+    justify-content: flex-end;
+    padding-right: 50px;
+  }
+  .slick-next {
+    right: 23.36%;
+    justify-content: flex-start;
+    padding-left: 50px;
+  }
+  .slick-prev:before, .slick-next:before {
+    font-size: 50px;
     position: relative;
-    left: 40%;
   }
-  .btn #nextArrow {
-    right: 0%;
-    top: 0%;
+  .slick-prev:before {
+    left: 35%;
   }
-  .btn #nextArrow > img {
-    position: relative;
-    right: 40%;
+  .slick-next:before {
+    right: 35%;
   }
   main {
     width: 65%;
-    height: 60%;
+    height: 62%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -308,9 +303,9 @@
     line-height: 42px;
     border-bottom: 1px solid #b8648e;
     position: relative;
-    cursor: pointer;
   }
   .side-menu-list > a {
+    cursor: pointer;
     display: block;
     padding-left: 10px;
   }
@@ -433,7 +428,7 @@
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
   }
@@ -442,7 +437,7 @@
   }
   #right-top {
     width: 100%;
-    height: 40%;
+    height: 33%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -479,7 +474,7 @@
   }
   #best-desktop {
     width: 100%;
-    height: 55%;
+    height: 50%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -588,7 +583,7 @@
   }
   #right-mid {
     width: 100%;
-    height: 35%;
+    height: 40%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -596,7 +591,7 @@
   }
   #right-mid > div:nth-child(1) {
     width: 100%;
-    height: 10%;
+    height: 8%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -608,7 +603,7 @@
   }
   .desktop-mid-products {
     width: 100%;
-    height: 80%;
+    height: 85%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -670,6 +665,12 @@
     color: #b8648e;
   }
   #right-bottom {
+    width: 95%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
     position: relative;
     bottom: 1.5vw;
   }
@@ -683,7 +684,7 @@
   }
   footer {
     width: 92%;
-    height: 25%;
+    height: 18%;
   }
   footer > div:nth-child(1) {
     width: 100%;

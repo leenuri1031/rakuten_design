@@ -29,10 +29,6 @@
 }
 
 * {
-  transition: 1s;
-}
-
-* {
   scroll-behavior: smooth;
 }
 
@@ -212,6 +208,7 @@ header > section:last-child {
   flex-direction: row;
   position: absolute;
   top: 2%;
+  /* z-index: 5; */
 }
 
 .slick-list {
@@ -241,46 +238,33 @@ header > section:last-child {
   height: 100%;
 }
 
-.btn {
-  width: 100%;
+.slick-arrow {
+  width: 40px;
   height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  position: absolute;
-}
-.btn > span {
-  width: 25px;
-  height: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  border-radius: 50%;
-  background-color: #fff;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+}
+
+.slick-prev {
+  left: 0%;
+}
+
+.slick-next {
+  right: 0%;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-size: 30px;
+  line-height: 1;
   opacity: 0.7;
-  cursor: pointer;
-}
-.btn > span > img {
-  width: 100%;
-  height: 100%;
-}
-.btn > span:hover {
-  opacity: 1;
-  background-color: rgb(222, 222, 222);
-}
-
-#prevArrow {
-  position: relative;
-  left: 1%;
-  top: 5%;
-}
-
-#nextArrow {
-  position: relative;
-  right: 1%;
-  top: 5%;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .slick-dots {
@@ -292,6 +276,7 @@ header > section:last-child {
   flex-direction: row;
   position: absolute;
   top: 95%;
+  z-index: 10;
 }
 @media (min-width: 1024px) {
   #root {
@@ -305,7 +290,7 @@ header > section:last-child {
     align-items: center;
     flex-direction: row;
     position: relative;
-    z-index: 1;
+    z-index: 2;
   }
   header > section:first-child {
     display: none;
@@ -502,44 +487,38 @@ header > section:last-child {
     width: 1248px;
     height: 100%;
   }
-  .btn {
-    width: 100%;
+  .slick-arrow {
+    width: 10%;
     height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    position: absolute;
-    top: -8%;
-  }
-  .btn > span {
-    width: 25%;
-    height: 100%;
-    opacity: 0.2;
-    border-radius: 0%;
-  }
-  .btn > span > img {
-    width: 50px;
-    height: 50px;
-  }
-  .btn > span:hover {
     opacity: 0.5;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    top: 50%;
+    background-color: white;
   }
-  .btn #prevArrow {
-    left: 0%;
-    top: 3%;
+  .slick-arrow:hover {
+    background-color: rgba(255, 255, 255, 0.7);
   }
-  .btn #prevArrow > img {
+  .slick-prev {
+    left: 23.36%;
+    justify-content: flex-end;
+    padding-right: 50px;
+  }
+  .slick-next {
+    right: 23.36%;
+    justify-content: flex-start;
+    padding-left: 50px;
+  }
+  .slick-prev:before, .slick-next:before {
+    font-size: 50px;
     position: relative;
-    left: 40%;
   }
-  .btn #nextArrow {
-    right: 0%;
-    top: 3%;
+  .slick-prev:before {
+    left: 35%;
   }
-  .btn #nextArrow > img {
-    position: relative;
-    right: 40%;
+  .slick-next:before {
+    right: 35%;
   }
 }
   </style>
@@ -560,7 +539,7 @@ onselectstart='return false' ondragstart='return false'>
             <li><a class="menu__item" href="#">Products</a></li>
             <li><a class="menu__item" href="#">Type of Skin</a></li>
             <li><a class="menu__item" href="#">Set Item</a></li>
-            <li><a class="menu__item" href="./Brand_Page/brand_page.html">About A-SKIN</a></li>
+            <li><a class="menu__item" href="./Brand_Page/brand_page.html" target="_top">About A-SKIN</a></li>
             <li><a class="menu__item" href="#">Cart</a></li>
             <li><a class="menu__item" href="https://www.rakuten.co.jp/smartforyou/info.html">Company</a></li>
           </ul>
@@ -604,8 +583,8 @@ onselectstart='return false' ondragstart='return false'>
             <button class="dropdown-btn">Skin Type</button>
             <div class="item">
               <a href="#">Sensitive</a>
-              <a href="#">Dry Skin</a>
-              <a href="#">Oily Skin</a>
+              <a href="#">Dry & Oily Skin</a>
+              <a href="#">Special</a>
               <a href="#">Sun care</a>
               <a href="#">Hair care</a>
             </div>
@@ -620,7 +599,7 @@ onselectstart='return false' ondragstart='return false'>
           </div>
           <div class="dropdown">
             <button class="dropdown-btn">
-              <a href="./Brand_Page/brand_page.html">About A-skin</a>
+              <a href="./Brand_Page/brand_page.html" target="_top">About A-skin</a>
             </button>
           </div>
         </div>
@@ -646,62 +625,32 @@ onselectstart='return false' ondragstart='return false'>
 
   <section id="slide">
     <div class="slider">
-      <div class="slide-item"><a href=""><img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/banner1.jpg" alt=""></a></div>
-      <div class="slide-item"><a href=""><img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/banner2.jpg" alt=""></a></div>
-      <div class="slide-item"><a href=""><img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/banner3.jpg" alt=""></a></div>
-      <div class="slide-item"><a href=""><img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/banner4.jpg" alt=""></a></div>
-    </div>
-    <div class="btn">
-      <span id="prevArrow"><img src="./IMG/arrow_left.png" alt=""></span>
-      <span id="nextArrow"><img src="./IMG/arrow_right.png" alt=""></span>
+      <div class="slide-item">
+        <a href="https://item.rakuten.co.jp/smartforyou/test1/" target="_top">
+          <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/banner1.jpg" alt="">
+        </a>
+      </div>
+      <div class="slide-item">
+        <a href="https://item.rakuten.co.jp/smartforyou/test1/" target="_top">
+          <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/banner2.jpg" alt="">
+        </a>
+      </div>
+      <div class="slide-item">
+        <a href="https://item.rakuten.co.jp/smartforyou/test1/" target="_top">
+          <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/banner3.jpg" alt="">
+        </a>
+      </div>
+      <div class="slide-item">
+        <a href="https://item.rakuten.co.jp/smartforyou/test1/" target="_top">
+          <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/banner4.jpg" alt="">
+        </a>
+      </div>
     </div>
   </section>
 
 </div>
 
   <script>
-    // const root = document.getElementById('root');
-    // const carouselSlides = document.querySelector('.carousel-slide');
-    // const slideItems = document.querySelectorAll('.carousel-item');
-    // const slideCount = slideItems.length;
-    // const prevBtn = document.getElementById('carousel-prev');
-    // const nextBtn = document.getElementById('carousel-next');
-    // let currentIndex = 0;
-    // let slideItemsWith = 300;
-    // let slideItemsMargin = 100;
-
-    // // console.log(root.clientWidth);
-
-    // function slideMove(num){
-    //   carouselSlides.style.left = -num * 250 + 'px';
-    //   currentIndex = num;
-    // }
-
-
-    // prevBtn.addEventListener('click', function(){
-    //   if(currentIndex !== 0){
-    //     slideMove(currentIndex-1);
-    //   }
-    // });
-
-    // nextBtn.addEventListener('click', function(){
-    //   if(currentIndex !== slideCount-1){
-    //     slideMove(currentIndex+1);
-    //   }
-    // });
-
-    // if(root.clientWidth>1024){
-    //   slideItemsMargin = 20;
-    // }
-
-    // accordion-menu-pc-----------------------------------
-    // const accordion = document.getElementsByClassName('accordion');
-    // for (i = 0; i < accordion.length; i++) {
-    //   accordion[i].addEventListener("click", function () {
-    //     this.classList.toggle("active");
-    //   });
-    // }
-    // accordion-menu-pc-----------------------------------
     $(function(){
       $('.slider').slick({
       infinite : true,     
@@ -710,9 +659,9 @@ onselectstart='return false' ondragstart='return false'>
       speed : 2000,     
       dots : true,        
       autoplay : true,  
-      pauseOnHover : true,      
-      prevArrow : $('#prevArrow'), 
-      nextArrow : $('#nextArrow'),   
+      pauseOnHover : true,     
+      dotsClass : "slick-dots",
+      arrws:true,
       responsive: [
         {
           breakpoint: 720,
@@ -724,8 +673,6 @@ onselectstart='return false' ondragstart='return false'>
       ]
       });
     });
-
   </script>
-  <!-- <script  src="./app.js"></script> -->
 </body>
 </html>
