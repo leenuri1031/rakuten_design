@@ -157,13 +157,18 @@
 }
 
 .slick-arrow{
-  @include mixin.size(13%,100%);
-  // opacity: 0.5; 
+  @include mixin.size(10%,100%);
+  opacity: 0.5; 
   border-radius: 0;
   display: flex;
   align-items: center;
   top: 50%;
+  background-color:white;
 }
+
+.slick-arrow:hover{
+  background-color:rgb(255, 255, 255,0.7);
+  }
 
 .slick-prev {
   left: 23.36%;
@@ -177,12 +182,17 @@
   padding-left: 50px;
 }
 
-// .slick-arrow:hover{
-//   background-color: rgb(222, 222, 222);
-//   opacity: 0.7; 
+.slick-prev:before, .slick-next:before {
+  font-size: 50px;
+  position: relative;
+}
 
-// }
-
+.slick-prev:before{
+  left: 35%;
+}
+.slick-next:before{
+  right: 35%
+}
 
 // slide-----------------------------------
 

@@ -169,32 +169,29 @@ header{
 }
 
 .slick-arrow{
-  @include mixin.container-style(40px, 40px, center, center);
+  @include mixin.container-style(40px, 100%, center, center);
   position: absolute;
-  border-radius: 50%;
-  opacity: 0.5;
   z-index: 1;
-  top: 52%;
-  background-color: #fff;
-}
-
-.slick-arrow:hover{
-  background-color: rgb(222, 222, 222);
+  top: 50%;
 }
 
 .slick-prev {
-  left: 1%;
-  &::before{
-    content: url(/IMG/arrow_left_1.png);
-  }
+  left: 0%;
 }
 
+
 .slick-next {
-  right: 1%;
-  &::before{
-    content: url(/IMG/arrow_right_1.png);
-  }
+  right: 0%;
 }
+.slick-prev:before, .slick-next:before {
+  font-size: 30px;
+  line-height: 1;
+  opacity: 0.7;
+  color:white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 
 .slick-dots{
   @include mixin.container-style(100%, 5%, center, center);

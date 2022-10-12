@@ -29,10 +29,6 @@
 }
 
 * {
-  transition: 1s;
-}
-
-* {
   scroll-behavior: smooth;
 }
 
@@ -244,35 +240,31 @@ header > section:last-child {
 
 .slick-arrow {
   width: 40px;
-  height: 40px;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   position: absolute;
-  border-radius: 50%;
-  opacity: 0.5;
-  z-index: 5;
-  top: 52%;
-  background-color: #fff;
-}
-
-.slick-arrow:hover {
-  background-color: rgb(222, 222, 222);
+  z-index: 1;
+  top: 50%;
 }
 
 .slick-prev {
-  left: 1%;
-}
-.slick-prev::before {
-  content: url(/IMG/arrow_left_1.png);
+  left: 0%;
 }
 
 .slick-next {
-  right: 1%;
+  right: 0%;
 }
-.slick-next::before {
-  content: url(/IMG/arrow_right_1.png);
+
+.slick-prev:before, .slick-next:before {
+  font-size: 30px;
+  line-height: 1;
+  opacity: 0.7;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .slick-dots {
@@ -496,12 +488,17 @@ header > section:last-child {
     height: 100%;
   }
   .slick-arrow {
-    width: 13%;
+    width: 10%;
     height: 100%;
+    opacity: 0.5;
     border-radius: 0;
     display: flex;
     align-items: center;
     top: 50%;
+    background-color: white;
+  }
+  .slick-arrow:hover {
+    background-color: rgba(255, 255, 255, 0.7);
   }
   .slick-prev {
     left: 23.36%;
@@ -512,6 +509,16 @@ header > section:last-child {
     right: 23.36%;
     justify-content: flex-start;
     padding-left: 50px;
+  }
+  .slick-prev:before, .slick-next:before {
+    font-size: 50px;
+    position: relative;
+  }
+  .slick-prev:before {
+    left: 35%;
+  }
+  .slick-next:before {
+    right: 35%;
   }
 }
   </style>
@@ -644,48 +651,6 @@ onselectstart='return false' ondragstart='return false'>
 </div>
 
   <script>
-    // const root = document.getElementById('root');
-    // const carouselSlides = document.querySelector('.carousel-slide');
-    // const slideItems = document.querySelectorAll('.carousel-item');
-    // const slideCount = slideItems.length;
-    // const prevBtn = document.getElementById('carousel-prev');
-    // const nextBtn = document.getElementById('carousel-next');
-    // let currentIndex = 0;
-    // let slideItemsWith = 300;
-    // let slideItemsMargin = 100;
-
-    // // console.log(root.clientWidth);
-
-    // function slideMove(num){
-    //   carouselSlides.style.left = -num * 250 + 'px';
-    //   currentIndex = num;
-    // }
-
-
-    // prevBtn.addEventListener('click', function(){
-    //   if(currentIndex !== 0){
-    //     slideMove(currentIndex-1);
-    //   }
-    // });
-
-    // nextBtn.addEventListener('click', function(){
-    //   if(currentIndex !== slideCount-1){
-    //     slideMove(currentIndex+1);
-    //   }
-    // });
-
-    // if(root.clientWidth>1024){
-    //   slideItemsMargin = 20;
-    // }
-
-    // accordion-menu-pc-----------------------------------
-    // const accordion = document.getElementsByClassName('accordion');
-    // for (i = 0; i < accordion.length; i++) {
-    //   accordion[i].addEventListener("click", function () {
-    //     this.classList.toggle("active");
-    //   });
-    // }
-    // accordion-menu-pc-----------------------------------
     $(function(){
       $('.slider').slick({
       infinite : true,     
@@ -708,8 +673,6 @@ onselectstart='return false' ondragstart='return false'>
       ]
       });
     });
-
   </script>
-  <!-- <script  src="./app.js"></script> -->
 </body>
 </html>
