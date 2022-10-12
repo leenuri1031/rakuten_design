@@ -119,7 +119,7 @@
 
 #root {
   width: 100vw;
-  height: 580vh;
+  height: 650vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -169,7 +169,7 @@ header > section:last-child {
 
 #slide {
   width: 100%;
-  height: 12%;
+  height: 32vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -259,7 +259,7 @@ header > section:last-child {
 
 main {
   width: 100%;
-  height: 492vh;
+  height: 560vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -282,7 +282,7 @@ main {
 
 .brand-top {
   width: 100%;
-  height: 65vh;
+  height: 70vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -297,7 +297,7 @@ main {
   flex-direction: column;
 }
 .brand-top > div:nth-child(1) > div:nth-child(1) {
-  width: 90%;
+  width: 95%;
   height: 20%;
   display: flex;
   justify-content: center;
@@ -305,10 +305,11 @@ main {
   flex-direction: row;
   background-color: #E8D5DA;
   text-align: center;
-  font-size: 1.1rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 550;
   color: #222;
-  line-height: 1.5;
+  line-height: 2;
+  letter-spacing: 1px;
 }
 .brand-top > div:nth-child(1) > div:nth-child(2) {
   width: 90%;
@@ -336,7 +337,7 @@ main {
   position: relative;
 }
 .brand-top > div:nth-child(1) > div:nth-child(2) > div > div {
-  width: 20%;
+  width: 23%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -349,13 +350,13 @@ main {
   position: absolute;
 }
 .brand-top > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(1) {
-  left: 4%;
+  left: 2%;
 }
 .brand-top > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) {
-  left: 25%;
+  left: 22%;
 }
 .brand-top > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(3) {
-  left: 45%;
+  left: 42%;
 }
 .brand-top > div:nth-child(2) {
   width: 100%;
@@ -405,11 +406,12 @@ main {
 
 .brand-media {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 .brand-media > iframe {
   width: 90%;
@@ -427,7 +429,26 @@ main {
   align-items: center;
   flex-direction: row;
 }
-.brand-media > img:nth-child(3) {
+.brand-media > div {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #222;
+  line-height: 2;
+}
+.brand-media > div:nth-child(3) {
+  width: 60%;
+  height: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  position: absolute;
+  top: 37%;
+  left: 35%;
+  z-index: 100;
+  text-align: right;
+}
+.brand-media > img:nth-child(4) {
   width: 100%;
   height: 15%;
   display: flex;
@@ -435,23 +456,19 @@ main {
   align-items: center;
   flex-direction: row;
 }
-.brand-media > div {
+.brand-media > div:nth-child(5) {
   width: 98%;
   height: 18%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  font-size: 0.9rem;
-  font-weight: 400;
-  color: #222;
   text-align: center;
-  line-height: 2;
 }
 
 .brand-patent {
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -506,7 +523,7 @@ main {
 
 .patent-bottom {
   width: 100%;
-  height: 55%;
+  height: 52%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -599,7 +616,7 @@ main {
 
 .brand-promiss {
   width: 100%;
-  height: 60vh;
+  height: 65vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -786,7 +803,7 @@ main {
 
 .brand-history {
   width: 100%;
-  height: 110vh;
+  height: 120vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -807,7 +824,7 @@ main {
 }
 .brand-history > div:nth-child(2) {
   width: 90%;
-  height: 65%;
+  height: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -819,7 +836,7 @@ main {
 }
 .brand-history > div:nth-child(3) {
   width: 95%;
-  height: 22%;
+  height: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -832,7 +849,7 @@ main {
 
 .brand-bottom {
   width: 100%;
-  height: 50vh;
+  height: 60vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;

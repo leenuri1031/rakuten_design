@@ -22,11 +22,11 @@
 
 @media (min-width: 1024px) {
   #root {
-    height: 350vh;
+    height: 430vh;
   }
   header {
     width: 65%;
-    height: 10%;
+    height: 8%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -206,7 +206,7 @@
   }
   #slide {
     width: 100%;
-    height: 15%;
+    height: 12%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -261,7 +261,7 @@
   }
   main {
     width: 65%;
-    height: 60%;
+    height: 62%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -428,7 +428,7 @@
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
   }
@@ -437,7 +437,7 @@
   }
   #right-top {
     width: 100%;
-    height: 40%;
+    height: 33%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -474,7 +474,7 @@
   }
   #best-desktop {
     width: 100%;
-    height: 55%;
+    height: 50%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -583,7 +583,7 @@
   }
   #right-mid {
     width: 100%;
-    height: 35%;
+    height: 40%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -591,7 +591,7 @@
   }
   #right-mid > div:nth-child(1) {
     width: 100%;
-    height: 10%;
+    height: 8%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -603,7 +603,7 @@
   }
   .desktop-mid-products {
     width: 100%;
-    height: 80%;
+    height: 85%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -665,6 +665,12 @@
     color: #b8648e;
   }
   #right-bottom {
+    width: 95%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
     position: relative;
     bottom: 1.5vw;
   }
@@ -678,7 +684,7 @@
   }
   footer {
     width: 92%;
-    height: 25%;
+    height: 18%;
   }
   footer > div:nth-child(1) {
     width: 100%;

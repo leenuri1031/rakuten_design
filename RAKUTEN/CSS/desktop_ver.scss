@@ -5,12 +5,12 @@
 
 @media(min-width:1024px){
   #root{
-    height: 350vh;
+    height: 430vh;
     // height: 100vh;
   }
 
   header{
-    @include mixin.container-style(65%, 10%, center, center,column);
+    @include mixin.container-style(65%, 8%, center, center,column);
 
     &>section:first-child{
       display: none;
@@ -142,7 +142,7 @@
 
 // slide-----------------------------------
 #slide{
-  @include mixin.container-style(100%, 15%, center, center);
+  @include mixin.container-style(100%, 12%, center, center);
 }
 
 .slider{
@@ -197,7 +197,7 @@
 // slide-----------------------------------
 
 main{
-  @include mixin.container-style(65%, 60%, center, flex-start);
+  @include mixin.container-style(65%, 62%, center, flex-start);
   // position: relative;
   // border: 5px solid black;
 }
@@ -461,7 +461,7 @@ color: #ff7c7c;
 
 
 #main-right{
-  @include mixin.container-style(100%, 100%, space-between, center, column);
+  @include mixin.container-style(100%, 100%, space-around, center, column);
   // border: 2px solid black;
   &>div{
     margin-left: 2vw;
@@ -471,10 +471,9 @@ color: #ff7c7c;
 
 // top-----------------------------------
 #right-top{
-  @include mixin.container-style(100%, 40%, space-between, center, column);
+  @include mixin.container-style(100%, 33%, space-between, center, column);
   // border: solid black 1px;
-    padding-bottom: 1vw;
-
+  padding-bottom: 1vw;
 }
 
 .banner-top{
@@ -497,7 +496,7 @@ color: #ff7c7c;
 }
 
 #best-desktop{
-  @include mixin.container-style(100%, 55%, space-between, center, column );
+  @include mixin.container-style(100%, 50%, space-between, center, column );
   // border: solid 1px violet;
   &>h2{
     @include mixin.container-style(100%, 10%, center, flex-start );
@@ -540,8 +539,6 @@ color: #ff7c7c;
   }
 
 }
-
-
 // top-----------------------------------
 
 // notice-----------------------------------
@@ -585,11 +582,11 @@ color: #ff7c7c;
 
 // mid-products-----------------------------------
 #right-mid{
-  @include mixin.container-style(100%, 35%, space-around, center, column);
+  @include mixin.container-style(100%, 40%, space-around, center, column);
   // border: solid black 1px;
 
   &>div:nth-child(1){
-    @include mixin.container-style(100%,10%, center, center );
+    @include mixin.container-style(100%,8%, center, center );
     // background-color: antiquewhite;
     letter-spacing: 5px;
 
@@ -601,12 +598,12 @@ color: #ff7c7c;
 }
 
 .desktop-mid-products{
-  @include mixin.container-style(100%, 80%, space-around, center, column );
+  @include mixin.container-style(100%, 85%, space-around, center, column );
   // border: solid 1px violet;
 
   &>div{
   @include mixin.container-style(100%, 45%, space-around, center );
-
+  // border: solid 1px violet;
     &>div{
       @include mixin.container-style(20%, 100%, space-around, center,column );
       // border: solid black 1px;
@@ -640,6 +637,7 @@ color: #ff7c7c;
 
 // bottom-----------------------------------
 #right-bottom{
+  @include mixin.container-style(95%, 10%, space-around, center, column);
   position: relative;
   bottom: 1.5vw;
 
@@ -652,7 +650,7 @@ color: #ff7c7c;
 
 // footer--------------------------------------------------
   footer{
-    @include mixin.size(92%,25%);
+    @include mixin.size(92%,18%);
 
     &>div:nth-child(1){
       @include mixin.container-style(100%, 8%, center, center);

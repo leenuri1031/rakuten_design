@@ -99,7 +99,7 @@
 // class-setting-----------------------------------------
 
 #root{
-  @include mixin.container-style(100vw, 580vh, space-between, center, column );
+  @include mixin.container-style(100vw, 650vh, space-between, center, column );
 
 }
 
@@ -136,7 +136,7 @@ header{
 
 // slide-----------------------------------
 #slide{
-  @include mixin.container-style(100%, 5%, center, center);
+  @include mixin.container-style(100%, 32vh, center, center);
   position: relative;
 }
 
@@ -203,7 +203,7 @@ header{
 // slide-----------------------------------
 
 main{
-  @include mixin.container-style(100%, 492vh, space-around, center);
+  @include mixin.container-style(100%, 560vh, space-around, center);
   position: relative;
   // border: solid 3px black;
 }
@@ -219,18 +219,19 @@ main{
 }
 
 .brand-top{
-  @include mixin.container-style(100%, 65vh, space-evenly, center, column);
+  @include mixin.container-style(100%, 70vh, space-evenly, center, column);
   // background-color: cornsilk;
 
     &>div:nth-child(1){
       @include mixin.container-style(100%, 50%, space-evenly, center, column);
       // border: #000 solid 1px;
       &>div:nth-child(1){
-        @include mixin.container-style(90%, 20%, center, center);
+        @include mixin.container-style(95%, 20%, center, center);
         background-color: var.$col-4;
         text-align: center;
-        @include mixin.font(1.1rem, 500, #222);
-        line-height: 1.5;
+        @include mixin.font(1rem, 550, #222);
+        line-height: 2;
+        letter-spacing: 1px;
       }
 
       &>div:nth-child(2){
@@ -245,15 +246,15 @@ main{
           @include mixin.container-style(90%, 25%, space-around, center);
           position: relative;
           &>div{
-            @include mixin.container-style(20%, 100%, center, center);
+            @include mixin.container-style(23%, 100%, center, center);
             text-align: center;
             @include mixin.font(0.9rem, 500, var.$col-3);
             // border: solid black 1px;
             position: absolute;
           }
-          &>div:nth-child(1){left: 4%;}
-          &>div:nth-child(2){left: 25%;}
-          &>div:nth-child(3){left: 45%;}
+          &>div:nth-child(1){left: 2%;}
+          &>div:nth-child(2){left: 22%;}
+          &>div:nth-child(3){left: 42%;}
         }
       }
     }
@@ -289,7 +290,8 @@ main{
 }
 
 .brand-media{
-  @include mixin.container-style(100%, 90vh, space-around, center, column);
+  @include mixin.container-style(100%, 100vh, space-between, center, column);
+  position: relative;
   // background-color: burlywood;
 
   &>iframe{
@@ -301,22 +303,34 @@ main{
     // border: solid 1px black;
   }
 
-  &>img:nth-child(3){
+  &>div{
+    @include mixin.font(1rem, 500, #222);
+    line-height: 2;
+  }
+  
+  &>div:nth-child(3){
+    @include mixin.container-style(60%, 20%, flex-end, center);
+    @include mixin.posi(absolute, 37%, 35%);
+    text-align: right;
+    // background-color: #ffffff;
+    // border: solid 1px black;
+  }
+  
+  &>img:nth-child(4){
     @include mixin.container-style(100%, 15%, center, center);
     // border: solid 1px black;
   }
-
-  &>div{
+  
+  &>div:nth-child(5){
     @include mixin.container-style(98%, 18%, center, center);
-    // border: #000 solid 1px;
-    @include mixin.font(0.9rem, 400, #222);
     text-align: center;
-    line-height: 2;
   }
+
+
 }
 
 .brand-patent{
-  @include mixin.container-style(100%, 80vh, space-evenly, center, column);
+  @include mixin.container-style(100%, 90vh, space-evenly, center, column);
   // border: #000 solid 1px;
 }
 
@@ -349,7 +363,7 @@ main{
 }
 
 .patent-bottom{
-  @include mixin.container-style(100%, 55%, space-evenly, center, column);
+  @include mixin.container-style(100%, 52%, space-evenly, center, column);
   // border: solid violet 2px;
 
   &>div:nth-child(1){
@@ -419,7 +433,7 @@ main{
 }
 
 .brand-promiss{
-  @include mixin.container-style(100%, 60vh, space-evenly, center, column);
+  @include mixin.container-style(100%, 65vh, space-evenly, center, column);
   // background-color: chartreuse;
   &>div:nth-child(1){
     @include mixin.container-style(90%, 8%, center, center);
@@ -468,7 +482,7 @@ main{
 }
 
 .brand-history{
-  @include mixin.container-style(100%, 110vh, space-around, center, column);
+  @include mixin.container-style(100%, 120vh, space-around, center, column);
   // background-color: cornflowerblue;
   &>div:nth-child(1){
     @include mixin.container-style(90%, 5%, center, center);
@@ -478,7 +492,7 @@ main{
     background-color: var.$col-4;
   }
   &>div:nth-child(2){
-    @include mixin.container-style(90%, 65%, center, center);
+    @include mixin.container-style(90%, 60%, center, center);
     // border: solid black 1px;
     &>img{
       @include mixin.size(100%,100%);
@@ -486,7 +500,7 @@ main{
   }
 
   &>div:nth-child(3){
-    @include mixin.container-style(95%, 22%, center, center);
+    @include mixin.container-style(95%, 25%, center, center);
     // border: solid black 1px;
     &>img{
       @include mixin.size(100%,100%);
@@ -495,7 +509,7 @@ main{
 }
 
 .brand-bottom{
-  @include mixin.container-style(100%, 50vh, space-evenly, center, column);
+  @include mixin.container-style(100%, 60vh, space-evenly, center, column);
   // background-color: darksalmon;
   &>div:first-child{
     @include mixin.container-style(95%, 75%, space-evenly, center, column);
