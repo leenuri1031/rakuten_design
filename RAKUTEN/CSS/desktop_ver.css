@@ -254,10 +254,10 @@
     position: relative;
   }
   .slick-prev:before {
-    left: 35%;
+    left: 23%;
   }
   .slick-next:before {
-    right: 35%;
+    right: 23%;
   }
   main {
     width: 65%;

@@ -188,10 +188,10 @@
 }
 
 .slick-prev:before{
-  left: 35%;
+  left: 23%;
 }
 .slick-next:before{
-  right: 35%
+  right: 23%
 }
 
 // slide-----------------------------------
@@ -437,7 +437,7 @@ color: #ff7c7c;
 
 // brand-media-----------------------------------
 .brand-media{
-  @include mixin.container-style(90%, 17%, space-around, center, column);
+  @include mixin.container-style(90%, 20%, space-around, center, column);
   position: relative;
   // background-color: burlywood;
 
@@ -471,7 +471,7 @@ color: #ff7c7c;
     // border: #000 solid 1px;          
     border-top: solid 2px var.$col-3;
     border-bottom: solid 2px var.$col-3;
-    @include mixin.font(1.2rem, 400, #222);
+    @include mixin.font(1.1rem, 400, #222);
   }
 }
 // brand-media-----------------------------------

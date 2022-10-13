@@ -253,10 +253,10 @@
     position: relative;
   }
   .slick-prev:before {
-    left: 35%;
+    left: 23%;
   }
   .slick-next:before {
-    right: 35%;
+    right: 23%;
   }
   main {
     width: 65%;
@@ -516,7 +516,7 @@
   }
   .brand-media {
     width: 90%;
-    height: 17%;
+    height: 20%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -572,7 +572,7 @@
     flex-direction: row;
     border-top: solid 2px #99415A;
     border-bottom: solid 2px #99415A;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 400;
     color: #222;
   }
