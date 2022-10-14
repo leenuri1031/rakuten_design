@@ -205,7 +205,7 @@ main{
 #main-left{
   @include mixin.container-style(300px, 500px, space-around, flex-start, column);
   // background-color: aliceblue;
-  position: fixed;
+  position: sticky;
   top: 30%;
   left: 10%;
 
