@@ -273,8 +273,7 @@
     justify-content: space-around;
     align-items: flex-start;
     flex-direction: column;
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 30%;
     left: 10%;
   }
