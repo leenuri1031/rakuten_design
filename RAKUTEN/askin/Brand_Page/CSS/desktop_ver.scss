@@ -3,25 +3,28 @@
 @use './basic';
 // -------------------------------------------
 
-@media(min-width:1024px){
+@media(min-width:600px){
   #root{
     height: 900vh;
     // height: 100vh;
   }
 
   header{
-    @include mixin.container-style(65%, 35vh, center, center,column);
-
+    @include mixin.container-style(100%, 210px, center, center,column);
+    background-color: #fff;
+    // border: solid 1px black;
+    position: sticky;
+    top: 0;
     &>section:first-child{
       display: none;
     }
 
     &>section:last-child{
-      @include mixin.container-style(100%, 90%, flex-start, center, column);
+      @include mixin.container-style(65%, 90%, flex-start, center, column);
       // border: 1px solid black;
 
       &>div:nth-child(1){
-        @include mixin.container-style(100%, 40%, flex-start, center);
+        @include mixin.container-style(100%, 50%, flex-start, center);
         // background-color: thistle;
 
       // header-top-part-------------------------------------------
@@ -46,7 +49,7 @@
         // logo&title ---------------------------------
         
         &>div:last-child{
-          @include mixin.container-style(55%, 90%, space-around, flex-start);
+          @include mixin.container-style(55%, 80%, space-around, flex-start);
           // border: 1px solid black;
         }
         // site-menu-class-setting ---------------------------------
@@ -56,7 +59,7 @@
       // header-bottom-part-------------------------------------------
 
       &>div:nth-child(2){
-        @include mixin.container-style(100%, 20%, space-between, center);
+        @include mixin.container-style(100%, 30%, space-between, center);
         margin-top: 2vh;
         border-top: #2c2c2c 1px solid;
         border-bottom: #2c2c2c 1px solid;
@@ -202,176 +205,6 @@ main{
   // border: 5px solid black;
 }
 
-#main-left{
-  @include mixin.container-style(300px, 500px, space-around, flex-start, column);
-  // background-color: aliceblue;
-  position: fixed;
-  top: 30%;
-  left: 10%;
-}
-
-// side-menu-----------------------------------
-.side-menu{
-  &>nav{
-    margin-top: 30px;
-    &>section{
-      margin-bottom: 30px;
-      &>h3{
-        width: 280px;
-        height: 60px;
-        @include mixin.flex(flex-start, center);
-        @include mixin.font(1.5rem, #222, 700);
-        border-bottom: 2px solid var.$col-5;
-        padding-left: 1vw;
-        // background-color: #ff7c7c;;
-      }
-    }
-  }
-}
-
-.side-menu-list{
-  display: block;
-  line-height: 42px;
-  border-bottom: 1px solid #b8648e;
-  position: relative;
-  cursor: pointer;
-  &>a{
-    display: block;
-    padding-left: 10px;
-  }
-}
-
-.side-menu .info {
-  display: block;
-}
-
-.sidebar .accordionbox .accordionlist dt {
-  display: block;
-  padding-left: 1vw;
-  height: 60px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  border-bottom: 1px solid var.$col-5;
-  position: relative;
-  cursor: pointer;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
-.sidebar .accordionbox .accordionlist dt > div > p:hover{
-  color: #ff7c7c;
-}
-
-.sidebar .accordionbox .accordionlist dd {
-  display: none;
-  position: relative;
-}
-
-.sidebar .accordionbox .accordionlist dd > ul > li {
-  line-height: 42px;
-  position: relative;
-  padding: 0;
-}
-
-.sidebar .accordionbox .accordionlist dd > ul > li a {
-  display: block;
-  padding-left: 20px;
-  // font-size: 1rem;
-}
-
-.sidebar .accordionbox .accordionlist dd > ul > li a:hover {
-  text-decoration: none;
-  /* background: #ccc; */
-  color: #ff7c7c;
-}
-
-.sidebar .accordionbox .accordionlist dd > ul > li > ul {
-  position: absolute;
-  z-index: 11;
-  top: 0;
-  left: 188px;
-  overflow: hidden;
-  height: 0;
-  min-width: 390px;
-  padding: 0;
-  cursor: auto;
-}
-
-.sidebar .accordionbox .accordionlist dd > ul > li > ul > li {
-  line-height: 40px;
-}
-.sidebar .accordionbox .accordionlist dd > ul > li > ul > li > a {
-  padding: 0 20px;
-  /* font-size: 1.5rem;
-  font-weight: 700; */
-}
-.sidebar .accordionbox .accordion_icon,
-.sidebar .accordionbox .accordion_icon span {
-  display: inline-block;
-  // transition: all .4s;
-  box-sizing: border-box;
-}
-.sidebar .accordionbox .accordion_icon {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  top: 25px;
-  right: 6px;
-  /* background-color: #ff7c7c; */
-}
-
-.sidebar .accordionbox .accordion_icon span {
-  position: absolute;
-  left: 6px;
-  width: 50%;
-  height: 2px;
-  background-color: #555;
-  color: #ff7c7c;
-}
-
-.sidebar .accordionbox .accordion_icon:hover>span{
-  background-color: #ff7c7c;
-}
-
-.sidebar .accordionbox .accordion_icon span:nth-of-type(1) {
-  top: 5px;
-  transform: rotate(0deg);
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-}
-.sidebar .accordionbox .accordion_icon span:nth-of-type(2) {
-  top: 5px;
-  transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-}
-.sidebar .accordionbox .accordion_icon.active span:nth-of-type(1) {
-  top: 5px;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-}
-.sidebar .accordionbox .accordion_icon.active span:nth-of-type(2) {
-  top: 5px;
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
-  -moz-transform: rotate(135deg);
-  -ms-transform: rotate(135deg);
-  -o-transform: rotate(135deg);
-}
-
-.sidebar .accordionbox .accordion_icon.active:hover{
-color: #ff7c7c;
-}
-// side-menu-----------------------------------
-
 
 #main-right{
   @include mixin.container-style(100%, 100%, space-around, center, column);
@@ -380,7 +213,7 @@ color: #ff7c7c;
 
 // brand-top-----------------------------------
 .brand-top{
-  @include mixin.container-style(90%, 15%, space-evenly, center, column);
+  @include mixin.container-style(90%, 15%, space-around, center, column);
   // background-color: cornsilk;
 
     &>div:nth-child(1){
@@ -390,13 +223,14 @@ color: #ff7c7c;
         @include mixin.container-style(90%, 20%, center, center);
         @include mixin.font(1.4rem, 500, #222);
         // border: #000 solid 1px;
+        @include mixin.posi(relative, -10%);
       }
 
       &>div:nth-child(2){
-        @include mixin.container-style(90%, 65%, center, center,column);
+        @include mixin.container-style(90%, 70%, center, center,column);
         // border: #000 solid 1px;
         &>img{
-          @include mixin.container-style(90%, 80%, center, center);
+          @include mixin.container-style(80%, 80%, center, center);
         // border: #000 solid 1px;
         }
         &>div{
@@ -406,7 +240,8 @@ color: #ff7c7c;
             @include mixin.font(1.2rem, 500, var.$col-3);
             // border: solid black 1px;
           }
-
+          &>div:nth-child(1){left: 6%;}
+          &>div:nth-child(2){left: 25%;}
         }
       }
 
@@ -667,7 +502,7 @@ color: #ff7c7c;
 
 // footer--------------------------------------------------
   footer{
-    @include mixin.size(92%,75vh);
+    @include mixin.size(65%,72vh);
 
     &>div:nth-child(1){
       @include mixin.container-style(100%, 8%, center, center);
@@ -700,6 +535,8 @@ color: #ff7c7c;
     &>div:nth-child(1){
       @include mixin.container-style(100%, 15%, space-around, flex-start,column);
       // border: #2c2c2c 2px solid;
+      position: relative;
+      top: -1%;
       &>div:nth-child(1){
         @include mixin.container-style(100%, 50%, flex-start, center);
         @include mixin.font(1rem, 600, #222);
@@ -813,7 +650,7 @@ color: #ff7c7c;
       &>div{
         @include mixin.container-style(98%, auto, flex-start, center);
         // margin-top: 0.5vw;
-        line-height: 2;
+        line-height: 1.8;
       }
     }
   }

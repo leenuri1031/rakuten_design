@@ -165,6 +165,7 @@ header > section:first-child {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  
 }
 header > section:first-child > div:last-child {
   width: 70%;
@@ -278,19 +279,23 @@ header > section:last-child {
   top: 95%;
   z-index: 10;
 }
-@media (min-width: 1024px) {
+@media (min-width: 600px) {
   #root {
     height: 100vh;
   }
   header {
-    width: 70%;
-    height: 30%;
+    width: 1240px;
+    height: 210px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
     position: relative;
     z-index: 2;
+    background-color: #fff;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
   }
   header > section:first-child {
     display: none;
@@ -305,7 +310,7 @@ header > section:last-child {
   }
   header > section:last-child > div:nth-child(1) {
     width: 100%;
-    height: 40%;
+    height: 50%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -350,7 +355,7 @@ header > section:last-child {
   }
   header > section:last-child > div:nth-child(2) {
     width: 100%;
-    height: 23%;
+    height: 30%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -449,8 +454,10 @@ header > section:last-child {
     width: 320px;
     height: 30px;
     font-size: 0.8rem;
+    border-radius: 20px;
     font-weight: 500;
     color: #2c2c2c;
+    padding-left: 10px;
   }
   .search-btn {
     width: 30px;
@@ -460,7 +467,7 @@ header > section:last-child {
     align-items: center;
     flex-direction: row;
     position: absolute;
-    top: 15%;
+    top: 19%;
     left: 75%;
     z-index: 100;
   }
@@ -472,7 +479,7 @@ header > section:last-child {
     align-items: center;
     flex-direction: row;
     position: relative;
-    top: 0%;
+    top: 3%;
   }
   .slider {
     width: 3715px;
@@ -642,7 +649,7 @@ onselectstart='return false' ondragstart='return false'>
       </div>
       <div class="slide-item">
         <a href="" >
-          <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/banner4.jpg" alt="">
+          <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09434625/new_renewal_4.jpg" alt="">
         </a>
       </div>
     </div>

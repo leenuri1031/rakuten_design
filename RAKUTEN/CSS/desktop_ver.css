@@ -20,17 +20,21 @@
   font-family: "Noto Sans JP", sans-serif;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 600px) {
   #root {
     height: 430vh;
   }
   header {
     width: 65%;
-    height: 8%;
+    height: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: #fff;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
   }
   header > section:first-child {
     display: none;
@@ -45,7 +49,7 @@
   }
   header > section:last-child > div:nth-child(1) {
     width: 100%;
-    height: 40%;
+    height: 50%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -82,7 +86,7 @@
   }
   header > section:last-child > div:nth-child(1) > div:last-child {
     width: 55%;
-    height: 90%;
+    height: 80%;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
@@ -90,7 +94,7 @@
   }
   header > section:last-child > div:nth-child(2) {
     width: 100%;
-    height: 20%;
+    height: 30%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -188,6 +192,8 @@
   .text-area {
     width: 320px;
     height: 30px;
+    border-radius: 20px;
+    padding-left: 10px;
     font-size: 0.8rem;
     font-weight: 500;
     color: #2c2c2c;
@@ -200,7 +206,7 @@
     align-items: center;
     flex-direction: row;
     position: absolute;
-    top: 15%;
+    top: 19%;
     left: 75%;
     z-index: 100;
   }
@@ -261,7 +267,7 @@
   }
   main {
     width: 65%;
-    height: 62%;
+    height: 60%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -280,57 +286,32 @@
   }
   #right-top {
     width: 100%;
-    height: 33%;
+    height: 20%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 1vw;
-  }
-  .banner-top {
-    width: 100%;
-    height: 40%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-  }
-  .banner-top > h2 {
-    width: 100%;
-    height: 15%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: row;
-    letter-spacing: 5px;
-  }
-  .banner-top > div {
-    width: 100%;
-    height: 60%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
   }
   #best {
     display: none;
   }
   #best-desktop {
     width: 100%;
-    height: 50%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
   }
   #best-desktop > h2 {
-    width: 100%;
+    width: 30%;
     height: 10%;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: row;
     letter-spacing: 5px;
+    border-bottom: solid black 1px;
   }
   #best-desktop > div {
     width: 100%;
@@ -377,6 +358,7 @@
     flex-direction: column;
     text-align: center;
     line-height: 2;
+    letter-spacing: 2px;
   }
   #best-desktop > div > div > a > div:nth-child(2) > span {
     width: 100%;
@@ -387,58 +369,46 @@
     flex-direction: row;
     color: #b8648e;
   }
-  #main-notice {
-    height: 6%;
-  }
-  #main-notice > div:nth-child(1) > div {
-    height: 35%;
-  }
-  #main-notice > div:nth-child(1) > div:nth-child(1) {
-    font-size: 1rem;
-    font-weight: 550;
-    color: #b8648e;
-    justify-content: flex-end;
-    letter-spacing: 5px;
-  }
-  #main-notice > div:nth-child(1) > div:nth-child(2) {
-    font-size: 1.3rem;
-    font-weight: 550;
-    color: #b8648e;
-    letter-spacing: 5px;
-  }
-  #main-notice > div:nth-child(2) > div > div:first-child {
-    font-size: 1rem;
-    font-weight: 500;
-    color: #222;
-    width: 25%;
-    height: 45%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    letter-spacing: 5px;
-  }
-  #main-notice > div:nth-child(2) > div > div:last-child {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: #b8648e;
-    letter-spacing: 3px;
-  }
-  #right-mid {
-    width: 100%;
-    height: 40%;
+  #brand-banner {
+    width: 95%;
+    height: 13%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
   }
-  #right-mid > div:nth-child(1) {
+  #brand-banner > div {
     width: 100%;
-    height: 8%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  #brand-banner > div > a {
+    width: 100%;
+    height: 100%;
+  }
+  #brand-banner > div > a > img {
+    width: 100%;
+    height: 100%;
+  }
+  #right-mid {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  #right-mid > h2 {
+    width: 30%;
+    height: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    border-bottom: solid black 1px;
     letter-spacing: 5px;
   }
   .mid-products {
@@ -446,7 +416,7 @@
   }
   .desktop-mid-products {
     width: 100%;
-    height: 85%;
+    height: 80%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -454,7 +424,7 @@
   }
   .desktop-mid-products > div {
     width: 100%;
-    height: 45%;
+    height: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -477,8 +447,8 @@
     flex-direction: column;
   }
   .desktop-mid-products > div > div > a > div:first-child {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -497,6 +467,7 @@
     flex-direction: column;
     text-align: center;
     line-height: 1.5;
+    letter-spacing: 2px;
   }
   .desktop-mid-products > div > div > a > div:nth-child(2) > span {
     width: 100%;
@@ -507,26 +478,70 @@
     flex-direction: row;
     color: #b8648e;
   }
-  #right-bottom {
-    width: 95%;
+  #category {
+    width: 100%;
+    height: 23%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  #category > h2 {
+    width: 30%;
     height: 10%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    position: relative;
-    bottom: 1.5vw;
+    flex-direction: row;
+    letter-spacing: 5px;
+    border-bottom: solid black 1px;
   }
-  #right-bottom > div {
+  #category > div {
     width: 100%;
-    height: 90%;
+    height: 85%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
   }
+  #category > div > div {
+    width: 95%;
+    height: 45%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  #category > div > div > a {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+  }
+  #category > div > div > a > div:first-child {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  #category > div > div > a > div:first-child > img {
+    width: 100%;
+    height: 100%;
+  }
+  #category > div > div > a > div:last-child {
+    width: 60%;
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+  }
   footer {
-    width: 92%;
+    width: 65%;
     height: 18%;
   }
   footer > div:nth-child(1) {
@@ -575,6 +590,8 @@
     justify-content: space-around;
     align-items: flex-start;
     flex-direction: column;
+    position: relative;
+    top: -1%;
   }
   .foot-left > div:nth-child(1) > div:nth-child(1) {
     width: 100%;
@@ -583,7 +600,7 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #222;
   }
@@ -597,20 +614,20 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 550;
     color: #222;
     padding: 2px;
   }
   .foot-left > div:nth-child(2) {
     width: 95%;
-    height: 35%;
+    height: 30%;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
     border-left: #838383 1px solid;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 500;
     color: #838383;
     line-height: 2;
@@ -631,7 +648,7 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #222;
   }
@@ -655,7 +672,7 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 500;
     color: #838383;
   }
@@ -679,7 +696,7 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 500;
     color: #838383;
   }
@@ -702,7 +719,7 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 500;
     color: #838383;
   }
@@ -713,7 +730,7 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: 500;
     color: #838383;
     padding-left: 0.7vw;
@@ -770,7 +787,7 @@
     align-items: center;
     flex-direction: row;
     margin-top: 0.5vh;
-    line-height: 2;
+    line-height: 1.8;
   }
   .foot-right {
     border-right: #838383 1px solid;
