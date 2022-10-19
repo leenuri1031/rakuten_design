@@ -21,11 +21,11 @@
 
 @media (min-width: 600px) {
   #root {
-    height: 900vh;
+    height: 950vh;
   }
   header {
     width: 100%;
-    height: 210px;
+    height: 21.6vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -191,6 +191,8 @@
   .text-area {
     width: 320px;
     height: 30px;
+    border-radius: 20px;
+    padding-left: 10px;
     font-size: 0.8rem;
     font-weight: 500;
     color: #2c2c2c;
@@ -209,7 +211,7 @@
   }
   #slide {
     width: 100%;
-    height: 50vh;
+    height: 51.6vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -264,7 +266,7 @@
   }
   main {
     width: 65%;
-    height: 740vh;
+    height: 800vh;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -279,8 +281,8 @@
     flex-direction: column;
   }
   .brand-top {
-    width: 90%;
-    height: 15%;
+    width: 80%;
+    height: 95vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -295,19 +297,15 @@
     flex-direction: column;
   }
   .brand-top > div:nth-child(1) > div:nth-child(1) {
-    width: 90%;
+    width: 85%;
     height: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 500;
     color: #222;
-    position: relative;
-    top: -10%;
-    left: 0;
-    z-index: 100;
   }
   .brand-top > div:nth-child(1) > div:nth-child(2) {
     width: 90%;
@@ -357,7 +355,7 @@
   }
   .brand-top > div:nth-child(3) {
     width: 85%;
-    height: 20%;
+    height: 25%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -373,7 +371,7 @@
   }
   .brand-media {
     width: 90%;
-    height: 20%;
+    height: 150vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -381,15 +379,15 @@
     position: relative;
   }
   .brand-media > iframe {
-    width: 80%;
-    height: 30%;
+    width: 55%;
+    height: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
   }
   .brand-media > img:nth-child(2) {
-    width: 80%;
+    width: 85%;
     height: 20%;
     display: flex;
     justify-content: center;
@@ -404,7 +402,7 @@
     align-items: center;
     flex-direction: row;
     position: absolute;
-    top: 37.5%;
+    top: 35%;
     left: 50%;
     z-index: 100;
     font-size: 1.1rem;
@@ -413,7 +411,7 @@
     line-height: 3;
   }
   .brand-media > img:nth-child(4) {
-    width: 80%;
+    width: 85%;
     height: 15%;
     display: flex;
     justify-content: center;
@@ -435,9 +433,9 @@
   }
   .brand-patent {
     width: 90%;
-    height: 15%;
+    height: 120vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
   }
@@ -445,12 +443,9 @@
     width: 100%;
     height: 45%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
-  }
-  .patent-top > div:nth-child(1) {
-    margin-bottom: 3vh;
   }
   .patent-top > div:nth-child(1) > div {
     font-size: 1.3rem;
@@ -462,7 +457,7 @@
     height: 100%;
   }
   .patent-top > div:nth-child(2) {
-    width: 90%;
+    width: 80%;
     height: 85%;
     display: flex;
     justify-content: space-around;
@@ -472,17 +467,6 @@
   .patent-top > div:nth-child(2) > img {
     width: 85%;
     height: 40%;
-  }
-  .patent-bottom {
-    width: 100%;
-    height: 55%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .patent-bottom > div:nth-child(1) {
-    margin-bottom: 3vh;
   }
   .patent-bottom > div:nth-child(1) > div {
     font-size: 1.3rem;
@@ -494,8 +478,8 @@
     height: 100%;
   }
   .patent-bottom > div:nth-child(2) {
-    width: 90%;
-    height: 70%;
+    width: 80%;
+    height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -506,8 +490,8 @@
     height: 100%;
   }
   .brand-lap {
-    width: 80%;
-    height: 6%;
+    width: 60%;
+    height: 45vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -535,7 +519,7 @@
   }
   .brand-promiss {
     width: 80%;
-    height: 12%;
+    height: 100vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -680,7 +664,7 @@
   }
   .brand-history {
     width: 90%;
-    height: 20%;
+    height: 180vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -716,7 +700,7 @@
   }
   .brand-bottom {
     width: 100%;
-    height: 10%;
+    height: 75vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -733,7 +717,7 @@
     border-bottom: solid 2px #99415A;
     padding: 1vw;
   }
-  .brand-bottom > div:first-child > h3 {
+  .brand-bottom > div:first-child > h4 {
     width: 50%;
     height: 12%;
     display: flex;

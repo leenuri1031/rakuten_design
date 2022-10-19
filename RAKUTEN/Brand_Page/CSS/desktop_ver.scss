@@ -5,12 +5,12 @@
 
 @media(min-width:600px){
   #root{
-    height: 900vh;
+    height: 950vh;
     // height: 100vh;
   }
 
   header{
-    @include mixin.container-style(100%, 210px, center, center,column);
+    @include mixin.container-style(100%, 21.6vh, center, center,column);
     background-color: #fff;
     // border: solid 1px black;
     position: sticky;
@@ -148,7 +148,7 @@
 
 // slide-----------------------------------
 #slide{
-  @include mixin.container-style(100%, 50vh, center, center);
+  @include mixin.container-style(100%, 51.6vh, center, center);
   // border: #222 solid 3px;
 }
 
@@ -203,7 +203,7 @@
 // slide-----------------------------------
 
 main{
-  @include mixin.container-style(65%, 740vh, center, flex-start);
+  @include mixin.container-style(65%, 800vh, center, flex-start);
   // position: relative;
   // border: 5px solid black;
 }
@@ -216,17 +216,16 @@ main{
 
 // brand-top-----------------------------------
 .brand-top{
-  @include mixin.container-style(90%, 15%, space-around, center, column);
+  @include mixin.container-style(80%, 95vh, space-around, center, column);
   // background-color: cornsilk;
 
     &>div:nth-child(1){
       @include mixin.container-style(100%, 45%, space-evenly, center, column);
       // border: #000 solid 1px;
       &>div:nth-child(1){
-        @include mixin.container-style(90%, 20%, center, center);
-        @include mixin.font(1.4rem, 500, #222);
+        @include mixin.container-style(85%, 20%, center, center);
+        @include mixin.font(1.2rem, 500, #222);
         // border: #000 solid 1px;
-        @include mixin.posi(relative, -10%);
       }
 
       &>div:nth-child(2){
@@ -251,6 +250,7 @@ main{
     }
 
     &>div:nth-child(2){
+      // border: solid black 1px;
         &>div:first-child{
           line-height: 2.5;
           @include mixin.font(1.1rem, 500, #222);
@@ -263,7 +263,7 @@ main{
     }
 
     &>div:nth-child(3){
-      @include mixin.container-style(85%, 20%, space-between, center);
+      @include mixin.container-style(85%, 25%, space-between, center);
       // border: solid black 1px;
       &>img{
         @include mixin.container-style(45%, 100%, center, center);
@@ -275,17 +275,17 @@ main{
 
 // brand-media-----------------------------------
 .brand-media{
-  @include mixin.container-style(90%, 20%, space-around, center, column);
+  @include mixin.container-style(90%, 150vh, space-around, center, column);
   position: relative;
   // background-color: burlywood;
 
   &>iframe{
-    @include mixin.container-style(80%, 30%, center, center);
+    @include mixin.container-style(55%, 25%, center, center);
     // margin-bottom: 5vh;
   }
 
   &>img:nth-child(2){
-    @include mixin.container-style(80%, 20%, center, center);
+    @include mixin.container-style(85%, 20%, center, center);
     // margin-bottom: 5vh;
     // border: solid 1px black;
   }
@@ -293,13 +293,13 @@ main{
   &>div:nth-child(3){
     @include mixin.container-style(40%, 20%, center, center);
     // border: solid 1px black;
-    @include mixin.posi(absolute, 37.5%, 50%);
+    @include mixin.posi(absolute, 35%, 50%);
     @include mixin.font(1.1rem, 500, #222);
     line-height: 3;
   }
 
   &>img:nth-child(4){
-    @include mixin.container-style(80%, 15%, center, center);
+    @include mixin.container-style(85%, 15%, center, center);
     // margin-bottom: 5vh;
     // border: solid 1px black;
   }
@@ -316,14 +316,16 @@ main{
 
 // brand-patent-----------------------------------
 .brand-patent{
-  @include mixin.container-style(90%, 15%, space-between, center, column);
+  @include mixin.container-style(90%, 120vh, space-around, center, column);
   // border: #000 solid 1px;
 }
 
 .patent-top{
-  @include mixin.container-style(100%, 45%, center, center, column);
+  @include mixin.container-style(100%, 45%, space-between, center, column);
+  // border: #000 solid 1px;
   &>div:nth-child(1){
-    margin-bottom: 3vh;
+    
+    // margin-bottom: 3vh;
     &>div{
       @include mixin.font(1.3rem, 500, var.$col-3);
     }
@@ -333,7 +335,7 @@ main{
   }
 
   &>div:nth-child(2){
-    @include mixin.container-style(90%, 85%, space-around, center, column);
+    @include mixin.container-style(80%, 85%, space-around, center, column);
     // border: #000 solid 1px;
 
     &>img{
@@ -344,11 +346,9 @@ main{
 }
 
 .patent-bottom{
-  @include mixin.container-style(100%, 55%, center, center, column);
   // border: solid violet 2px;
 
   &>div:nth-child(1){
-    margin-bottom: 3vh;
     &>div{
       @include mixin.font(1.3rem, 500, var.$col-3);
     }
@@ -358,7 +358,7 @@ main{
   }
 
   &>div:nth-child(2){
-    @include mixin.container-style(90%, 70%, center, center);
+    @include mixin.container-style(80%, 80%, center, center);
     // border: #000 solid 1px;
     &>img{
       @include mixin.size(85%,100%);
@@ -369,7 +369,7 @@ main{
 
 // brand-lap-----------------------------------
 .brand-lap{
-  @include mixin.container-style(80%, 6%, center, center, column);
+  @include mixin.container-style(60%, 45vh, center, center, column);
   // background-color: cadetblue;
   &>div{
     &>div{
@@ -395,7 +395,7 @@ main{
 
 // brand-promiss-----------------------------------
 .brand-promiss{
-  @include mixin.container-style(80%, 12%, space-evenly, center, column);
+  @include mixin.container-style(80%, 100vh, space-evenly, center, column);
   // background-color: chartreuse;
   &>div:first-child{
     @include mixin.container-style(100%, 5.5%, space-around, center, column);
@@ -435,7 +435,7 @@ main{
 
 // brand-history-----------------------------------
 .brand-history{
-  @include mixin.container-style(90%, 20%, space-around, center, column);
+  @include mixin.container-style(90%, 180vh, space-around, center, column);
   // background-color: cornflowerblue;
   &>div:nth-child(1){
     @include mixin.container-style(90%, 5%, center, center);
@@ -457,7 +457,7 @@ main{
 
 // brand-bottom-----------------------------------
 .brand-bottom{
-  @include mixin.container-style(100%, 10%, center, center, column);
+  @include mixin.container-style(100%, 75vh, center, center, column);
   // background-color: darksalmon;
   &>div:first-child{
     @include mixin.container-style(90%, 60%, space-around, flex-start, column);
@@ -465,7 +465,7 @@ main{
     border-bottom: solid 2px var.$col-3;
     padding: 1vw;
     // border: solid black 1px;
-    &>h3{
+    &>h4{
       @include mixin.container-style(50%, 12%, flex-start, center);
       padding-left: 1vw;
     }
