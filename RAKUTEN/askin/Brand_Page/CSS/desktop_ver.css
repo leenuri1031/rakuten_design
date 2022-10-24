@@ -24,7 +24,7 @@
     height: 950vh;
   }
   header {
-    width: 100%;
+    width: 1248px;
     height: 21.6vh;
     display: flex;
     justify-content: center;
@@ -39,7 +39,7 @@
     display: none;
   }
   header > section:last-child {
-    width: 65%;
+    width: 1248px;
     height: 90%;
     display: flex;
     justify-content: flex-start;
@@ -47,7 +47,7 @@
     flex-direction: column;
   }
   header > section:last-child > div:nth-child(1) {
-    width: 100%;
+    width: 1248px;
     height: 50%;
     display: flex;
     justify-content: flex-start;
@@ -55,7 +55,7 @@
     flex-direction: row;
   }
   header > section:last-child > div:nth-child(1) > div:first-child {
-    width: 30%;
+    width: 363px;
     height: 100%;
     display: flex;
     justify-content: flex-start;
@@ -84,7 +84,7 @@
     color: #2c2c2c;
   }
   header > section:last-child > div:nth-child(1) > div:last-child {
-    width: 55%;
+    width: 670px;
     height: 80%;
     display: flex;
     justify-content: space-around;
@@ -92,7 +92,7 @@
     flex-direction: row;
   }
   header > section:last-child > div:nth-child(2) {
-    width: 100%;
+    width: 1248px;
     height: 30%;
     display: flex;
     justify-content: space-between;
@@ -103,7 +103,7 @@
     border-bottom: #2c2c2c 1px solid;
   }
   header > section:last-child > div:nth-child(2) > div:first-child {
-    width: 65%;
+    width: 812px;
     height: 90%;
     display: flex;
     justify-content: space-around;
@@ -111,7 +111,7 @@
     flex-direction: row;
   }
   header > section:last-child > div:nth-child(2) > div:last-child {
-    width: 35%;
+    width: 437px;
     height: 90%;
     display: flex;
     justify-content: space-around;
@@ -125,7 +125,7 @@
     color: #2c2c2c;
   }
   .dropdown {
-    width: 20%;
+    width: 163px;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -210,7 +210,7 @@
     z-index: 100;
   }
   #slide {
-    width: 100%;
+    width: 1920px;
     height: 51.6vh;
     display: flex;
     justify-content: center;
@@ -225,14 +225,13 @@
     align-items: center;
     flex-direction: row;
     position: relative;
-    top: -5%;
   }
   .slide-track {
-    width: 1248px;
+    width: 3696px;
     height: 100%;
   }
   .slick-arrow {
-    width: 10%;
+    width: 370px;
     height: 100%;
     opacity: 0.5;
     border-radius: 0;
@@ -245,12 +244,12 @@
     background-color: rgba(255, 255, 255, 0.7);
   }
   .slick-prev {
-    left: 23.36%;
+    left: 862px;
     justify-content: flex-end;
     padding-right: 50px;
   }
   .slick-next {
-    right: 23.36%;
+    right: 862px;
     justify-content: flex-start;
     padding-left: 50px;
   }
@@ -259,13 +258,13 @@
     position: relative;
   }
   .slick-prev:before {
-    left: 23%;
+    left: 77px;
   }
   .slick-next:before {
-    right: 23%;
+    right: 77px;
   }
   main {
-    width: 65%;
+    width: 1248px;
     height: 800vh;
     display: flex;
     justify-content: center;
@@ -282,7 +281,7 @@
   }
   .brand-top {
     width: 80%;
-    height: 95vh;
+    height: 110vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -370,8 +369,8 @@
     flex-direction: row;
   }
   .brand-media {
-    width: 90%;
-    height: 150vh;
+    width: 80%;
+    height: 165vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -432,8 +431,8 @@
     color: #222;
   }
   .brand-patent {
-    width: 90%;
-    height: 120vh;
+    width: 80%;
+    height: 125vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -490,8 +489,8 @@
     height: 100%;
   }
   .brand-lap {
-    width: 60%;
-    height: 45vh;
+    width: 50%;
+    height: 40vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -506,13 +505,13 @@
     flex-direction: row;
   }
   .brand-lap > div:first-child > div:last-child {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 400;
     color: #222;
     text-align: center;
   }
   .brand-lap > div:last-child > div:first-child {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 400;
     color: #222;
     text-align: center;
@@ -663,7 +662,7 @@
     color: #222;
   }
   .brand-history {
-    width: 90%;
+    width: 80%;
     height: 180vh;
     display: flex;
     justify-content: space-around;
@@ -699,15 +698,15 @@
     flex-direction: row;
   }
   .brand-bottom {
-    width: 100%;
-    height: 75vh;
+    width: 80%;
+    height: 65vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
   .brand-bottom > div:first-child {
-    width: 90%;
+    width: 100%;
     height: 60%;
     display: flex;
     justify-content: space-around;
@@ -777,16 +776,16 @@
     line-height: 2;
   }
   .brand-bottom > div:last-child {
-    width: 70%;
-    height: 25%;
+    width: 55%;
+    height: 20%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    margin-top: 3vh;
+    margin-top: 5vh;
   }
   footer {
-    width: 65%;
+    width: 1248px;
     height: 72vh;
   }
   footer > div:nth-child(1) {
@@ -1050,7 +1049,7 @@
     flex-direction: row;
   }
   .foot-right > div:nth-child(2) > div:nth-child(1) > a {
-    width: 30%;
+    width: 40%;
     height: 100%;
     display: flex;
     justify-content: space-around;

@@ -284,7 +284,7 @@ header > section:last-child {
     height: 100vh;
   }
   header {
-    width: 1248px;
+    width: 1240px;
     height: 210px;
     display: flex;
     justify-content: space-around;
@@ -301,7 +301,7 @@ header > section:last-child {
     display: none;
   }
   header > section:last-child {
-    width: 1248px;
+    width: 100%;
     height: 90%;
     display: flex;
     justify-content: flex-start;
@@ -309,7 +309,7 @@ header > section:last-child {
     flex-direction: column;
   }
   header > section:last-child > div:nth-child(1) {
-    width: 1248px;
+    width: 100%;
     height: 50%;
     display: flex;
     justify-content: flex-start;
@@ -317,7 +317,7 @@ header > section:last-child {
     flex-direction: row;
   }
   header > section:last-child > div:nth-child(1) > div:first-child {
-    width: 363px;
+    width: 30%;
     height: 100%;
     display: flex;
     justify-content: flex-start;
@@ -346,7 +346,7 @@ header > section:last-child {
     color: #2c2c2c;
   }
   header > section:last-child > div:nth-child(1) > div:last-child {
-    width: 670px;
+    width: 55%;
     height: 80%;
     display: flex;
     justify-content: space-around;
@@ -354,7 +354,7 @@ header > section:last-child {
     flex-direction: row;
   }
   header > section:last-child > div:nth-child(2) {
-    width: 1248px;
+    width: 100%;
     height: 30%;
     display: flex;
     justify-content: space-between;
@@ -365,7 +365,7 @@ header > section:last-child {
     border-bottom: #2c2c2c 1px solid;
   }
   header > section:last-child > div:nth-child(2) > div:first-child {
-    width: 812px;
+    width: 65%;
     height: 90%;
     display: flex;
     justify-content: space-around;
@@ -373,7 +373,7 @@ header > section:last-child {
     flex-direction: row;
   }
   header > section:last-child > div:nth-child(2) > div:last-child {
-    width: 437px;
+    width: 35%;
     height: 90%;
     display: flex;
     justify-content: space-around;
@@ -387,7 +387,7 @@ header > section:last-child {
     color: #2c2c2c;
   }
   .dropdown {
-    width: 163px;
+    width: 20%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -472,7 +472,7 @@ header > section:last-child {
     z-index: 100;
   }
   #slide {
-    width: 1920px;
+    width: 100%;
     height: 52.5%;
     display: flex;
     justify-content: center;
@@ -482,20 +482,20 @@ header > section:last-child {
     top: 3%;
   }
   .slider {
-    width: 3696px;
+    width: 3715px;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    /* top: -5%; */
+    top: -5%;
   }
   .slide-track {
     width: 1248px;
     height: 100%;
   }
   .slick-arrow {
-    width: 370px;
+    width: 10%;
     height: 100%;
     opacity: 0.5;
     border-radius: 0;
@@ -508,12 +508,12 @@ header > section:last-child {
     background-color: rgba(255, 255, 255, 0.7);
   }
   .slick-prev {
-    left: 862px;
+    left: 23.36%;
     justify-content: flex-end;
     padding-right: 50px;
   }
   .slick-next {
-    right: 862px;
+    right: 23.36%;
     justify-content: flex-start;
     padding-left: 50px;
   }
@@ -522,10 +522,10 @@ header > section:last-child {
     position: relative;
   }
   .slick-prev:before {
-    left: 77px;
+    left: 23%;
   }
   .slick-next:before {
-    right: 77px;
+    right: 23%;
   }
 }
   </style>
@@ -535,102 +535,6 @@ header > section:last-child {
 <body oncontextmenu='return false' 
 onselectstart='return false' ondragstart='return false'>
 <div id="root">
-  <header style="position:sticky; top: 0;">
-    <section id="mobile-area">
-        <div class="hamburger-menu">
-          <input id="menu__toggle" type="checkbox" />
-          <label class="menu__btn" for="menu__toggle">
-            <span></span>
-          </label>
-          <ul class="menu__box">
-            <li><a class="menu__item" href="https://item.rakuten.co.jp/smartforyou/c/0000001281/">Products</a></li>
-            <li><a class="menu__item" href="https://item.rakuten.co.jp/smartforyou/c/0000001282/">Type of Skin</a></li>
-            <li><a class="menu__item" href="https://item.rakuten.co.jp/smartforyou/c/0000001283/">Set Item</a></li>
-            <li><a class="menu__item" href="./Brand_Page/brand_page.html">About A-SKIN</a></li>
-            <li><a class="menu__item" href="https://basket.step.rakuten.co.jp/rms/mall/bs/cart/?shop_bid=280427">Cart</a></li>
-            <li><a class="menu__item" href="https://www.rakuten.co.jp/smartforyou/info.html">Company</a></li>
-          </ul>
-          </ul>
-        </div>
-        <div class="logo">
-          <div>A S K I N</div>
-        </div>
-    </section>
-    <!-- mobile-ver-header -->
-    <section id="desktop-area">
-      <div>
-        <div>
-          <a href="https://www.rakuten.ne.jp/gold/smartforyou/" target="_top">
-            <img src="https://image.rakuten.co.jp/smartforyou/cabinet/askin/askin-logo/brand_name_gray.jpg" alt="">
-          </a>
-        </div>     
-        <!-- title -->
-        <div class="site-menu-container">
-          <div class="site-menu"><a href="https://www.rakuten.co.jp/smartforyou/info.html" target="_blank" title="会社概要">COMPANY</a></div>
-          <div class="site-menu"><a href="https://www.rakuten.co.jp/smartforyou/info2.html" target="_blank" title="お買い物ガイド">SHOPPING INFORMATION</a></div>
-          <div class="site-menu"><a href="https://basket.step.rakuten.co.jp/rms/mall/bs/cart/?shop_bid=280427" target="_blank" title="カート">SHOPPING CART</a></div>
-          <div class="site-menu"><a href="https://ask.step.rakuten.co.jp/inquiry-form/?page=simple-inquiry-top&act=login&ms=500&shop_id=280427" target="_blank" title="お問い合わせ">Q＆A</a></div>
-          <div class="site-menu"><a href="https://www.rakuten.co.jp" target="_blank" title="楽天へ">RAKUTEN HOME</a></div>
-        </div>
-      </div>
-      <!-- header-top -->
-      <div>
-        <div>
-          <div class="dropdown">
-            <button class="dropdown-btn">Products</button>
-            <div class="item">
-              <a href="https://item.rakuten.co.jp/smartforyou/c/0000001313/" target="_parent">Cleanser</a>
-              <a href="https://item.rakuten.co.jp/smartforyou/c/0000001286/" target="_parent">Skin/Toner</a>
-              <a href="https://item.rakuten.co.jp/smartforyou/c/0000001287/" target="_parent">Lotion/Cream</a>
-              <a href="https://item.rakuten.co.jp/smartforyou/c/0000001288/" target="_parent">Ampoule</a>
-              <a href="https://item.rakuten.co.jp/smartforyou/c/0000001308/" target="_parent">Sun care</a>
-              <a href="https://item.rakuten.co.jp/smartforyou/c/0000001309/" target="_parent">Hair care</a>
-            </div>
-          </div>
-          <div class="dropdown">
-            <button class="dropdown-btn">Skin Type</button>
-            <div class="item">
-              <a href="https://item.rakuten.co.jp/smartforyou/c/0000001289/" target="_parent">Sensitive</a>
-              <a href="https://item.rakuten.co.jp/smartforyou/c/0000001290/" target="_parent">Dry & Oily Skin</a>
-              <a href="https://item.rakuten.co.jp/smartforyou/c/0000001291/" target="_parent">Special</a>
-              <a href="https://item.rakuten.co.jp/smartforyou/c/0000001310/" target="_parent">Sun care</a>
-              <a href="https://item.rakuten.co.jp/smartforyou/c/0000001311/" target="_parent">Hair care</a>
-            </div>
-          </div>
-          <div class="dropdown">
-            <button class="dropdown-btn">Set</button>
-            <div class="item">
-              <a href="https://item.rakuten.co.jp/smartforyou/c/0000001298/" target="_parent">Soothing Set</a>
-              <a href="https://item.rakuten.co.jp/smartforyou/c/0000001297/" target="_parent">Repair Set</a>
-              <a href="https://item.rakuten.co.jp/smartforyou/c/0000001299/" target="_parent">Trouble Set</a>
-            </div>
-          </div>
-          <div class="dropdown">
-            <button class="dropdown-btn">
-              <a href="./Brand_Page/brand_page.html" target="_blank">About A-skin</a>
-            </button>
-          </div>
-        </div>
-        <div>
-          <div class="search-box">
-            <form accept-charset="euc-jp" method="get" action="http://esearch.rakuten.co.jp/rms/sd/esearch/vc" target="_top" onclick="document.charset='EUC-JP'; document.rakutenSubmit.submit();">
-              <input type="hidden" name="sv" value="6">
-              <input type="hidden" name="sid" value="280427">
-              <input type="hidden" name="su" value="smartforyou">
-              <input type="hidden" name="sn" value="smartforyou">
-              <input type="hidden" name="f" value="A">
-              <input name="v" value="3" type="hidden">
-              <input type="text" name="sitem" class="text-area" value="キーワードを入力してください" onFocus="if( this.value == 'キーワードを入力してください' ) { this.value = ''; } " onBlur="if( this.value == '' ) { this.value = 'キーワードを入力してください'; } ">
-              <input type="image" src="https://image.rakuten.co.jp/smartforyou/cabinet/search_btn_w.jpg" class="search-btn" value="検索" alt="検索">
-            </form>	
-          </div>
-        </div> 
-      </div>
-      <!-- header-bottom -->
-    </section>
-      <!-- desktop-ver-header -->
-  </header>
-
   <section id="slide">
     <div class="slider">
       <div class="slide-item">
@@ -639,8 +543,8 @@ onselectstart='return false' ondragstart='return false'>
         </a>
       </div>
       <div class="slide-item">
-        <a href="#">
-          <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09434625/new_renewal_4.jpg" >
+        <a href="https://item.rakuten.co.jp/smartforyou/mgf_plus_cream/">
+          <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/banner2.jpg" >
         </a>
       </div>
       <div class="slide-item">
@@ -649,13 +553,12 @@ onselectstart='return false' ondragstart='return false'>
         </a>
       </div>
       <div class="slide-item">
-        <a href="https://item.rakuten.co.jp/smartforyou/synergy_azulen_ampoule/" >
-          <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09452582/main_bn_4.jpg" >
+        <a href="#" >
+          <img src="https://image.rakuten.co.jp/smartforyou/cabinet/09434625/new_renewal_4.jpg" >
         </a>
       </div>
     </div>
   </section>
-
 </div>
 
   <script>
