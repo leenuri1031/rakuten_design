@@ -605,6 +605,10 @@ main {
   display: none;
 }
 
+#special {
+  display: none;
+}
+
 #right-bottom {
   width: 100%;
   height: 12%;

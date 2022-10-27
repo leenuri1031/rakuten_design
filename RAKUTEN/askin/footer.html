@@ -52,17 +52,19 @@
   align-items: center;
   flex-direction: column;
 }
+
 footer {
-  width: 100%;
-  height: 55%;
+  width: 1200px;
+  height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+
 footer > div:nth-child(1) {
   width: 100%;
-  height: 10%;
+  height: 8%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,100 +75,8 @@ footer > div:nth-child(1) {
   background-color: #b8648e;
   border-bottom: #8F2B5F 1px solid;
 }
-footer > div:nth-child(3) {
-  display: none;
-}
 
-.mobile-footer {
-  width: 100%;
-  height: 90%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  background-color: #b8648e;
-
-}
-.mobile-footer > div:nth-child(2) {
-  width: 90%;
-  height: 55%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-}
-.mobile-footer > div:nth-child(2) > div {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: row;
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: white;
-  line-height: 1.5;
-}
-.mobile-footer > div:last-child {
-  width: 100%;
-  height: 10%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: white;
-}
-
-.footer-menu {
-  width: 100%;
-  height: 30%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
-}
-.footer-menu > div {
-  width: 40%;
-  height: 90%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-}
-.footer-menu > div > div {
-  width: 80%;
-  height: 20%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: row;
-}
-.footer-menu > div > div > a {
-  width: 100%;
-  height: 100%;
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: white;
-}
-@media (min-width: 600px){
-  footer {
-    width: 1200px;
-    height: 90%;
-  }
-  footer > div:nth-child(1) {
-    width: 100%;
-    height: 8%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  footer > div:nth-child(2) {
-    display: none;
-  }
-  footer > div:nth-child(3) {
+footer > div:nth-child(2) {
     width: 100%;
     height: 88%;
     display: flex;
@@ -174,6 +84,7 @@ footer > div:nth-child(3) {
     align-items: center;
     flex-direction: column;
   }
+
   .foot-manual {
     width: 100%;
     height: 85%;
@@ -181,7 +92,6 @@ footer > div:nth-child(3) {
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    /* background-color: antiquewhite; */
   }
   .foot-manual > div {
     width: 33%;
@@ -193,7 +103,6 @@ footer > div:nth-child(3) {
   }
   .foot-left {
     border-left: #8F2B5F 1px solid;
-
     padding-left: 1vw;
   }
   .foot-left > div:nth-child(1) {
@@ -203,6 +112,8 @@ footer > div:nth-child(3) {
     justify-content: space-around;
     align-items: flex-start;
     flex-direction: column;
+    position: relative;
+    top: -1%;
   }
   .foot-left > div:nth-child(1) > div:nth-child(1) {
     width: 100%;
@@ -211,11 +122,9 @@ footer > div:nth-child(3) {
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #222;
-    position: relative;
-    top: -3%;
   }
   .foot-left > div:nth-child(1) > div:nth-child(1) > img {
     margin-right: 10px;
@@ -240,10 +149,10 @@ footer > div:nth-child(3) {
     align-items: flex-start;
     flex-direction: column;
     border-left: #8F2B5F 1px solid;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-weight: 500;
     color: #838383;
-    line-height: 2.5;
+    line-height: 2;
     padding-left: 0.4vw;
   }
   .foot-left > div:nth-child(3) {
@@ -261,7 +170,7 @@ footer > div:nth-child(3) {
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #222;
   }
@@ -285,7 +194,7 @@ footer > div:nth-child(3) {
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-weight: 500;
     color: #838383;
   }
@@ -309,7 +218,7 @@ footer > div:nth-child(3) {
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-weight: 500;
     color: #838383;
   }
@@ -332,7 +241,7 @@ footer > div:nth-child(3) {
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-weight: 500;
     color: #838383;
   }
@@ -350,17 +259,17 @@ footer > div:nth-child(3) {
     margin-top: 0.2vh;
   }
   .bold {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-weight: 580;
     color: #838383;
   }
   .bold-red {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-weight: 550;
     color: red;
   }
   .mid-txt {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-weight: 500;
     color: #838383;
     padding-left: 0.8vw;
@@ -376,7 +285,7 @@ footer > div:nth-child(3) {
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #222;
     padding-left: 0.5vw;
@@ -400,10 +309,10 @@ footer > div:nth-child(3) {
     align-items: center;
     flex-direction: row;
     margin-top: 0.5vh;
-    line-height: 2.5;
+    line-height: 1.8;
   }
   .foot-right {
-    border-right: #838383 1px solid;
+    border-right: #8F2B5F 1px solid;
   }
   .foot-right > div:nth-child(1) {
     width: 100%;
@@ -412,7 +321,7 @@ footer > div:nth-child(3) {
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #222;
     padding-left: 0.5vw;
@@ -422,7 +331,7 @@ footer > div:nth-child(3) {
   }
   .foot-right > div:nth-child(2) {
     width: 100%;
-    height: 45%;
+    height: 48%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -430,9 +339,9 @@ footer > div:nth-child(3) {
   }
   .foot-right > div:nth-child(2) > div:nth-child(1) {
     width: 95%;
-    height: 30%;
+    height: 20%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: center;
     flex-direction: row;
   }
@@ -448,7 +357,7 @@ footer > div:nth-child(3) {
     width: 124px;
     height: 19px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-direction: row;
   }
@@ -469,10 +378,10 @@ footer > div:nth-child(3) {
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-weight: 500;
     color: #838383;
-    line-height: 3;
+    line-height: 2;
   }
   .foot-right > div:nth-child(2) > div:nth-child(2) > span {
     width: 90%;
@@ -488,7 +397,7 @@ footer > div:nth-child(3) {
   }
   .foot-right > div:nth-child(3) {
     width: 90%;
-    height: 35%;
+    height: 43%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -511,10 +420,10 @@ footer > div:nth-child(3) {
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    font-size: 0.7rem;
-    font-weight: 400;
+    font-size: 0.8rem;
+    font-weight: 500;
     color: #838383;
-    line-height: 3;
+    line-height: 2;
   }
   .foot-menu {
     width: 100%;
@@ -550,7 +459,9 @@ footer > div:nth-child(3) {
     font-weight: 400;
     color: #BDBCBC;
   }
-}
+
+
+
   </style>
 </head>
 
@@ -560,53 +471,6 @@ onselectstart='return false' ondragstart='return false'>
     
   <footer>
     <div>Shopping Guid</div>
-    <div class="mobile-footer">
-      <div class="footer-menu">
-        <div>
-          <div>
-            <a href="https://www.rakuten.ne.jp/gold/smartforyou/" target="_top">トップページ</a>
-          </div>
-          <div>
-            <a  href="https://www.rakuten.co.jp/smartforyou/info.html" target="_blank" title="会社概要">会社概要</a>
-          </div>
-          <div>
-            <a  href="https://ask.step.rakuten.co.jp/inquiry-form/?page=simple-inquiry-top&act=login&ms=500&shop_id=280427" target="_blank" title="お問い合わせ">問い合わせ</a>
-          </div>
-        </div>
-        <!-- footer-menu-left -->
-        <div>
-          <div>
-            <a href="https://www.rakuten.co.jp/smartforyou/info2.html" target="_blank" title="お買い物ガイド">支払い・返品
-              ・運送
-            </a>
-          </div>
-          <div>
-            <a  href="#" target="_blank" title="お問い合わせ">商品一覧</a>
-          </div>
-          <div>
-            <a href="https://www.rakuten.co.jp" target="_blank" title="楽天へ">楽天</a>
-          </div>
-        </div>
-        <!-- footer-menu-right -->
-      </div>
-      <div>
-        <div>
-          A-SKIN(エースキン)</br>
-          〒162-0056 東京都新宿区若松町38-20</br>
-          TEL : 03-6265-9861 FAX : 03-6265-9983</br>
-          応対可能な時間 : 平日10:00~15:00(週末・祝日除く)</br>
-          メール : info@smartforyou.net</br></br>
-          配送関連のお知らせ</br>
-          ・エースキンは国内発送、海外発送ともに行っております。</br>
-          ・国内発送の場合、平均お届け日数は3~5日ぐらいかかります。</br>　(一部地域除く)</br>
-          ※ 国内の商品在庫が足りない場合は韓国からの国際発送になります。</br>この場合、平均お届け日数より2~3日遅れることもございます。
-        </div>
-      </div>
-      
-      <div>
-        Copyright © 2022 A-skin Co.,Ltd. All rights reserved.
-      </div>
-    </div>
     <div class="desktop-footer">
       <div class="foot-manual">
         <div class="foot-left">

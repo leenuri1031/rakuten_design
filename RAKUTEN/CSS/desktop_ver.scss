@@ -222,12 +222,27 @@ main{
 
 // top-----------------------------------
 
+#rakuten-event{
+  @include mixin.container-style(100%, 10%, space-around, center, column);
+  // background-color: aqua;
+  &>div{
+    @include mixin.container-style(100%, 40%, center, center);
+    // background-color: #ff7c7c;
+    &>a{
+      @include mixin.container-style(100%, 100%, center, center);
+      &>img{
+        @include mixin.container-style(65%, 100%, center, center);
+      }
+    }
+  }
+}
+
 #banner-top{
   @include mixin.container-style(100%, 6%, space-around, center);
   // border: solid black 1px;
 
   &>div{
-    @include mixin.container-style(40%, 100%, space-around, center);
+    @include mixin.container-style(40%, 80%, space-around, center);
     // background-color: #ff7c7c;
     &>a{
     @include mixin.container-style(100%, 100%, center, center);

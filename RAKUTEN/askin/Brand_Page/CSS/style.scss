@@ -606,10 +606,10 @@ footer{
   @include mixin.container-style(100%, 30%, space-around, center);
 
   &>div{
-    @include mixin.container-style(40%, 90%, space-around, center, column);
+    @include mixin.container-style(45%, 90%, space-around, center, column);
 
     &>div{
-      @include mixin.container-style(80%, 20%, flex-start, center);
+      @include mixin.container-style(90%, 20%, flex-start, center);
       &>a{
         @include mixin.size(100%,100%);
         @include mixin.font(0.8rem, 400, var.$col-white);
