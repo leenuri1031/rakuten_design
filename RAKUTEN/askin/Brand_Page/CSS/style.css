@@ -986,7 +986,7 @@ footer > div:nth-child(1) {
   font-size: 0.7rem;
   font-weight: 400;
   color: white;
-  line-height: 2;
+  line-height: 1.5;
 }
 .mobile-footer > div:last-child {
   width: 100%;

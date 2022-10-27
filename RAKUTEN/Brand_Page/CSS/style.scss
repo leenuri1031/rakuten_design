@@ -588,7 +588,7 @@ footer{
     &>div{
     @include mixin.container-style(100%, 100%, flex-start,center);
     @include mixin.font(0.7rem, 400, var.$col-white);
-    line-height: 2;
+    line-height: 1.5;
     }
   }
 
