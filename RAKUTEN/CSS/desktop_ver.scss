@@ -78,7 +78,7 @@
       }
     }
   }
-  // site-menu-class-setting------------------------------
+  //site-menu-class-setting------------------------------
   .site-menu{
     @include mixin.font(0.8rem, 450, #2c2c2c);
   }
@@ -149,7 +149,7 @@
 
 // slide-----------------------------------
 #slide{
-  @include mixin.container-style(100%, auto, center, center);
+  @include mixin.container-style(100%, 9%, center, center);
 }
 
 .slider{
@@ -204,7 +204,7 @@
 // slide-----------------------------------
 
 main{
-  @include mixin.container-style(66.1%, 65%, center, flex-start);
+  @include mixin.container-style(66.1%, 68%, center, flex-start);
   // position: relative;
   // border: 5px solid black;
   // background-color: antiquewhite
@@ -223,39 +223,39 @@ main{
 // top-----------------------------------
 
 #rakuten-event{
-  @include mixin.container-style(100%, 10%, space-around, center, column);
+  @include mixin.container-style(100%, 13%, space-around, center, column);
   // background-color: aqua;
   &>div{
-    @include mixin.container-style(100%, 40%, center, center);
+    @include mixin.container-style(100%, 80%, center, center);
     // background-color: #ff7c7c;
-    &>a{
-      @include mixin.container-style(100%, 100%, center, center);
-      &>img{
-        @include mixin.container-style(65%, 100%, center, center);
-      }
+    &>img{
+      @include mixin.container-style(1029px, 455px, center, center);
     }
+    // &>a{
+    //   @include mixin.container-style(100%, 100%, center, center);
+    // }
   }
 }
 
 #banner-top{
-  @include mixin.container-style(100%, 6%, space-around, center);
+  @include mixin.container-style(100%, 20%, space-around, center, column);
   // border: solid black 1px;
 
-  &>div{
-    @include mixin.container-style(40%, 80%, space-around, center);
-    // background-color: #ff7c7c;
-    &>a{
-    @include mixin.container-style(100%, 100%, center, center);
-      &>img{
-        @include mixin.container-style(98%, 100%, center, center);
-      }
+  &>a{
+  @include mixin.container-style(981px, 192px, center, center);
+    &>img{
+      @include mixin.container-style(100%, 100%, center, center);
     }
   }
+  // &>div{
+  //   @include mixin.container-style(100%, 80%, space-around, center);
+  //   // background-color: #ff7c7c;
+  // }
 }
 
 
 #right-top{
-  @include mixin.container-style(100%, 16%, space-between, center, column);
+  @include mixin.container-style(100%, 14%, space-between, center, column);
   // border: solid black 1px;
 }
 
@@ -315,7 +315,7 @@ main{
 
 // brand-banner-----------------------------------
 #brand-banner{
-  @include mixin.container-style(95%, 10%, space-around, center, column);
+  @include mixin.container-style(95%, 8%, space-around, center, column);
   // border: solid 1px black;
 
   &>div{
@@ -335,7 +335,7 @@ main{
 
 // mid-products-----------------------------------
 #right-mid{
-  @include mixin.container-style(100%, 16%, space-between, center, column);
+  @include mixin.container-style(100%, 14%, space-between, center, column);
   // border: solid black 1px;
 
   &>h2{
@@ -390,7 +390,7 @@ main{
 }
 
 #special{
-  @include mixin.container-style(100%, 16%, space-between, center, column);
+  @include mixin.container-style(100%, 14%, space-between, center, column);
   // border: solid black 1px;
 
   &>h2{
@@ -405,7 +405,7 @@ main{
 
 // categories-----------------------------------
 #category{
-  @include mixin.container-style(100%, 15%, space-between, center, column);
+  @include mixin.container-style(100%, 13%, space-between, center, column);
   // background-color: antiquewhite;
   // border: #222 solid 1px;
 
