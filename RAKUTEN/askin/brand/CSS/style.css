@@ -29,7 +29,7 @@
 }
 
 header {
-  width: 66.1%;
+  width: 1200px;
   height: 21.6vh;
   display: flex;
   justify-content: center;
@@ -225,7 +225,7 @@ header > section > div:nth-child(2) > div:last-child {
 }
 
 #slide {
-  width: 66.1%;
+  width: 1200px;
   height: 51.6vh;
   display: flex;
   justify-content: center;
@@ -322,7 +322,7 @@ header > section > div:nth-child(2) > div:last-child {
 }
 
 main {
-  width: 66.1%;
+  width: 1200px;
   height: auto;
   display: flex;
   justify-content: space-around;
@@ -1008,7 +1008,7 @@ main {
 }
 
 footer {
-  width: 66.1%;
+  width: 1200px;
   height: 72vh;
   display: flex;
   justify-content: center;

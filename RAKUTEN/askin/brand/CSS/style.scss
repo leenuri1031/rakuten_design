@@ -9,7 +9,7 @@
 }
 
 header{
-  @include mixin.container-style(66.1%, 21.6vh, center, center,column);
+  @include mixin.container-style(1200px, 21.6vh, center, center,column);
   background-color: #fff;
   background-color: #fff;
   position: sticky;
@@ -145,7 +145,7 @@ header{
 
 // slide-----------------------------------
 #slide{
-  @include mixin.container-style(66.1%, 51.6vh, center, center);
+  @include mixin.container-style(1200px, 51.6vh, center, center);
   position: relative;
 }
 
@@ -218,7 +218,7 @@ header{
 // slide-----------------------------------
 
 main{
-  @include mixin.container-style(66.1%, auto, space-around, center);
+  @include mixin.container-style(1200px, auto, space-around, center);
   position: relative;
   // border: solid 3px black;
 }
@@ -595,7 +595,7 @@ main{
 
 
 footer{
-  @include mixin.container-style(66.1%, 72vh, center, center, column);
+  @include mixin.container-style(1200px, 72vh, center, center, column);
   // background-color: var.$col-dark-gray;
   // border: #000 solid 1px;
   // &>iframe{
