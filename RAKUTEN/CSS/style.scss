@@ -108,7 +108,7 @@ header{
   // font-size: 0.8rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.192);
   background-color: rgba(255, 255, 255, 1);
-  @include mixin.font(0.9rem, 500, #2c2c2c);
+  @include mixin.font(0.8rem, 500, #2c2c2c);
   display: none;
   letter-spacing: 1px;
 
@@ -119,7 +119,7 @@ header{
   }
 
   &>a:hover{
-    @include mixin.font(0.95rem, 600, var.$col-2);
+    @include mixin.font(0.9rem, 600, var.$col-2);
   }
 }
 // drop-down-menu-class-setting------------------------------

@@ -178,7 +178,7 @@ header > section > div:nth-child(2) > div:last-child {
 .item {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.192);
   background-color: rgb(255, 255, 255);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 500;
   color: #2c2c2c;
   display: none;
@@ -193,7 +193,7 @@ header > section > div:nth-child(2) > div:last-child {
   flex-direction: row;
 }
 .item > a:hover {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: #b8648e;
 }
